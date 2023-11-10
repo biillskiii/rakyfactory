@@ -32,17 +32,28 @@ const LandingPage = () => {
   return (
     <>
       <div id="hero" className="flex flex-col text-center ">
-        <p className="font-bold text-2xl lg:text-5xl mt-32">
+        <p className="font-bold text-xl lg:text-5xl mt-32">
           We help your content growth more easily
         </p>
-        <img className="ms-auto mr-52" src={Pen1} width={300} alt="pencil" />
-        <p className="font-medium text-lg my-10">
+        <img
+          id="pen1"
+          className="ms-auto ml-72 lg:mr-52"
+          src={Pen1}
+          width={300}
+          alt="pencil"
+          style={
+            window.matchMedia("(max-width: 768px)").matches
+              ? { width: 100 }
+              : {}
+          }
+        />
+        <p className="font-medium text-sm my-10 px-4 lg:text-lg lg:px-2">
           Dapatkan tim konten pribadimu untuk akses permintaan konten sebanyak
           mungkin <br /> dengan cara berlangganan. Dapat dijeda atau batalkan
           kapan saja.
         </p>
         <div className="flex gap-x-5 justify-center mt-3">
-          <button className="bg-[#7A5AE1] text-white font-bold rounded-md px-5 py-2">
+          <button className="bg-[#7A5AE1] text-white font-bold rounded-md px-5 py-2 ">
             Lihat paket
           </button>
           <button className="bg-[#F4F2FD] text-[#7A5AE1] font-bold rounded-md px-3 py-2">
