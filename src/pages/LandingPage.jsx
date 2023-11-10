@@ -27,6 +27,7 @@ import Alvi from "../assets/alvi.png";
 import Cici from "../assets/cici.png";
 import Training from "../assets/training.png";
 import Faiz from "../assets/faiz.png";
+import Prototype from "../assets/prototype.png"
 import Card from "../components/Card";
 const LandingPage = () => {
   return (
@@ -360,6 +361,7 @@ const LandingPage = () => {
             <BsArrowRight size={15} className="text-P2 font-bold" />{" "}
           </button>
         </p>
+        <img src={Prototype} width={1000} className="mt-10" alt="" />
       </div>
       <div className="w-full bg-white py-32">
         <div className="w-6/12 rounded-xl mx-auto h-full">
