@@ -397,7 +397,7 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="flex justify-center items-center my-10 gap-x-5 ">
-        <p className={`text-gray-300 font-semibold ${isChecked && "font-light"}`}>Starter level</p>
+        <p className={`text-gray-300 font-semibold ${isChecked && "font-thin"}`}>Starter level</p>
 
         <label class="relative inline-flex items-center cursor-pointer">
           <input
