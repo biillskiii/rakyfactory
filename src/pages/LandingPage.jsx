@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsStars } from "react-icons/bs";
 import { BsArrowRight, BsFillCheckCircleFill } from "react-icons/bs";
 import { AiOutlineInfoCircle, AiFillCheckCircle } from "react-icons/ai";
@@ -32,6 +32,11 @@ import Faiz from "../assets/faiz.png";
 import Prototype from "../assets/prototype.png";
 import Card from "../components/Card";
 const LandingPage = () => {
+  const [isChecked, setIsChecked] = useState(false);
+  const handleToggleChange = () => {
+    setIsChecked(!isChecked);
+  };
+
   return (
     <>
       <div id="hero" className="flex flex-col text-center ">
@@ -364,7 +369,11 @@ const LandingPage = () => {
             Beta Version
           </span>
           .{" "}
-          <a href="https://trello.com/b/0cYbLlF0/beta-version-prototype" target="_blank" className="flex items-center gap-x-1 text-P2 font-semibold">
+          <a
+            href="https://trello.com/b/0cYbLlF0/beta-version-prototype"
+            target="_blank"
+            className="flex items-center gap-x-1 text-P2 font-semibold"
+          >
             Pelajari selengkapnya{" "}
             <BsArrowRight size={15} className="text-P2 font-bold" />{" "}
           </a>
@@ -391,7 +400,12 @@ const LandingPage = () => {
         <p className="dark:text-gray-300">Starter level</p>
 
         <label class="relative inline-flex items-center cursor-pointer">
-          <input type="checkbox" value="" class="sr-only peer" />
+          <input
+            type="checkbox"
+            value=""
+            class="sr-only peer"
+            onChange={handleToggleChange}
+          />
           <div class="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-P2"></div>
           <span class="ms-3 text-sm font-semibold text-P2 ">
             Creator level (hemat 28%)
@@ -405,8 +419,10 @@ const LandingPage = () => {
               Script Writing Team <AiOutlineInfoCircle className="text-P2" />
             </h2>
             <p class="text-lg font-bold mb-2">
-              Rp3,199 jt{" "}
-              <span className="text-xs font-thin">/ periode 31 hari</span>
+              {isChecked ? "Rp3,199 jt" : "Rp2,199 jt"}
+              <span className="text-xs font-thin">
+                {isChecked ? "/ periode 31 hari" : "/ periode 15 hari"}
+              </span>
             </p>
             <p className="text-xs">
               Dapatkan tim script writer yang <br />
@@ -452,8 +468,10 @@ const LandingPage = () => {
               Video Editing Team <AiOutlineInfoCircle className="text-P2" />
             </h2>
             <p class="text-lg font-bold mb-2">
-              Rp3,199 jt{" "}
-              <span className="text-xs font-thin">/ periode 31 hari</span>
+              {isChecked ? "Rp3,199 jt" : "Rp2,199 jt"}
+              <span className="text-xs font-thin">
+                {isChecked ? "/ periode 31 hari" : "/ periode 15 hari"}
+              </span>
             </p>
             <p className="text-xs">
               Dapatkan tim video editor yang <br /> bertalenta sesuai gaya
@@ -496,54 +514,56 @@ const LandingPage = () => {
               Jeda atau batalkan kapanpun
             </p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg text-start">
-            <h2 className="flex items-center gap-x-3 text-lg font-semibold">
-              Premium Bundling <AiOutlineInfoCircle className="text-P2" />
-            </h2>
-            <p class="text-lg font-bold mb-2">
-              Rp5,499 jt{" "}
-              <span className="text-xs font-thin">/ periode 31 hari</span>
-            </p>
-            <p className="text-xs">
-              Dapatkan tim video editor dan script <br /> writer untuk menghemat
-              waktumu!
-            </p>
-            <hr className="my-5" />
-            <ul className="text-left text-sm  mb-6">
-              <li className="flex items-center gap-x-2 mb-2">
-                <div className="bg-P1 rounded-full px-1 py-1">
-                  <FaCheck className=" text-P2 " />
-                </div>
-                Semua bonus di paket satuan
-              </li>
-              <li class="flex items-center gap-x-2 mb-2">
-                <div className="bg-P1 rounded-full px-1 py-1">
-                  <FaCheck className=" text-P2 " />
-                </div>
-                Bonus thumbnail IG Reels
-              </li>
-              <li className="flex items-center gap-x-2 mb-2">
-                <div className="bg-P1 rounded-full px-1 py-1">
-                  <FaCheck className=" text-P2 " />
-                </div>
-                1 permintaan dalam 1 waktu{" "}
-                <AiOutlineInfoCircle className="text-P2" />
-              </li>
-              <li className="flex items-center gap-x-2 mb-2 ">
-                <div className="bg-P1 rounded-full px-1 py-1">
-                  <FaCheck className=" text-P2 " />
-                </div>
-                Termasuk fitur tambahan
-                <AiOutlineInfoCircle className="text-P2" />
-              </li>
-            </ul>
-            <button className="w-full bg-P2 text-white py-2 px-4 rounded-md hover:bg-purple-600 focus:outline-none focus:ring focus:border-purple-300">
-              Join Waitlist
-            </button>
-            <p className="text-xs text-center mt-3">
-              Jeda atau batalkan kapanpun
-            </p>
-          </div>
+          {isChecked && (
+            <div className="bg-white p-6 rounded-lg shadow-lg text-start">
+              <h2 className="flex items-center gap-x-3 text-lg font-semibold">
+                Premium Bundling <AiOutlineInfoCircle className="text-P2" />
+              </h2>
+              <p class="text-lg font-bold mb-2">
+                Rp5,499 jt{" "}
+                <span className="text-xs font-thin">/ periode 31 hari</span>
+              </p>
+              <p className="text-xs">
+                Dapatkan tim video editor dan script <br /> writer untuk
+                menghemat waktumu!
+              </p>
+              <hr className="my-5" />
+              <ul className="text-left text-sm  mb-6">
+                <li className="flex items-center gap-x-2 mb-2">
+                  <div className="bg-P1 rounded-full px-1 py-1">
+                    <FaCheck className=" text-P2 " />
+                  </div>
+                  Semua bonus di paket satuan
+                </li>
+                <li class="flex items-center gap-x-2 mb-2">
+                  <div className="bg-P1 rounded-full px-1 py-1">
+                    <FaCheck className=" text-P2 " />
+                  </div>
+                  Bonus thumbnail IG Reels
+                </li>
+                <li className="flex items-center gap-x-2 mb-2">
+                  <div className="bg-P1 rounded-full px-1 py-1">
+                    <FaCheck className=" text-P2 " />
+                  </div>
+                  1 permintaan dalam 1 waktu{" "}
+                  <AiOutlineInfoCircle className="text-P2" />
+                </li>
+                <li className="flex items-center gap-x-2 mb-2 ">
+                  <div className="bg-P1 rounded-full px-1 py-1">
+                    <FaCheck className=" text-P2 " />
+                  </div>
+                  Termasuk fitur tambahan
+                  <AiOutlineInfoCircle className="text-P2" />
+                </li>
+              </ul>
+              <button className="w-full bg-P2 text-white py-2 px-4 rounded-md hover:bg-purple-600 focus:outline-none focus:ring focus:border-purple-300">
+                Join Waitlist
+              </button>
+              <p className="text-xs text-center mt-3">
+                Jeda atau batalkan kapanpun
+              </p>
+            </div>
+          )}
         </div>
       </div>
       <p className="flex justify-center items-center mt-10 font-medium text-sm">
