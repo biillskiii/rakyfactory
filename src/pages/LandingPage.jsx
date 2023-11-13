@@ -1,7 +1,9 @@
 import React from "react";
 import { BsStars } from "react-icons/bs";
 import { BsArrowRight, BsFillCheckCircleFill } from "react-icons/bs";
+import { AiOutlineInfoCircle, AiFillCheckCircle } from "react-icons/ai";
 import { IoIosArrowDown } from "react-icons/io";
+import { FaCheck } from "react-icons/fa6";
 import Marquee from "react-fast-marquee";
 import Image1 from "../assets/image1.png";
 import Image2 from "../assets/image2.png";
@@ -27,7 +29,7 @@ import Alvi from "../assets/alvi.png";
 import Cici from "../assets/cici.png";
 import Training from "../assets/training.png";
 import Faiz from "../assets/faiz.png";
-import Prototype from "../assets/prototype.png"
+import Prototype from "../assets/prototype.png";
 import Card from "../components/Card";
 const LandingPage = () => {
   return (
@@ -346,23 +348,210 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="flex flex-col justify-center items-center my-10">
-        <p className="font-medium text-lg w-[764px] text-center ">
-          Dengan berlangganan, kamu bisa request konten sebanyak mungkin. Kalau
-          lagi nggak butuh, kamu bisa jeda langganan kapan pun ⏳
-        </p>
+        <div className="relative">
+          <p className="font-medium text-lg w-[764px] text-center relative z-10">
+            Dengan berlangganan, kamu bisa request konten sebanyak mungkin.
+            Kalau lagi nggak butuh, kamu bisa jeda langganan kapan pun ⏳
+          </p>
+          <p className="absolute bg-P2 rounded-md px-3 py-2 text-white font-semibold text-sm top-1 -left-10 -rotate-3 z-20">
+            FULL VERSION PROTOTYPE 🤩
+          </p>
+        </div>
+
         <p className=" flex items-center gap-x-1 text-xs my-2 font-semibold ">
           Baru tersedia{" "}
           <span className="bg-P1 text-P2 text-xs px-1 border-2 border-P3 rounded-md font-semibold">
             Beta Version
           </span>
           .{" "}
-          <button className="flex items-center gap-x-1 text-P2 font-semibold">
+          <a href="https://trello.com/b/0cYbLlF0/beta-version-prototype" target="_blank" className="flex items-center gap-x-1 text-P2 font-semibold">
             Pelajari selengkapnya{" "}
             <BsArrowRight size={15} className="text-P2 font-bold" />{" "}
-          </button>
+          </a>
         </p>
         <img src={Prototype} width={1000} className="mt-10" alt="" />
       </div>
+      <div className="flex justify-center items-center">
+        <div className="relative flex flex-col justify-center items-center">
+          <p className="font-bold text-5xl">
+            Pilih paket yang sesuai untuk kamu
+          </p>
+          <p className="font-medium mt-8 text-lg">
+            Biaya tetap. Tanpa kontrak. Tanpa pusing kelola tim 🙅🏻
+          </p>
+          <p className="absolute bg-P1 px-1 py-1.5 text-P2 font-semibold border-2 border-P3 rounded-md text-xs -rotate-3 top-20 left-64 uppercase shadow-md">
+            Paling dibutuhkan
+          </p>
+          <p className="absolute bg-P2 px-1 py-2 text-P1 font-semibold rounded-md text-xs rotate-3 top-20 -right-44 uppercase shadow-md">
+            HEMAT 900 RIBU! 🤑
+          </p>
+        </div>
+      </div>
+      <div className="flex justify-center items-center my-10 gap-x-5 ">
+        <p className="dark:text-gray-300">Starter level</p>
+
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input type="checkbox" value="" class="sr-only peer" />
+          <div class="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-P2"></div>
+          <span class="ms-3 text-sm font-semibold text-P2 ">
+            Creator level (hemat 28%)
+          </span>
+        </label>
+      </div>
+      <div className="flex justify-center items-center mt-10">
+        <div className="flex space-x-10">
+          <div className="bg-white p-6 rounded-lg shadow-lg text-start">
+            <h2 className="flex items-center gap-x-3 text-lg font-semibold">
+              Script Writing Team <AiOutlineInfoCircle className="text-P2" />
+            </h2>
+            <p class="text-lg font-bold mb-2">
+              Rp3,199 jt{" "}
+              <span className="text-xs font-thin">/ periode 31 hari</span>
+            </p>
+            <p className="text-xs">
+              Dapatkan tim script writer yang <br />
+              bertalenta sesuai niche kontenmu.
+            </p>
+            <hr className="my-5" />
+            <ul className="text-left text-sm mb-6">
+              <li className="flex items-center gap-x-2 mb-2">
+                <div className="bg-P1 rounded-full px-1 py-1">
+                  <FaCheck className=" text-P2 " />
+                </div>
+                Bonus ide-ide bank konten
+              </li>
+              <li class="flex items-center gap-x-2 mb-2">
+                <div className="bg-P1 rounded-full px-1 py-1">
+                  <FaCheck className=" text-P2 " />
+                </div>
+                Termasuk riset materi konten
+              </li>
+              <li className="flex items-center gap-x-2 mb-2">
+                <div className="bg-P1 rounded-full px-1 py-1">
+                  <FaCheck className=" text-P2 " />
+                </div>
+                1 permintaan dalam 1 waktu
+              </li>
+              <li className="flex items-center gap-x-2 mb-2 ">
+                <div className="bg-P1 rounded-full px-1 py-1">
+                  <FaCheck className=" text-P2 " />
+                </div>
+                Termasuk fitur tambahan
+                <AiOutlineInfoCircle className="text-P2" />
+              </li>
+            </ul>
+            <button className="w-full bg-P2 text-white py-2 px-4 rounded-md hover:bg-purple-600 focus:outline-none focus:ring focus:border-purple-300">
+              Join Waitlist
+            </button>
+            <p className="text-xs text-center mt-3">
+              Jeda atau batalkan kapanpun
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg text-start">
+            <h2 className="flex items-center gap-x-3 text-lg font-semibold">
+              Video Editing Team <AiOutlineInfoCircle className="text-P2" />
+            </h2>
+            <p class="text-lg font-bold mb-2">
+              Rp3,199 jt{" "}
+              <span className="text-xs font-thin">/ periode 31 hari</span>
+            </p>
+            <p className="text-xs">
+              Dapatkan tim video editor yang <br /> bertalenta sesuai gaya
+              visualmu.
+            </p>
+            <hr className="my-5" />
+            <ul className="text-left text-sm mb-6">
+              <li className="flex items-center gap-x-2 mb-2">
+                <div className="bg-P1 rounded-full px-1 py-1">
+                  <FaCheck className=" text-P2 " />
+                </div>
+                Bonus pemilihan klip YT{" "}
+                <AiOutlineInfoCircle className="text-P2" />
+              </li>
+              <li class="flex items-center gap-x-2 mb-2">
+                <div className="bg-P1 rounded-full px-1 py-1">
+                  <FaCheck className=" text-P2 " />
+                </div>
+                Bonus visual-content style{" "}
+                <AiOutlineInfoCircle className="text-P2" />
+              </li>
+              <li className="flex items-center gap-x-2 mb-2">
+                <div className="bg-P1 rounded-full px-1 py-1">
+                  <FaCheck className=" text-P2 " />
+                </div>
+                1 permintaan dalam 1 waktu
+              </li>
+              <li className="flex items-center gap-x-2 mb-2 ">
+                <div className="bg-P1 rounded-full px-1 py-1">
+                  <FaCheck className=" text-P2 " />
+                </div>
+                Termasuk fitur tambahan
+                <AiOutlineInfoCircle className="text-P2" />
+              </li>
+            </ul>
+            <button className="w-full bg-P2 text-white py-2 px-4 rounded-md hover:bg-purple-600 focus:outline-none focus:ring focus:border-purple-300">
+              Join Waitlist
+            </button>
+            <p className="text-xs text-center mt-3">
+              Jeda atau batalkan kapanpun
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg text-start">
+            <h2 className="flex items-center gap-x-3 text-lg font-semibold">
+              Premium Bundling <AiOutlineInfoCircle className="text-P2" />
+            </h2>
+            <p class="text-lg font-bold mb-2">
+              Rp5,499 jt{" "}
+              <span className="text-xs font-thin">/ periode 31 hari</span>
+            </p>
+            <p className="text-xs">
+              Dapatkan tim video editor dan script <br /> writer untuk menghemat
+              waktumu!
+            </p>
+            <hr className="my-5" />
+            <ul className="text-left text-sm  mb-6">
+              <li className="flex items-center gap-x-2 mb-2">
+                <div className="bg-P1 rounded-full px-1 py-1">
+                  <FaCheck className=" text-P2 " />
+                </div>
+                Semua bonus di paket satuan
+              </li>
+              <li class="flex items-center gap-x-2 mb-2">
+                <div className="bg-P1 rounded-full px-1 py-1">
+                  <FaCheck className=" text-P2 " />
+                </div>
+                Bonus thumbnail IG Reels
+              </li>
+              <li className="flex items-center gap-x-2 mb-2">
+                <div className="bg-P1 rounded-full px-1 py-1">
+                  <FaCheck className=" text-P2 " />
+                </div>
+                1 permintaan dalam 1 waktu{" "}
+                <AiOutlineInfoCircle className="text-P2" />
+              </li>
+              <li className="flex items-center gap-x-2 mb-2 ">
+                <div className="bg-P1 rounded-full px-1 py-1">
+                  <FaCheck className=" text-P2 " />
+                </div>
+                Termasuk fitur tambahan
+                <AiOutlineInfoCircle className="text-P2" />
+              </li>
+            </ul>
+            <button className="w-full bg-P2 text-white py-2 px-4 rounded-md hover:bg-purple-600 focus:outline-none focus:ring focus:border-purple-300">
+              Join Waitlist
+            </button>
+            <p className="text-xs text-center mt-3">
+              Jeda atau batalkan kapanpun
+            </p>
+          </div>
+        </div>
+      </div>
+      <p className="flex justify-center items-center mt-10 font-medium text-sm">
+        Butuh lebih banyak konten?{"  "}
+        <span className="font-medium text-sm text-P2">
+          Upgrade 2 permintaan dalam 1 waktu
+        </span>
+      </p>
       <div className="w-full bg-white py-32">
         <div className="w-6/12 rounded-xl mx-auto h-full">
           <p className="font-bold text-4xl pl-5 pt-9">
