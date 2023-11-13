@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BsStars } from "react-icons/bs";
-import { BsArrowRight, BsFillCheckCircleFill } from "react-icons/bs";
-import { AiOutlineInfoCircle, AiFillCheckCircle } from "react-icons/ai";
+import { BsArrowRight } from "react-icons/bs";
+import {
+  AiOutlineInfoCircle,
+  AiFillLinkedin,
+  AiOutlineInstagram,
+} from "react-icons/ai";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaCheck } from "react-icons/fa6";
 import Marquee from "react-fast-marquee";
@@ -30,13 +34,21 @@ import Cici from "../assets/cici.png";
 import Training from "../assets/training.png";
 import Faiz from "../assets/faiz.png";
 import Prototype from "../assets/prototype.png";
+import Raky from "../assets/raky.png";
 import Card from "../components/Card";
+import Faq from "../components/Faq";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const LandingPage = () => {
   const [isChecked, setIsChecked] = useState(false);
+
   const handleToggleChange = () => {
     setIsChecked(!isChecked);
   };
-
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <>
       <div id="hero" className="flex flex-col text-center ">
@@ -72,7 +84,10 @@ const LandingPage = () => {
           <BsStars color="black" size={20} />
           Tanpa kontrak. Tanpa biaya tambahan.
         </p>
-        <div className="w-[1200px] h-[352px] rounded-lg bg-white mx-auto mt-40 text-black shadow-lg relative flex">
+        <div
+          data-aos="fade-up"
+          className="w-[1200px] h-[352px] rounded-lg bg-white mx-auto mt-48 text-black shadow-lg relative flex"
+        >
           <div className="w-[500px] flex flex-col items-start ml-20 mt-14 mb-44">
             <p className="font-bold text-xl ">
               Pesan dari pak CEO Rakyfactory? 👀
@@ -93,7 +108,10 @@ const LandingPage = () => {
             <img src={Image5} alt="" width={350} />
           </div>
         </div>
-        <div className="flex flex-col h-full text-center justify-center items-center py-32">
+        <div
+          data-aos="fade-up"
+          className="flex flex-col h-full text-center justify-center items-center mt-48"
+        >
           <p className="font-bold text-5xl">
             Kami hadir sebagai partner kontenmu
           </p>
@@ -105,8 +123,8 @@ const LandingPage = () => {
           <button className="bg-purple-500 text-white px-4 py-2 my-5 rounded-md">
             Lihat paket berlangganan
           </button>
-          <div className="flex flex-wrap justify-center items-center mt-20 px-2 gap-x-40">
-            <div className=" w-80 h-96">
+          <div className="flex flex-wrap justify-center items-center mt-24 px-2 gap-x-40">
+            <div data-aos="fade-up" className=" w-80 h-96">
               <div className="flex flex-col justify-center items-center gap-x-3 mt-5 ml-10">
                 <img src={Partner} width={150} className="mx-auto mt-5" />
                 <p className="font-bold text-xl text-center mt-4">
@@ -118,7 +136,7 @@ const LandingPage = () => {
                 </p>
               </div>
             </div>
-            <div className=" w-80 h-96">
+            <div data-aos="fade-up" className=" w-80 h-96">
               <div className="flex flex-col justify-center items-center gap-x-3 mt-5 ml-10">
                 <img src={Subs} width={150} className="mx-auto mt-5" />
                 <p className="font-bold text-xl text-center mt-4">
@@ -130,7 +148,7 @@ const LandingPage = () => {
                 </p>
               </div>
             </div>
-            <div className=" w-80 h-96">
+            <div data-aos="fade-up" className=" w-80 h-96">
               <div className="flex flex-col justify-center items-center gap-x-3 mt-5 ml-10">
                 <img src={Kanban} width={150} className="mx-auto mt-5" />
                 <p className="font-bold text-xl text-center mt-4">
@@ -141,7 +159,7 @@ const LandingPage = () => {
                 </p>
               </div>
             </div>
-            <div className=" w-80 h-96">
+            <div data-aos="fade-up" className=" w-80 h-96">
               <div className="flex flex-col justify-center items-center gap-x-3 mt-5 ml-10">
                 <img src={Wallet} width={150} className="mx-auto mt-5" />
                 <p className="font-bold text-xl text-center mt-4">
@@ -153,7 +171,7 @@ const LandingPage = () => {
                 </p>
               </div>
             </div>
-            <div className=" w-80 h-96">
+            <div data-aos="fade-up" className=" w-80 h-96">
               <div className="flex flex-col justify-center items-center gap-x-3 mt-5 ml-10">
                 <img src={Deadline} width={150} className="mx-auto mt-5" />
                 <p className="font-bold text-xl text-center mt-4">
@@ -165,7 +183,7 @@ const LandingPage = () => {
                 </p>
               </div>
             </div>
-            <div className=" w-80 h-96">
+            <div data-aos="fade-up" className=" w-80 h-96">
               <div className="flex flex-col justify-center items-center gap-x-3 mt-5 ml-10">
                 <img src={Checklist} width={150} className="mx-auto mt-5" />
                 <p className="font-bold text-xl text-center mt-4">
@@ -180,7 +198,10 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center gap-x-40">
+      <div
+        data-aos="fade-up"
+        className="flex justify-center items-center mt-48"
+      >
         <div className="w-[520px]">
           <p className="font-bold text-3xl">Fun fact tentang Rakyfactory?</p>
 
@@ -196,7 +217,7 @@ const LandingPage = () => {
         </div>
       </div>
       <Marquee
-        className="h-28 mt-10 gap-x-5"
+        className="h-28 mt-24 gap-x-5"
         autoFill={true}
         pauseOnClick
         gradient={true}
@@ -288,7 +309,10 @@ const LandingPage = () => {
           </div>
         </div>
       </Marquee>
-      <div className="flex flex-col justify-center items-center mt-24">
+      <div
+        data-aos="fade-up"
+        className="flex flex-col justify-center items-center mt-48"
+      >
         <div className="flex flex-col">
           <p className="font-bold text-5xl text-center z-20">
             Dapatkan tim konten pribadimu
@@ -300,9 +324,12 @@ const LandingPage = () => {
             membawa kamu mencapai tujuan sebagai Content Creator 🚀
           </p>
         </div>
-        <div className="flex mt-20">
+        <div className="flex mt-48">
           <div className=" w-72 h-96">
-            <div className="flex flex-col bg-white rounded-md shadow-md justify-center items-center mt-5 ml-10">
+            <div
+              data-aos="fade-right"
+              className="flex flex-col bg-white rounded-md shadow-md justify-center items-center mt-5 ml-10"
+            >
               <div className="flex items-center gap-x-2 mt-5">
                 <div className="bg-gray-300 rounded-full w-10 h-10 flex justify-center items-center">
                   01
@@ -318,7 +345,7 @@ const LandingPage = () => {
               </p>
             </div>
           </div>
-          <div className=" w-72 h-96">
+          <div data-aos="fade-up" className=" w-72 h-96">
             <div className="flex flex-col bg-white rounded-md shadow-md justify-center items-center gap-x-3 mt-5 ml-10">
               <div className="flex items-center gap-x-2 mt-5">
                 <div className="bg-gray-300 rounded-full w-10 h-10 flex justify-center items-center">
@@ -335,7 +362,7 @@ const LandingPage = () => {
               </p>
             </div>
           </div>
-          <div className=" w-72 h-96">
+          <div data-aos="fade-left" className=" w-72 h-96">
             <div className="flex flex-col bg-white rounded-md shadow-md justify-center items-center gap-x-3 mt-5 ml-10">
               <div className="flex items-center gap-x-2 mt-5">
                 <div className="bg-gray-300 rounded-full w-10 h-10 flex justify-center items-center">
@@ -352,7 +379,10 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center my-10">
+      <div
+        data-aos="fade-up"
+        className="flex flex-col justify-center items-center mt-16"
+      >
         <div className="relative">
           <p className="font-medium text-lg w-[764px] text-center relative z-10">
             Dengan berlangganan, kamu bisa request konten sebanyak mungkin.
@@ -378,10 +408,13 @@ const LandingPage = () => {
             <BsArrowRight size={15} className="text-P2 font-bold" />{" "}
           </a>
         </p>
-        <img src={Prototype} width={1000} className="mt-10" alt="" />
+        <img src={Prototype} width={1000} className="mt-16" alt="" />
       </div>
-      <div className="flex justify-center items-center">
-        <div className="relative flex flex-col justify-center items-center">
+      <div className="flex justify-center items-center mt-48">
+        <div
+          data-aos="fade-up"
+          className="relative flex flex-col justify-center items-center"
+        >
           <p className="font-bold text-5xl">
             Pilih paket yang sesuai untuk kamu
           </p>
@@ -397,7 +430,11 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="flex justify-center items-center my-10 gap-x-5 ">
-        <p className={`text-gray-300 font-semibold ${isChecked && "font-thin"}`}>Starter level</p>
+        <p
+          className={`text-gray-300 font-semibold ${isChecked && "font-thin"}`}
+        >
+          Starter level
+        </p>
 
         <label class="relative inline-flex items-center cursor-pointer">
           <input
@@ -413,7 +450,7 @@ const LandingPage = () => {
         </label>
       </div>
       <div className="flex justify-center items-center mt-10">
-        <div className="flex space-x-10">
+        <div data-aos="fade-up" className="flex space-x-10">
           <div className="bg-white p-6 rounded-lg shadow-lg text-start">
             <h2 className="flex items-center gap-x-3 text-lg font-semibold">
               Script Writing Team <AiOutlineInfoCircle className="text-P2" />
@@ -572,103 +609,209 @@ const LandingPage = () => {
           Upgrade 2 permintaan dalam 1 waktu
         </span>
       </p>
-      <div className="w-full bg-white py-32">
+      <div data-aos="fade-up" className="w-full bg-white py-32">
         <div className="w-6/12 rounded-xl mx-auto h-full">
-          <p className="font-bold text-4xl pl-5 pt-9">
-            Frequently asked question
+          <p className="font-bold text-center text-4xl mb-14 pl-5 pt-9">
+            Pertanyaan umum
           </p>
-          <div className="flex flex-col px-5 gap-y-5 py-8">
-            <div className="flex items-center justify-between border-b border-gray-500 py-5">
-              <p className="font-bold">Kenapa saya harus berlangganan?</p>
-              <IoIosArrowDown size={25} className="opacity-40" />
-            </div>
-            <div className="flex items-center justify-between border-b border-gray-500 py-5 ">
-              <p className="font-bold">
-                Bagaimana cara kerja satu permintaan dalam satu waktu?
+          <Faq
+            question={"Kenapa saya harus berlangganan?"}
+            answer={
+              "Kami memahami bahwa mungkin Anda merasa terbebani jika kami meminta Anda untuk menyiapkan sejumlah permintaan konten sekaligus untuk memenuhi jumlah paketan seperti layanan pada umumnya.Terlebih lagi, layanan seperti ini biasanya freelance, yang mungkin menimbulkan kesan kesulitan dalam melakukan transaksi berulang ketika menggunakan layanan serupa. Oleh karena itu, kami berupaya memberikan fleksibilitas permintaan konten, pembayaran, dan standar konten dengan menghadirkan fitur berlangganan jeda pada layanan kami. Tidak hanya itu, setiap paket dalam langganan ini mencakup permintaan tanpa batas, revisi tanpa batas, dan biaya berlangganan yang tetap. Selain itu, model ini dapat menjadi sumber motivasi untuk mencapai konsistensi dalam pembuatan konten, karena kita semua tahu bahwa kunci kesuksesan dalam konten adalah konsistensi."
+            }
+          />
+          <Faq
+            question={
+              "Apa bedanya jika saya langsung memesan 30 konten sekaligus secara freelance?"
+            }
+            answer={
+              "Ada beberapa perbedaan signifikan antara memesan 30 konten sekaligus secara freelance dan menggunakan layanan berlangganan kami. Pertama, biaya yang kami tawarkan adalah FLAT, yang berarti tidak akan ada biaya tambahan yang muncul secara mendadak. Selain itu, revisi juga kami sediakan tanpa biaya tambahan, memberikan fleksibilitas tanpa batas dalam mengatasi perubahan yang mungkin diperlukan. Begitu juga dengan cara berlangganan, kami memberikan nilai tambah yang berbeda. Kami beroperasi sebagai sebuah tim untuk Anda, yang bertujuan untuk menciptakan kolaborasi yang lebih efisien. Dengan menjadi bagian dari satu WhatsApp grup bersama Anda, Anda akan merasa seolah memiliki tim konten sendiri, memudahkan koordinasi dan komunikasi.Kami juga menawarkan fleksibilitas fitur jeda, sehingga Anda dapat menggunakan layanan kami sesuai kebutuhan Anda. Tak perlu khawatir untuk menyiapkan 30 konten sekaligus, berikan permintaan konten secara berkala dan jeda langganan jika tidak ada kebutuhan."
+            }
+          />
+          <Faq
+            question={"Bagaimana cara kerja satu permintaan dalam satu waktu?"}
+            answer={
+              "Sama seperti antrean streaming satu lagu di Spotify dalam satu waktu, permintaan dikerjakan satu per satu hingga selesai."
+            }
+          />
+          <Faq
+            question={"Bagaimana cara kerja fitur jeda?"}
+            answer={
+              "Kami memahami Anda mungkin tidak memiliki cukup permintaan untuk diisi sepanjang berlangganan. Mungkin saat ini Anda hanya memiliki satu atau dua permintaan konten. Di situlah menjeda langganan Anda berguna. Siklus penagihan didasarkan pada periode 31 hari. Katakanlah Anda mendaftar dan menggunakan layanan ini selama 21 hari, lalu memutuskan untuk menjeda langganan Anda. Ini berarti siklus penagihan akan dijeda dan Anda memiliki sisa layanan 10 hari untuk digunakan kapan saja di masa mendatang."
+            }
+          />
+          <Faq
+            question={"Bagaimana jika saya hanya mempunyai satu permintaan?"}
+            answer={
+              "Tidak apa-apa. Anda dapat menjeda langganan Anda setelah selesai dan kembali lagi ketika Anda memiliki kebutuhan konten lagi. Tidak perlu menyia-nyiakan sisa langganan Anda."
+            }
+          />
+          <Faq
+            question={
+              "Kenapa saya tidak memperkerjakan freelancer sendiri saja?"
+            }
+            answer={
+              "Bisa saja, tapi mengelola orang itu pusing. Proses mencarinya, hasil pengerjaannya, bahkan komunikasinya belum tentu cocok dengan Anda. Kami menghilangkan semua risiko dengan mengelola semua hal untuk Anda. Dengan paket bulanan, Anda dapat menjeda dan melanjutkan langganan sesering yang diperlukan untuk memastikan Anda hanya membayar tim konten Anda saat pekerjaan tersedia untuk mereka."
+            }
+          />
+          <Faq
+            question={"Apakah Anda yakin ini membantu saya berkembang?"}
+            answer={
+              "Setiap konten yang sukses adalah konten yang relevan bagi audiensnya. Kami tidak bisa menjamin pertumbuhan, tapi kami pastikan membantu Anda membuat konten terbaik. Kami memiliki tim konsultasi berpengalaman untuk berdiskusi dengan Anda dalam perencanaan konten Anda."
+            }
+          />
+          <Faq
+            question={
+              "Apakah ada batasan berapa banyak permintaan yang dapat saya ajukan?"
+            }
+            answer={
+              "Setelah berlangganan, Anda dapat menambahkan permintaan ke antrean sebanyak mungkin, dan permintaan tersebut akan dikirimkan satu per satu (dua sekaligus jika Anda membeli paket Exclusive) hingga semuanya selesai."
+            }
+          />
+          <Faq
+            question={"Berapa lama saya bisa menerima konten saya?"}
+            answer={
+              "Sebagian besar permintaan diselesaikan hanya dalam dua hari atau kurang. Namun, permintaan yang lebih kompleks bisa memakan waktu lebih lama."
+            }
+          />
+          <Faq
+            question={"Berapa banyak video yang saya dapatkan?"}
+            answer={
+              "Dengan rata-rata waktu penyelesaian dalam 2 hari, pelanggan biasanya menerima sekitar 16 video. Namun, jumlah ini dapat bervariasi tergantung pada tingkat kesulitan dari permintaan Anda. Jika permintaan videonya relatif mudah, maka kami dapat menyelesaikannya lebih cepat, dan Anda mungkin akan menerima lebih banyak video dalam periode yang sama."
+            }
+          />
+        </div>
+      </div>
+      <footer class="bg-F1 text-center text-black lg:text-left">
+        <div class="ml-20 pt-14">
+          <img src={Raky} width={250} alt="" />
+        </div>
+        <div class="mx-20 py-10 text-center md:text-left">
+          <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div class="">
+              <h6 class="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
+                PT Rakyfactory Digital Group
+              </h6>
+              <p class="mb-2">
+                <a href="#!" class="">
+                  Tentang kami
+                </a>
               </p>
-              <IoIosArrowDown size={25} className="opacity-40" />
-            </div>
-            <div className="flex items-center justify-between border-b border-gray-500 py-5">
-              <p className="font-bold">Bagaimana cara kerja fitur jeda?</p>
-              <IoIosArrowDown size={25} className="opacity-40" />
-            </div>
-            <div className="flex items-center justify-between border-b border-gray-500 py-5">
-              <p className="font-bold">
-                Bagaimana jika saya hanya mempunyai satu permintaan?
+              <p class="mb-2">
+                <a href="#!" class="">
+                  Affiliates{" "}
+                  <span className="bg-P1 text-P2 px-2 py-1 rounded-md text-xs font-semibold uppercase">
+                    Upcoming
+                  </span>
+                </a>
               </p>
-              <IoIosArrowDown size={25} className="opacity-40" />
-            </div>
-            <div className="flex items-center justify-between border-b border-gray-500 py-5">
-              <p className="font-bold">
-                Kenapa saya tidak memperkerjakan freelancer sendiri saja?
+              <p class="mb-2">
+                <a href="#!" class="">
+                  Program CSR{" "}
+                  <span className="bg-P1 text-P2 px-2 py-1 rounded-md text-xs font-semibold uppercase">
+                    Upcoming
+                  </span>
+                </a>
               </p>
-              <IoIosArrowDown size={25} className="opacity-40" />
-            </div>
-            <div className="flex items-center justify-between border-b border-gray-500 py-5">
-              <p className="font-bold">
-                Apakah Anda yakin ini membantu saya berkembang?
+              <p class="mb-2">
+                <a href="#!" class="">
+                  Karier{" "}
+                  <span className="bg-P1 text-P2 px-2 py-1 rounded-md text-xs font-semibold uppercase">
+                    Upcoming
+                  </span>
+                </a>
               </p>
-              <IoIosArrowDown size={25} className="opacity-40" />
             </div>
-            <div className="flex items-center justify-between border-b border-gray-500 py-5">
-              <p className="font-bold">
-                Apakah ada batasan berapa banyak permintaan yang dapat saya
-                ajukan?
+            <div class="">
+              <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+                Produk
+              </h6>
+              <p class="mb-2">
+                <a href="#!" class="">
+                  Script writing team
+                </a>
               </p>
-              <IoIosArrowDown size={25} className="opacity-40" />
-            </div>
-            <div className="flex items-center justify-between border-b border-gray-500 py-5">
-              <p className="font-bold">
-                Berapa lama saya bisa menerima konten saya?
+              <p class="mb-2">
+                <a href="#!" class="">
+                  Video editing team
+                </a>
               </p>
-              <IoIosArrowDown size={25} className="opacity-40" />
-            </div>
-            <div className="flex items-center justify-between border-b border-gray-500 py-5">
-              <p className="font-bold">
-                Berapa banyak video yang saya dapatkan?
+              <p class="mb-2">
+                <a href="#!" class="">
+                  Talent manager{" "}
+                  <span className="bg-P1 text-P2 px-2 py-1 rounded-md text-xs font-semibold uppercase">
+                    Upcoming
+                  </span>
+                </a>
               </p>
-              <IoIosArrowDown size={25} className="opacity-40" />
-            </div>
-            <div className="flex items-center justify-between border-b border-gray-500 py-5">
-              <p className="font-bold">
-                Bisakah Anda mengambil video saya yang berdurasi panjang <br />{" "}
-                dan mengubahnya menjadi video pendek?
+              <p class="mb-2">
+                <a href="#!" class="">
+                  Rakyfactory AI ✦⁺{" "}
+                  <span className="bg-P1 text-P2 px-2 py-1 rounded-md text-xs font-semibold uppercase">
+                    Upcoming
+                  </span>
+                </a>
               </p>
-              <IoIosArrowDown size={25} className="opacity-40" />
             </div>
-            <div className="flex items-center justify-between border-b border-gray-500 py-5">
-              <p className="font-bold">
-                Bagaimana cara mengirimkan konten saya?
+            <div class="">
+              <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+                Panduan
+              </h6>
+              <p class="mb-2">
+                <a href="#!">Biaya langganan</a>
               </p>
-              <IoIosArrowDown size={25} className="opacity-40" />
-            </div>
-            <div className="flex items-center justify-between border-b border-gray-500 py-5">
-              <p className="font-bold">
-                Apakah Anda menawarkan uji coba atau membuat konten contoh?
+              <p class="mb-2">
+                <a href="#!">Subscription-pause option</a>
               </p>
-              <IoIosArrowDown size={25} className="opacity-40" />
-            </div>
-            <div className="flex items-center justify-between border-b border-gray-500 py-5">
-              <p className="font-bold">Kenapa saya harus berlangganan?</p>
-              <IoIosArrowDown size={25} className="opacity-40" />
-            </div>
-            <div className="flex items-center justify-between border-b border-gray-500 py-5">
-              <p className="font-bold">
-                Bagaimana jika saya tidak puas dengan konten saya?
+              <p class="mb-2">
+                <a href="#!">Studi kasus</a>
               </p>
-              <IoIosArrowDown size={25} className="opacity-40" />
-            </div>
-            <div className="flex items-center justify-between  ">
-              <p className="font-bold">
-                Bisakah saya membatalkan layanan dan apakah ada pengembalian{" "}
-                <br />
-                dana jika saya ingin berhenti menggunakan layanan ini?
+              <p>
+                <a href="#!">
+                  Komunitas{" "}
+                  <span className="bg-P1 text-P2 px-2 py-1 rounded-md text-xs font-semibold uppercase">
+                    Upcoming
+                  </span>
+                </a>
               </p>
-              <IoIosArrowDown size={25} className="opacity-40" />
+            </div>
+            <div>
+              <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+                Hubungi kami
+              </h6>
+              <p class="mb-2 flex items-center justify-center md:justify-start">
+                Semarang, Indonesia
+              </p>
+              <p class="mb-2 flex items-center justify-center md:justify-start">
+                +62 819-4659-3466 (WA Only)
+              </p>
+              <p class="mb-2 flex items-center justify-center md:justify-start">
+                tanya@rakyfactory.com
+              </p>
+              <div className="flex gap-x-3">
+                <a
+                  href="https://www.linkedin.com/company/rakyfactory/"
+                  target="_blank"
+                  className="bg-black p-1 rounded-full"
+                >
+                  <AiFillLinkedin className="text-white" />
+                </a>
+                <a
+                  href="https://www.instagram.com/rakyfactory/"
+                  target="_blank"
+                  className="bg-black p-1 rounded-full"
+                >
+                  <AiOutlineInstagram className="text-white" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+        <hr className="w-8/12 mx-auto" />
+        <div class="bg-F1 p-6 text-center">
+          <span className="text-F2">Copyright © 2023 All rights reserved</span>
+        </div>
+      </footer>
     </>
   );
 };
