@@ -9,16 +9,6 @@ export default {
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
       },
-      fontWeight: {
-        "100": 100,
-        "200": 200,
-        "300": 300,
-        "400": 400,
-        "500": 500,
-        "600": 600,
-        "700": 700,
-        "800": 800,
-      },
       colors: {
         P1: "#F4F2FD",
         P2: "#7A5AE1",
