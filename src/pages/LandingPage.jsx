@@ -6,7 +6,6 @@ import {
   AiFillLinkedin,
   AiOutlineInstagram,
 } from "react-icons/ai";
-import { IoIosArrowDown } from "react-icons/io";
 import { FaCheck } from "react-icons/fa6";
 import Marquee from "react-fast-marquee";
 import Image1 from "../assets/image1.png";
@@ -34,7 +33,7 @@ import Cici from "../assets/cici.png";
 import Training from "../assets/training.png";
 import Faiz from "../assets/faiz.png";
 import Prototype from "../assets/prototype.png";
-import Raky from "../assets/raky.png";
+import Raky from "../assets/Raky.png";
 import Card from "../components/Card";
 import Faq from "../components/Faq";
 import AOS from "aos";
