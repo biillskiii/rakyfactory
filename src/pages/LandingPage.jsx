@@ -196,7 +196,7 @@ const LandingPage = () => {
         </div>
       </div>
       <Marquee
-        className="h-28 mt-10"
+        className="h-28 mt-10 gap-x-5"
         autoFill={true}
         pauseOnClick
         gradient={true}
@@ -244,7 +244,7 @@ const LandingPage = () => {
         </div>
       </Marquee>
       <Marquee
-        className="h-28"
+        className="h-28 gap-x-5"
         autoFill={true}
         pauseOnClick
         gradient={true}
