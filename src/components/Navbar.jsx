@@ -1,119 +1,89 @@
-import React from "react";
-import {
-  Navbar,
-  MobileNav,
-  Typography,
-  Button,
-  IconButton,
-} from "@material-tailwind/react";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { GrClose } from "react-icons/gr";
-import Logo from "../assets/logo.png"
-export default function NavbarDefault() {
-  const [openNav, setOpenNav] = React.useState(false);
+import React, { useState, useEffect } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import Logo from "../assets/logo.png";
+
+const NavbarDefault = () => {
+  const [openNav, setOpenNav] = useState(false);
 
   const isPathActive = (path) => {
-    return location.pathname === path ? "active" : "";
+    return window.location.pathname === path ? "active" : "";
   };
-  React.useEffect(() => {
-    window.addEventListener(
-      "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false)
-    );
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 960) {
+        setOpenNav(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const navList = (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal text-black"
-      >
-        <a href="#about" className={isPathActive("#about")}>
+    <ul className="text-sm mb-4 mt-2 ml-96 flex flex-col lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+      <li className="p-1 font-normal text-black">
+        <a href="#pesan" className={isPathActive("#pesan")}>
           What We Do
         </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal text-black"
-      >
-        <a href="#" className="flex items-center">
+      </li>
+      <li className="p-1 font-normal text-black">
+        <a href="#funfact" className="flex items-center">
           Testimonials
         </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal text-black"
-      >
-        <a href="#" className="flex items-center">
+      </li>
+      <li className="p-1 font-normal text-black">
+        <a href="#fitur" className="flex items-center">
           How it Works
         </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal text-black"
-      >
-        <a href="#" className="flex items-center">
+      </li>
+      <li className="p-1 font-normal text-black">
+        <a href="#pricing" className="flex items-center">
           Pricing
         </a>
-      </Typography>
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal text-black"
-      >
-        <a href="#" className="flex items-center">
+      </li>
+      <li className="p-1 font-normal text-black">
+        <a href="#faq" className="flex items-center">
           FAQ
         </a>
-      </Typography>
+      </li>
     </ul>
   );
 
   return (
-    <Navbar className="w-full h-fulll py-2 px-4 lg:px-8 lg:py-4 shadow-md">
+    <nav className="w-full h-fulll py-2 px-4 lg:px-8 lg:py-4 shadow-md">
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
-        <Typography
-          as="a"
+        <a
           href="#"
-          className=" text-2xl cursor-pointer py-1.5 font-bold text-black flex items-center gap-x-3"
+          className="text-2xl cursor-pointer py-1.5 font-bold text-black flex items-center gap-x-3"
         >
           <img src={Logo} width={30} alt="" />
           Rakyfactory
-        </Typography>
+        </a>
         <div className="hidden lg:block">{navList}</div>
-        <Button
-          variant="gradient"
-          size="sm"
-          className="hidden bg-[#7A5AE1] rounded-md p-3 lg:inline-block font-semibold"
-        >
-          <span className="text-white ">Join Waitlist</span>
-        </Button>
-
-        <IconButton
-          variant="text"
+        <button className="hidden bg-[#7A5AE1] rounded-md px-3 py-2 text-sm lg:inline-block font-medium text-white">
+          Join Waitlist
+        </button>
+        <button
           className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
-          ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >
-          {openNav ? <GrClose size={25} /> : <GiHamburgerMenu size={25} color="black" />}
-        </IconButton>
+          {openNav ? <FaTimes size={25} /> : <FaBars size={25} color="black" />}
+        </button>
       </div>
-      <MobileNav open={openNav}>
+      {openNav && (
         <div className="container mx-auto">
           {navList}
-          <Button variant="gradient" size="sm" fullWidth className="mb-2 text-white bg-[#7A5AE1] rounded-sm">
-            <span>Join Waitlist</span>
-          </Button>
+          <button className="mb-2 bg-[#7A5AE1] rounded-sm p-2 text-white">
+            Join Waitlist
+          </button>
         </div>
-      </MobileNav>
-    </Navbar>
+      )}
+    </nav>
   );
-}
+};
+
+export default NavbarDefault;

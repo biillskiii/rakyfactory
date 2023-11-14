@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: "Poppins", sans-serif;
+  background: url("../src/assets/background.png");
+  background-repeat: repeat-y;
+  background-size: 100%;
+  background-position-x: center;
+}
+li{
+    list-style: none;
+    text-decoration: none;
+}

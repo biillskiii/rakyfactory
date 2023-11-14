@@ -38,6 +38,7 @@ import Card from "../components/Card";
 import Faq from "../components/Faq";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ScrollUpButton from "../components/ScrollUp";
 const LandingPage = () => {
   const [isChecked, setIsChecked] = useState(false);
 
@@ -48,6 +49,7 @@ const LandingPage = () => {
     AOS.init();
     AOS.refresh();
   }, []);
+
   return (
     <>
       <div id="hero" className="flex flex-col text-center ">
@@ -66,16 +68,19 @@ const LandingPage = () => {
               : {}
           }
         />
-        <p className="font-medium text-sm my-10 px-4 lg:text-lg lg:px-2">
+        <p className="font-medium text-sm my-10 px-4 lg:text-xl lg:px-2">
           Dapatkan tim konten pribadimu untuk akses permintaan konten sebanyak
           mungkin <br /> dengan cara berlangganan. Dapat dijeda atau batalkan
           kapan saja.
         </p>
         <div className="flex gap-x-5 justify-center mt-3">
-          <button className="bg-[#7A5AE1] text-white font-bold rounded-md px-5 py-2 ">
+          <a
+            href="#paket"
+            className="bg-P2  text-white font-medium rounded-md px-5 py-3 "
+          >
             Lihat paket
-          </button>
-          <button className="bg-[#F4F2FD] text-[#7A5AE1] font-bold rounded-md px-3 py-2">
+          </a>
+          <button className="bg-[#F4F2FD] text-[#7A5AE1] font-medium rounded-md px-5 py-3">
             Konsultasi Gratis
           </button>
         </div>
@@ -85,13 +90,16 @@ const LandingPage = () => {
         </p>
         <div
           data-aos="fade-up"
-          className="w-[1200px] h-[352px] rounded-lg bg-white mx-auto mt-48 text-black shadow-lg relative flex"
+          className="w-[1232px] h-[352px] rounded-lg bg-white mx-auto mt-48 text-black shadow-lg relative flex"
         >
-          <div className="w-[500px] flex flex-col items-start ml-20 mt-14 mb-44">
-            <p className="font-bold text-xl ">
+          <div
+            id="pesan"
+            className="w-[649px] flex flex-col items-start ml-20 mt-14 mb-44"
+          >
+            <p className="font-bold text-3xl ">
               Pesan dari pak CEO Rakyfactory? 👀
             </p>
-            <img src={Pen2} className="mb-4" width={170} alt="" />
+            <img src={Pen2} className="mb-4" width={170} alt="pen2" />
             <p className="text-base text-start leading-[32px]">
               "Sebagai konten kreator pasti ada hambatannya. Mikirin ide konten,
               ngedit, susah bagi waktunya. Butuh tim biar bisa bantuin dan jadi
@@ -103,25 +111,29 @@ const LandingPage = () => {
               <BsArrowRight size={20} className="text-purple-500" />
             </button>
           </div>
-          <div className="ml-48 flex justify-center items-center">
-            <img src={Image5} alt="" width={350} />
+          <div className="ml-24 mb-5 flex justify-center items-center">
+            <img src={Image5} alt="avatar" width={350} />
           </div>
         </div>
         <div
+          id="fitur"
           data-aos="fade-up"
           className="flex flex-col h-full text-center justify-center items-center mt-48"
         >
-          <p className="font-bold text-5xl">
+          <h2 className="font-bold text-5xl">
             Kami hadir sebagai partner kontenmu
-          </p>
-          <p className="font-medium text-lg mt-4">
+          </h2>
+          <p className="font-medium text-xl mt-10">
             Kami menyediakan tim seperti content strategist, writer, dan video
             editor bertalenta untuk <br /> mengembangkan kontenmu. Tanpa pusing
             kelola tim. Tanpa biaya tambahan. Tanpa kontrak.
           </p>
-          <button className="bg-purple-500 text-white px-4 py-2 my-5 rounded-md">
+          <a
+            href="#paket"
+            className="bg-P2 hover:bg-[#280598] text-white px-4 py-2 mt-10 rounded-md cursor-pointer"
+          >
             Lihat paket berlangganan
-          </button>
+          </a>
           <div className="flex flex-wrap justify-center items-center mt-24 px-2 gap-x-40">
             <div data-aos="fade-up" className=" w-80 h-96">
               <div className="flex flex-col justify-center items-center gap-x-3 mt-5 ml-10">
@@ -188,7 +200,7 @@ const LandingPage = () => {
                 <p className="font-bold text-xl text-center mt-4">
                   Unlimited revisions
                 </p>
-                <p className="text-xs text-center mt-3.5 mb-10">
+                <p className="text-sm text-center mt-3.5 mb-10">
                   Tim konten kamu akan terus melakukan revisi sampai kamu puas!
                   Tanpa biaya tambahan.
                 </p>
@@ -198,13 +210,14 @@ const LandingPage = () => {
         </div>
       </div>
       <div
+        id="funfact"
         data-aos="fade-up"
         className="flex justify-center items-center mt-48"
       >
-        <div className="w-[520px]">
-          <p className="font-bold text-3xl">Fun fact tentang Rakyfactory?</p>
+        <div className="w-[794px]">
+          <p className="font-bold text-5xl">Fun fact tentang Rakyfactory?</p>
 
-          <p className="text-sm w-full">
+          <p className="text-xl w-full mt-4">
             Rakyfactory meraih apresiasi dari pemerintah dan dukungan
             universitas, sekaligus telah bermitra dengan sejumlah Content
             Creator 🫶🏻
@@ -309,6 +322,7 @@ const LandingPage = () => {
         </div>
       </Marquee>
       <div
+        id="yourcontentpartner"
         data-aos="fade-up"
         className="flex flex-col justify-center items-center mt-48"
       >
@@ -316,7 +330,7 @@ const LandingPage = () => {
           <p className="font-bold text-5xl text-center z-20">
             Dapatkan tim konten pribadimu
           </p>
-          <img src={Pen3} width={400} className="ml-80 z-10" alt="" />
+          <img src={Pen3} width={400} className="ml-80 z-10" alt="pen3" />
           <p className="font-medium text-xl mt-5 text-center  w-[825px]">
             Kami akan membantu membuat konten bernilai secara konsisten, yang{" "}
             <br />
@@ -379,11 +393,12 @@ const LandingPage = () => {
         </div>
       </div>
       <div
+        id="sistem"
         data-aos="fade-up"
         className="flex flex-col justify-center items-center mt-16"
       >
         <div className="relative">
-          <p className="font-medium text-lg w-[764px] text-center relative z-10">
+          <p className="font-medium text-xl w-[764px] text-center relative z-10">
             Dengan berlangganan, kamu bisa request konten sebanyak mungkin.
             Kalau lagi nggak butuh, kamu bisa jeda langganan kapan pun ⏳
           </p>
@@ -399,7 +414,7 @@ const LandingPage = () => {
           </span>
           .{" "}
           <a
-            href="https://trello.com/b/0cYbLlF0/beta-version-prototype"
+            href="https://trello.com/b/c9RKe2pl/beta-version-prototype"
             target="_blank"
             className="flex items-center gap-x-1 text-P2 font-semibold"
           >
@@ -407,9 +422,9 @@ const LandingPage = () => {
             <BsArrowRight size={15} className="text-P2 font-bold" />{" "}
           </a>
         </p>
-        <img src={Prototype} width={1000} className="mt-16" alt="" />
+        <img src={Prototype} width={1000} className="mt-16" alt="prototype" />
       </div>
-      <div className="flex justify-center items-center mt-48">
+      <div id="paket" className="flex justify-center items-center mt-48">
         <div
           data-aos="fade-up"
           className="relative flex flex-col justify-center items-center"
@@ -417,7 +432,7 @@ const LandingPage = () => {
           <p className="font-bold text-5xl">
             Pilih paket yang sesuai untuk kamu
           </p>
-          <p className="font-medium mt-8 text-lg">
+          <p className="font-medium mt-8 text-xl">
             Biaya tetap. Tanpa kontrak. Tanpa pusing kelola tim 🙅🏻
           </p>
           <p className="absolute bg-P1 px-1 py-1.5 text-P2 font-semibold border-2 border-P3 rounded-md text-xs -rotate-3 top-20 left-64 uppercase shadow-md">
@@ -428,9 +443,14 @@ const LandingPage = () => {
           </p>
         </div>
       </div>
-      <div className="flex justify-center items-center my-10 gap-x-5 ">
+      <div
+        id="pricing"
+        className="flex justify-center items-center my-10 gap-x-5 "
+      >
         <p
-          className={`text-gray-300 font-semibold ${isChecked && "font-thin"}`}
+          className={`ms-3 text-lg ${
+            isChecked ? "font-medium text-gray-300" : " font-semibold text-B1"
+          }`}
         >
           Starter level
         </p>
@@ -439,11 +459,15 @@ const LandingPage = () => {
           <input
             type="checkbox"
             value=""
-            class="sr-only peer"
+            className="sr-only peer"
             onChange={handleToggleChange}
           />
-          <div class="w-11 h-6 bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-P2"></div>
-          <span class={`ms-3 text-sm text-P2 ${isChecked && "font-semibold"}`}>
+          <div class="w-11 h-6  bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-P2"></div>
+          <span
+            className={`ms-3 text-lg ${
+              isChecked ? "font-semibold text-P2" : " font-medium text-P3"
+            }`}
+          >
             Creator level (hemat 28%)
           </span>
         </label>
@@ -454,9 +478,9 @@ const LandingPage = () => {
             <h2 className="flex items-center gap-x-3 text-lg font-semibold">
               Script Writing Team <AiOutlineInfoCircle className="text-P2" />
             </h2>
-            <p class="text-lg font-bold mb-2">
+            <p class="text-lg font-semibold mb-2">
               {isChecked ? "Rp3,199 jt" : "Rp2,199 jt"}
-              <span className="text-xs font-thin">
+              <span className="text-xs font-normal">
                 {isChecked ? "/ periode 31 hari" : "/ periode 15 hari"}
               </span>
             </p>
@@ -492,7 +516,7 @@ const LandingPage = () => {
                 <AiOutlineInfoCircle className="text-P2" />
               </li>
             </ul>
-            <button className="w-full bg-P2 text-white py-2 px-4 rounded-md hover:bg-purple-600 focus:outline-none focus:ring focus:border-purple-300">
+            <button className="w-full bg-P2 text-white py-2 px-4 rounded-md hover:bg-[#280598] focus:outline-none focus:ring focus:border-purple-300">
               Join Waitlist
             </button>
             <p className="text-xs text-center mt-3">
@@ -503,9 +527,9 @@ const LandingPage = () => {
             <h2 className="flex items-center gap-x-3 text-lg font-semibold">
               Video Editing Team <AiOutlineInfoCircle className="text-P2" />
             </h2>
-            <p class="text-lg font-bold mb-2">
+            <p class="text-lg font-semibold mb-2">
               {isChecked ? "Rp3,199 jt" : "Rp2,199 jt"}
-              <span className="text-xs font-thin">
+              <span className="text-xs font-normal">
                 {isChecked ? "/ periode 31 hari" : "/ periode 15 hari"}
               </span>
             </p>
@@ -543,7 +567,7 @@ const LandingPage = () => {
                 <AiOutlineInfoCircle className="text-P2" />
               </li>
             </ul>
-            <button className="w-full bg-P2 text-white py-2 px-4 rounded-md hover:bg-purple-600 focus:outline-none focus:ring focus:border-purple-300">
+            <button className="w-full bg-P2 text-white py-2 px-4 rounded-md hover:bg-[#280598] focus:outline-none focus:ring focus:border-purple-300">
               Join Waitlist
             </button>
             <p className="text-xs text-center mt-3">
@@ -555,9 +579,9 @@ const LandingPage = () => {
               <h2 className="flex items-center gap-x-3 text-lg font-semibold">
                 Premium Bundling <AiOutlineInfoCircle className="text-P2" />
               </h2>
-              <p class="text-lg font-bold mb-2">
+              <p class="text-lg font-semibold mb-2">
                 Rp5,499 jt{" "}
-                <span className="text-xs font-thin">/ periode 31 hari</span>
+                <span className="text-xs font-normal">/ periode 31 hari</span>
               </p>
               <p className="text-xs">
                 Dapatkan tim video editor dan script <br /> writer untuk
@@ -592,7 +616,7 @@ const LandingPage = () => {
                   <AiOutlineInfoCircle className="text-P2" />
                 </li>
               </ul>
-              <button className="w-full bg-P2 text-white py-2 px-4 rounded-md hover:bg-purple-600 focus:outline-none focus:ring focus:border-purple-300">
+              <button className="w-full bg-P2 text-white py-2 px-4 rounded-md hover:bg-[#280598] focus:outline-none focus:ring focus:border-purple-300">
                 Join Waitlist
               </button>
               <p className="text-xs text-center mt-3">
@@ -608,7 +632,7 @@ const LandingPage = () => {
           Upgrade 2 permintaan dalam 1 waktu
         </span>
       </p>
-      <div data-aos="fade-up" className="w-full bg-white py-32">
+      <div id="faq" data-aos="fade-up" className="w-full py-32">
         <div className="w-6/12 rounded-xl mx-auto h-full">
           <p className="font-bold text-center text-4xl mb-14 pl-5 pt-9">
             Pertanyaan umum
@@ -683,9 +707,9 @@ const LandingPage = () => {
       </div>
       <footer class="bg-F1 text-center text-black lg:text-left">
         <div class="ml-20 pt-14">
-          <img src={Raky} width={250} alt="" />
+          <img src={Raky} width={250} alt="logo raky" />
         </div>
-        <div class="mx-20 py-10 text-center md:text-left">
+        <div class="mx-20 mt-5  text-center md:text-left">
           <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             <div class="">
               <h6 class="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
@@ -697,28 +721,28 @@ const LandingPage = () => {
                 </a>
               </p>
               <p class="mb-2">
-                <a href="#!" class="">
+                <li>
                   Affiliates{" "}
                   <span className="bg-P1 text-P2 px-2 py-1 rounded-md text-xs font-semibold uppercase">
                     Upcoming
                   </span>
-                </a>
+                </li>
               </p>
               <p class="mb-2">
-                <a href="#!" class="">
+                <li href="#!" class="">
                   Program CSR{" "}
                   <span className="bg-P1 text-P2 px-2 py-1 rounded-md text-xs font-semibold uppercase">
                     Upcoming
                   </span>
-                </a>
+                </li>
               </p>
               <p class="mb-2">
-                <a href="#!" class="">
+                <li href="#!" class="">
                   Karier{" "}
                   <span className="bg-P1 text-P2 px-2 py-1 rounded-md text-xs font-semibold uppercase">
                     Upcoming
                   </span>
-                </a>
+                </li>
               </p>
             </div>
             <div class="">
@@ -726,30 +750,30 @@ const LandingPage = () => {
                 Produk
               </h6>
               <p class="mb-2">
-                <a href="#!" class="">
+                <li href="#!" class="">
                   Script writing team
-                </a>
+                </li>
               </p>
               <p class="mb-2">
-                <a href="#!" class="">
+                <li href="#!" class="">
                   Video editing team
-                </a>
+                </li>
               </p>
               <p class="mb-2">
-                <a href="#!" class="">
+                <li href="#!" class="">
                   Talent manager{" "}
                   <span className="bg-P1 text-P2 px-2 py-1 rounded-md text-xs font-semibold uppercase">
                     Upcoming
                   </span>
-                </a>
+                </li>
               </p>
               <p class="mb-2">
-                <a href="#!" class="">
+                <li href="#!" class="">
                   Rakyfactory AI ✦⁺{" "}
                   <span className="bg-P1 text-P2 px-2 py-1 rounded-md text-xs font-semibold uppercase">
                     Upcoming
                   </span>
-                </a>
+                </li>
               </p>
             </div>
             <div class="">
@@ -757,21 +781,21 @@ const LandingPage = () => {
                 Panduan
               </h6>
               <p class="mb-2">
-                <a href="#!">Biaya langganan</a>
+                <li href="#!">Biaya langganan</li>
               </p>
               <p class="mb-2">
-                <a href="#!">Subscription-pause option</a>
+                <li href="#!">Subscription-pause option</li>
               </p>
               <p class="mb-2">
-                <a href="#!">Studi kasus</a>
+                <li href="#!">Studi kasus</li>
               </p>
               <p>
-                <a href="#!">
+                <li href="#!">
                   Komunitas{" "}
                   <span className="bg-P1 text-P2 px-2 py-1 rounded-md text-xs font-semibold uppercase">
                     Upcoming
                   </span>
-                </a>
+                </li>
               </p>
             </div>
             <div>
@@ -811,6 +835,7 @@ const LandingPage = () => {
           <span className="text-F2">Copyright © 2023 All rights reserved</span>
         </div>
       </footer>
+      <ScrollUpButton />
     </>
   );
 };
