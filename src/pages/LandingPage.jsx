@@ -38,7 +38,7 @@ import Card from "../components/Card";
 import Faq from "../components/Faq";
 import Pen4 from "../assets/Pen4.png";
 import Pen5 from "../assets/Pen5.png";
-import Pen6 from "../assets/Pen6.png";
+import Whatsapp from "../components/Whatsapp";
 import Pen9 from "../assets/Pen9.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -691,7 +691,12 @@ const LandingPage = () => {
             {" "}
             Pertanyaan umum
           </p>
-          <img src={Pen9} alt="pen9" className="absolute top-40 left-96" width={100} />
+          <img
+            src={Pen9}
+            alt="pen9"
+            className="absolute top-40 left-96"
+            width={100}
+          />
 
           <Faq
             question={"Kenapa saya harus berlangganan?"}
@@ -891,7 +896,10 @@ const LandingPage = () => {
           <span className="text-F2">Copyright © 2023 All rights reserved</span>
         </div>
       </footer>
-      <ScrollUpButton />
+      <div className="flex flex-col gap-y-4">
+        <ScrollUpButton />
+        <Whatsapp />
+      </div>
     </>
   );
 };
