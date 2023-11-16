@@ -4,31 +4,28 @@ import Logo from "../assets/logo.png";
 
 const NavbarDefault = () => {
   const [openNav, setOpenNav] = useState(false);
-
-  const isPathActive = (path) => {
-    return window.location.pathname === path ? "active" : "";
-  };
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 960) {
-        setOpenNav(false);
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
       }
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const navList = (
     <ul className="text-sm mb-4 mt-2 ml-96 flex flex-col lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <li className="p-1 font-normal text-black">
-        <a href="#pesan" className={isPathActive("#pesan")}>
-          What We Do
-        </a>
+        <a href="#pesan">What We Do</a>
       </li>
       <li className="p-1 font-normal text-black">
         <a href="#funfact" className="flex items-center">
@@ -54,7 +51,13 @@ const NavbarDefault = () => {
   );
 
   return (
-    <nav className="w-full h-fulll py-2 px-4 lg:px-8 lg:py-4 shadow-md">
+    <nav
+      className={`w-full h-full bg-transparent ${
+        isScrolled
+          ? "bg-white sticky top-0 py-2 px-4 lg:px-8 lg:py-4 shadow-md z-50"
+          : "bg-transparent sticky top-0 py-2 px-4 lg:px-8 lg:py-4 z-50"
+      }`}
+    >
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
         <a
           href="#"

@@ -6,10 +6,29 @@ body {
   font-family: "Poppins", sans-serif;
   background: url("../src/assets/background.png");
   background-repeat: repeat-y;
-  background-size: 100%;
-  background-position-x: center;
+  background-size: 140%;
+  background-position: 10% 0;
 }
-li{
-    list-style: none;
-    text-decoration: none;
+li {
+  list-style: none;
+  text-decoration: none;
+}
+/* YourComponent.css */
+
+.popup {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1;
+}
+
+.hover-icon:hover + #popup {
+  display: block;
+  /* Add positioning styles based on your layout */
+  /* Example positioning styles: */
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
 }

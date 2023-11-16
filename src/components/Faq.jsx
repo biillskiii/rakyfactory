@@ -1,20 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 const Faq = ({ question, answer }) => {
   const [isTextVisible, setIsTextVisible] = useState(false);
+  const faqRef = useRef(null);
 
   const handleArrowClick = () => {
     setIsTextVisible(!isTextVisible);
   };
 
+  const handleClickOutside = (event) => {
+    if (faqRef.current && !faqRef.current.contains(event.target)) {
+      setIsTextVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="flex flex-col py-2">
+    <div ref={faqRef} className="flex flex-col py-2">
       <button
         onClick={handleArrowClick}
         className="w-full flex items-center justify-between border-b border-gray-500 py-5"
       >
-        <p className="font-medium">{question}</p>
+        <p className="font-semibold">{question}</p>
         {isTextVisible ? (
           <IoIosArrowUp size={25} className="opacity-40 cursor-pointer" />
         ) : (
@@ -22,7 +37,7 @@ const Faq = ({ question, answer }) => {
         )}
       </button>
       {isTextVisible && (
-        <div className="mt-2 font-semibold">
+        <div className="mt-2 font-normal">
           <p>{answer}</p>
         </div>
       )}

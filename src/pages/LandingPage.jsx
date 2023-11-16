@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BsStars } from "react-icons/bs";
+import { BsArrowLeft, BsStars } from "react-icons/bs";
 import { BsArrowRight } from "react-icons/bs";
 import {
   AiOutlineInfoCircle,
@@ -36,11 +36,20 @@ import Prototype from "../assets/prototype.png";
 import Raky from "../assets/Raky.png";
 import Card from "../components/Card";
 import Faq from "../components/Faq";
+import Pen4 from "../assets/Pen4.png";
+import Pen5 from "../assets/Pen5.png";
+import Pen6 from "../assets/Pen6.png";
+import Pen9 from "../assets/Pen9.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollUpButton from "../components/ScrollUp";
 const LandingPage = () => {
   const [isChecked, setIsChecked] = useState(false);
+  const [showFullContent, setShowFullContent] = useState(false);
+
+  const toggleContent = () => {
+    setShowFullContent(!showFullContent);
+  };
 
   const handleToggleChange = () => {
     setIsChecked(!isChecked);
@@ -84,32 +93,61 @@ const LandingPage = () => {
             Konsultasi Gratis
           </button>
         </div>
-        <p className="text-xs mt-5 flex justify-center items-center opacity-40">
+        <p className="text-[#7C7C7C] font-medium text-xs mt-5 flex justify-center items-center opacity-40">
           <BsStars color="black" size={20} />
           Tanpa kontrak. Tanpa biaya tambahan.
         </p>
         <div
           data-aos="fade-up"
-          className="w-[1232px] h-[352px] rounded-lg bg-white mx-auto mt-48 text-black shadow-lg relative flex"
+          className="w-[1232px] h-[352px] rounded-3xl bg-white mx-auto mt-48 text-black shadow-lg relative flex"
         >
           <div
             id="pesan"
-            className="w-[649px] flex flex-col items-start ml-20 mt-14 mb-44"
+            className="w-[649px] flex flex-col items-start ml-20 my-16 mb-44"
           >
             <p className="font-bold text-3xl ">
-              Pesan dari pak CEO Rakyfactory? 👀
+              {!showFullContent ? (
+                "Pesan dari pak CEO Rakyfactory? 👀"
+              ) : (
+                <p className="font-bold text-3xl">
+                  Razan Musyaffa -{" "}
+                  <span className="font-normal"> CEO & Content Creator</span>
+                </p>
+              )}
             </p>
-            <img src={Pen2} className="mb-4" width={170} alt="pen2" />
-            <p className="text-base text-start leading-[32px]">
-              "Sebagai konten kreator pasti ada hambatannya. Mikirin ide konten,
-              ngedit, susah bagi waktunya. Butuh tim biar bisa bantuin dan jadi
-              temen diskusi, tapi susah nyari yang cocok dan malah bikin nambah
-              pusing kelolanya..."
-            </p>
-            <button className="text-purple-500 flex items-center gap-x-3 mt-8 mb-20">
-              Lihat selengkapnya
-              <BsArrowRight size={20} className="text-purple-500" />
-            </button>
+            <img src={Pen2} className="mb-4" width={270} alt="pen2" />
+            {!showFullContent ? (
+              <p className="text-base text-start leading-[32px]">
+                "Sebagai konten kreator pasti ada hambatannya. Mikirin ide
+                konten, ngedit, susah bagi waktunya. Butuh tim biar bisa bantuin
+                dan jadi temen diskusi, tapi susah nyari yang cocok dan malah
+                bikin nambah pusing kelolanya..."
+              </p>
+            ) : (
+              <p className="text-base text-start leading-[32px]">
+                ...Maka dari itu, hadirlah Rakyfactory untuk membantu kamu
+                berproses sebagai konten kreator. Kami ingin menjadi partner
+                kontenmu dan bersama-sama tumbuh untuk menciptakan peluang
+                bermanfaat bagi orang lain juga
+              </p>
+            )}
+            {!showFullContent ? (
+              <button
+                onClick={toggleContent}
+                className="text-P2 font-medium flex items-center gap-x-3 mt-8 mb-20"
+              >
+                Lihat selengkapnya
+                <BsArrowRight size={20} className="text-P2 font-medium" />
+              </button>
+            ) : (
+              <button
+                onClick={toggleContent}
+                className="text-P2 font-medium flex items-center gap-x-3 mt-8 mb-20"
+              >
+                <BsArrowLeft size={20} className="text-P2 font-medium" />
+                Kembali
+              </button>
+            )}
           </div>
           <div className="ml-24 mb-5 flex justify-center items-center">
             <img src={Image5} alt="avatar" width={350} />
@@ -215,7 +253,16 @@ const LandingPage = () => {
         className="flex justify-center items-center mt-48"
       >
         <div className="w-[794px]">
-          <p className="font-bold text-5xl">Fun fact tentang Rakyfactory?</p>
+          <img src={Pen4} alt="pen4" width={50} className="ms-auto" />
+          <p className="font-bold text-5xl z-20">
+            Fun fact tentang Rakyfactory?
+          </p>
+          <img
+            src={Pen5}
+            alt="pen4"
+            width={300}
+            className="ms-auto mr-20 z-10"
+          />
 
           <p className="text-xl w-full mt-4">
             Rakyfactory meraih apresiasi dari pemerintah dan dukungan
@@ -223,13 +270,13 @@ const LandingPage = () => {
             Creator 🫶🏻
           </p>
         </div>
-        <div className="flex items-start">
+        <div className="flex items-center">
           <img src={Wmp} width={200} alt="wmp" />
-          <img src={Unnes} width={180} alt="unnes" />
+          <img src={Unnes} width={170} alt="unnes" />
         </div>
       </div>
       <Marquee
-        className="h-28 mt-24 gap-x-5"
+        className="w-full h-28 mt-24 gap-x-5"
         autoFill={true}
         pauseOnClick
         gradient={true}
@@ -277,7 +324,7 @@ const LandingPage = () => {
         </div>
       </Marquee>
       <Marquee
-        className="h-28 gap-x-5"
+        className="w-full h-28 gap-x-5 "
         autoFill={true}
         pauseOnClick
         gradient={true}
@@ -324,21 +371,21 @@ const LandingPage = () => {
       <div
         id="yourcontentpartner"
         data-aos="fade-up"
-        className="flex flex-col justify-center items-center mt-48"
+        className="flex flex-col justify-center items-center mt-48 "
       >
         <div className="flex flex-col">
           <p className="font-bold text-5xl text-center z-20">
             Dapatkan tim konten pribadimu
           </p>
-          <img src={Pen3} width={400} className="ml-80 z-10" alt="pen3" />
+          <img src={Pen3} width={500} className="ml-72 z-10" alt="pen3" />
           <p className="font-medium text-xl mt-5 text-center  w-[825px]">
             Kami akan membantu membuat konten bernilai secara konsisten, yang{" "}
             <br />
             membawa kamu mencapai tujuan sebagai Content Creator 🚀
           </p>
         </div>
-        <div className="flex mt-48">
-          <div className=" w-72 h-96">
+        <div className="flex mt-48 gap-x-14">
+          <div className=" w-72 h-96 ">
             <div
               data-aos="fade-right"
               className="flex flex-col bg-white rounded-md shadow-md justify-center items-center mt-5 ml-10"
@@ -360,13 +407,19 @@ const LandingPage = () => {
           </div>
           <div data-aos="fade-up" className=" w-72 h-96">
             <div className="flex flex-col bg-white rounded-md shadow-md justify-center items-center gap-x-3 mt-5 ml-10">
-              <div className="flex items-center gap-x-2 mt-5">
+              <div className="flex items-center gap-x-1 mt-5">
                 <div className="bg-gray-300 rounded-full w-10 h-10 flex justify-center items-center">
                   02
                 </div>
-                <p className="font-bold text-sm text-center">
-                  Gabung di Rakyclub
-                </p>
+                <div className="group relative inline-block">
+                  <div className="cursor-pointer flex items-center gap-x-1 group-hover: p-2">
+                    <p>Gabung di Rakyclub </p>
+                    <AiOutlineInfoCircle className="text-P2 text-lg" />
+                  </div>
+                  <div className="hidden group-hover:block absolute bg-white shadow-md p-2 rounded-md -mt-1">
+                    <p>Your Tooltip Text</p>
+                  </div>
+                </div>
               </div>
               <img src={Image2} width={150} className="mx-auto mt-5" />
               <p className="text-xs text-start px-3 mt-3.5 mb-10">
@@ -402,9 +455,6 @@ const LandingPage = () => {
             Dengan berlangganan, kamu bisa request konten sebanyak mungkin.
             Kalau lagi nggak butuh, kamu bisa jeda langganan kapan pun ⏳
           </p>
-          <p className="absolute bg-P2 rounded-md px-3 py-2 text-white font-semibold text-sm top-1 -left-10 -rotate-3 z-20">
-            FULL VERSION PROTOTYPE 🤩
-          </p>
         </div>
 
         <p className=" flex items-center gap-x-1 text-xs my-2 font-semibold ">
@@ -422,6 +472,9 @@ const LandingPage = () => {
             <BsArrowRight size={15} className="text-P2 font-bold" />{" "}
           </a>
         </p>
+        <p className="absolute bg-P2 rounded-md px-3 py-2 text-white font-semibold text-sm top-40 left-44 -rotate-3 z-20">
+          FULL VERSION PROTOTYPE 🤩
+        </p>
         <img src={Prototype} width={1000} className="mt-16" alt="prototype" />
       </div>
       <div id="paket" className="flex justify-center items-center mt-48">
@@ -434,12 +487,6 @@ const LandingPage = () => {
           </p>
           <p className="font-medium mt-8 text-xl">
             Biaya tetap. Tanpa kontrak. Tanpa pusing kelola tim 🙅🏻
-          </p>
-          <p className="absolute bg-P1 px-1 py-1.5 text-P2 font-semibold border-2 border-P3 rounded-md text-xs -rotate-3 top-20 left-64 uppercase shadow-md">
-            Paling dibutuhkan
-          </p>
-          <p className="absolute bg-P2 px-1 py-2 text-P1 font-semibold rounded-md text-xs rotate-3 top-20 -right-44 uppercase shadow-md">
-            HEMAT 900 RIBU! 🤑
           </p>
         </div>
       </div>
@@ -473,9 +520,9 @@ const LandingPage = () => {
         </label>
       </div>
       <div className="flex justify-center items-center mt-10">
-        <div data-aos="fade-up" className="flex space-x-10">
+        <div data-aos="fade-up" className="flex flex-wrap  space-x-10">
           <div className="bg-white p-6 rounded-lg shadow-lg text-start">
-            <h2 className="flex items-center gap-x-3 text-lg font-semibold">
+            <h2 className="flex  items-center gap-x-3 text-lg font-semibold">
               Script Writing Team <AiOutlineInfoCircle className="text-P2" />
             </h2>
             <p class="text-lg font-semibold mb-2">
@@ -524,6 +571,9 @@ const LandingPage = () => {
             </p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg text-start">
+            <p className="absolute bg-P1 px-1 py-1.5 text-P2 font-semibold border-2 border-P3 rounded-md text-xs -rotate-3 top-1 left-72 uppercase shadow-md">
+              Paling dibutuhkan
+            </p>
             <h2 className="flex items-center gap-x-3 text-lg font-semibold">
               Video Editing Team <AiOutlineInfoCircle className="text-P2" />
             </h2>
@@ -576,6 +626,9 @@ const LandingPage = () => {
           </div>
           {isChecked && (
             <div className="bg-white p-6 rounded-lg shadow-lg text-start">
+              <p className="absolute bg-P2 px-1 py-2 text-P1 font-semibold rounded-md text-xs rotate-3 top-1 -right-5 uppercase shadow-md">
+                HEMAT 900 RIBU! 🤑
+              </p>
               <h2 className="flex items-center gap-x-3 text-lg font-semibold">
                 Premium Bundling <AiOutlineInfoCircle className="text-P2" />
               </h2>
@@ -633,10 +686,13 @@ const LandingPage = () => {
         </span>
       </p>
       <div id="faq" data-aos="fade-up" className="w-full py-32">
-        <div className="w-6/12 rounded-xl mx-auto h-full">
-          <p className="font-bold text-center text-4xl mb-14 pl-5 pt-9">
+        <div className="w-9/12 rounded-xl mx-auto h-full">
+          <p className="font-bold flex justify-center gap-x-5 text-5xl mb-14 pt-9">
+            {" "}
             Pertanyaan umum
           </p>
+          <img src={Pen9} alt="pen9" className="absolute top-40 left-96" width={100} />
+
           <Faq
             question={"Kenapa saya harus berlangganan?"}
             answer={
