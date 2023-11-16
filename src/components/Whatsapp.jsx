@@ -26,7 +26,7 @@ const Whatsapp = () => {
   return (
     <>
       {isVisible && (
-        <div className="fixed bg-P1 shadow-md rounded-full px-2 py-2 bottom-24 right-10 flex items-center justify-center">
+        <div className="fixed bg-P1 shadow-md rounded-full px-2 py-2 bottom-24 right-10 flex items-center justify-center z-10">
           <button onClick={handleClick} className={isVisible ? "block" : "hidden"}>
             <ImWhatsapp size={20} className="text-green-500" />
           </button>
