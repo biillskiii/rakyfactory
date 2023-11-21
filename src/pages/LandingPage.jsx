@@ -62,25 +62,25 @@ const LandingPage = () => {
   return (
     <>
       <div id="hero" className="flex flex-col text-center ">
-        <p className="font-bold text-xl lg:text-5xl mt-32">
+        <p className="font-bold text-4xl lg:text-5xl mt-32 z-20">
           We help your content growth more easily
         </p>
         <img
           id="pen1"
-          className="ms-auto ml-72 lg:mr-52"
+          className="ms-auto ml-72 lg:mr-60 z-10"
           src={Pen1}
           width={300}
           alt="pencil"
           style={
             window.matchMedia("(max-width: 768px)").matches
-              ? { width: 100 }
+              ? { width: 220, marginRight: 90 }
               : {}
           }
         />
-        <p className="font-medium text-sm my-10 px-4 lg:text-xl lg:px-2">
+        <p className="font-medium text-[#505050] text-sm text-center w-80 ml-60 lg:w-8/12 my-10 px-4 lg:text-xl lg:px-2">
           Dapatkan tim konten pribadimu untuk akses permintaan konten sebanyak
-          mungkin <br /> dengan cara berlangganan. Dapat dijeda atau batalkan
-          kapan saja.
+          mungkin dengan cara berlangganan. Dapat dijeda atau batalkan kapan
+          saja.
         </p>
         <div className="flex gap-x-5 justify-center mt-3">
           <a
@@ -93,18 +93,16 @@ const LandingPage = () => {
             Konsultasi Gratis
           </button>
         </div>
-        <p className="text-[#7C7C7C] font-medium text-xs mt-5 flex justify-center items-center opacity-40">
-          <BsStars color="black" size={20} />
+        <p className="text-[#7C7C7C] font-medium text-xs mt-6 flex justify-center items-center">
+          <BsStars className="text-[#7C7C7C]" size={20} />
           Tanpa kontrak. Tanpa biaya tambahan.
         </p>
+        <div id="pesan"></div>
         <div
           data-aos="fade-up"
           className="w-[1232px] h-[352px] rounded-3xl bg-white mx-auto mt-48 text-black shadow-lg relative flex"
         >
-          <div
-            id="pesan"
-            className="w-[649px] flex flex-col items-start ml-20 my-16 mb-44"
-          >
+          <div className="w-[649px] flex flex-col items-start ml-20 my-16 mb-44">
             <p className="font-bold text-3xl ">
               {!showFullContent ? (
                 "Pesan dari pak CEO Rakyfactory? 👀"
@@ -153,8 +151,8 @@ const LandingPage = () => {
             <img src={Image5} alt="avatar" width={350} />
           </div>
         </div>
+        <div id="fitur"></div>
         <div
-          id="fitur"
           data-aos="fade-up"
           className="flex flex-col h-full text-center justify-center items-center mt-48"
         >
@@ -191,7 +189,7 @@ const LandingPage = () => {
                 <p className="font-bold text-xl text-center mt-4">
                   Subscription-pause option
                 </p>
-                <p className="text-xs text-center mt-3.5 mb-10">
+                <p className="text-xs text-center mb-10">
                   Berlangganan yang dapat dijeda jika tidak ada permintaan yang
                   diproses, atau batalkan kapan saja.
                 </p>
@@ -203,7 +201,7 @@ const LandingPage = () => {
                 <p className="font-bold text-xl text-center mt-4">
                   Unlimited requests
                 </p>
-                <p className="text-xs text-center mt-3.5 mb-10">
+                <p className="text-xs text-center  mb-10">
                   Berlangganan paket dan request konten sesuai kebutuhanmu.
                 </p>
               </div>
@@ -214,7 +212,7 @@ const LandingPage = () => {
                 <p className="font-bold text-xl text-center mt-4">
                   Fixed subscription fee
                 </p>
-                <p className="text-xs text-center mt-3.5 mb-10">
+                <p className="text-xs text-center mb-10">
                   Tidak ada biaya tambahan! Bayar dengan biaya tetap yang sama
                   setiap periode.
                 </p>
@@ -226,7 +224,7 @@ const LandingPage = () => {
                 <p className="font-bold text-xl text-center mt-4">
                   Fast delivery
                 </p>
-                <p className="text-xs text-center mt-3.5 mb-10">
+                <p className="text-xs text-center  mb-10">
                   Dapatkan updates permintaan konten kamu satu per satu hanya
                   dalam beberapa hari.
                 </p>
@@ -238,7 +236,7 @@ const LandingPage = () => {
                 <p className="font-bold text-xl text-center mt-4">
                   Unlimited revisions
                 </p>
-                <p className="text-sm text-center mt-3.5 mb-10">
+                <p className="text-sm text-center  mb-10">
                   Tim konten kamu akan terus melakukan revisi sampai kamu puas!
                   Tanpa biaya tambahan.
                 </p>
@@ -247,8 +245,8 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+      <div id="funfact"></div>
       <div
-        id="funfact"
         data-aos="fade-up"
         className="flex justify-center items-center mt-48"
       >
@@ -412,13 +410,13 @@ const LandingPage = () => {
                   02
                 </div>
                 <div className="group relative inline-block">
-                  <div className="cursor-pointer flex items-center gap-x-1 group-hover: p-2">
+                  <div className="font-bold text-sm flex items-center gap-x-1 group-hover: p-2">
                     <p>Gabung di Rakyclub </p>
-                    <AiOutlineInfoCircle className="text-P2 text-lg" />
+                    {/* <AiOutlineInfoCircle className="text-P2 text-lg" /> */}
                   </div>
-                  <div className="hidden group-hover:block absolute bg-white shadow-md p-2 rounded-md -mt-1">
+                  {/* <div className="hidden group-hover:block absolute bg-white shadow-md p-2 rounded-md -mt-1">
                     <p>Your Tooltip Text</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <img src={Image2} width={150} className="mx-auto mt-5" />
@@ -472,12 +470,13 @@ const LandingPage = () => {
             <BsArrowRight size={15} className="text-P2 font-bold" />{" "}
           </a>
         </p>
-        <p className="absolute bg-P2 rounded-md px-3 py-2 text-white font-semibold text-sm top-40 left-44 -rotate-3 z-20">
+        <p className="absolute bg-P2 rounded-md px-3 py-2 text-white font-semibold text-sm top-36 left-52 z-20">
           FULL VERSION PROTOTYPE 🤩
         </p>
         <img src={Prototype} width={1000} className="mt-16" alt="prototype" />
       </div>
-      <div id="paket" className="flex justify-center items-center mt-48">
+      <div id="paket"></div>
+      <div className="flex justify-center items-center mt-48">
         <div
           data-aos="fade-up"
           className="relative flex flex-col justify-center items-center"
@@ -490,10 +489,7 @@ const LandingPage = () => {
           </p>
         </div>
       </div>
-      <div
-        id="pricing"
-        className="flex justify-center items-center my-10 gap-x-5 "
-      >
+      <div className="flex justify-center items-center my-10 gap-x-5 ">
         <p
           className={`ms-3 text-lg ${
             isChecked ? "font-medium text-gray-300" : " font-semibold text-B1"
@@ -571,7 +567,7 @@ const LandingPage = () => {
             </p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg text-start">
-            <p className="absolute bg-P1 px-1 py-1.5 text-P2 font-semibold border-2 border-P3 rounded-md text-xs -rotate-3 top-1 left-72 uppercase shadow-md">
+            <p className="absolute bg-P1 px-1 py-1.5 text-P2 font-semibold border-2 border-P3 rounded-md text-xs  -top-1 left-72 uppercase shadow-md">
               Paling dibutuhkan
             </p>
             <h2 className="flex items-center gap-x-3 text-lg font-semibold">
@@ -626,7 +622,7 @@ const LandingPage = () => {
           </div>
           {isChecked && (
             <div className="bg-white p-6 rounded-lg shadow-lg text-start">
-              <p className="absolute bg-P2 px-1 py-2 text-P1 font-semibold rounded-md text-xs rotate-3 top-1 -right-5 uppercase shadow-md">
+              <p className="absolute bg-P2 px-1 py-2 text-P1 font-semibold rounded-md text-xs  -top-1 -right-5 uppercase shadow-md">
                 HEMAT 900 RIBU! 🤑
               </p>
               <h2 className="flex items-center gap-x-3 text-lg font-semibold">
@@ -680,8 +676,8 @@ const LandingPage = () => {
         </div>
       </div>
       <p className="flex justify-center items-center mt-10 font-medium text-sm">
-        Butuh lebih banyak konten?{"  "}
-        <span className="font-medium text-sm text-P2">
+        Butuh lebih banyak konten?
+        <span className="ml-1 font-medium text-sm text-P2">
           Upgrade 2 permintaan dalam 1 waktu
         </span>
       </p>

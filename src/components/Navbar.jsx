@@ -23,7 +23,7 @@ const NavbarDefault = () => {
   }, []);
 
   const navList = (
-    <ul className="text-sm mb-4 mt-2 ml-96 flex flex-col lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+    <ul className="text-sm mb-4 mt-2 gap-x-5 mr-0 ml-96 flex flex-col lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
       <li className="p-1 font-normal text-black">
         <a href="#pesan">What We Do</a>
       </li>
@@ -38,7 +38,7 @@ const NavbarDefault = () => {
         </a>
       </li>
       <li className="p-1 font-normal text-black">
-        <a href="#pricing" className="flex items-center">
+        <a href="#paket" className="flex items-center">
           Pricing
         </a>
       </li>
@@ -52,9 +52,9 @@ const NavbarDefault = () => {
 
   return (
     <nav
-      className={`w-full h-full bg-transparent ${
+      className={`w-full h-full bg-transparent  text-black lg:text-black ${
         isScrolled
-          ? "bg-white sticky top-0 py-2 px-4 lg:px-8 lg:py-4 shadow-md z-50"
+          ? "bg-white  sticky top-0 py-2 px-4 lg:px-8 lg:py-4 shadow-md z-50"
           : "bg-transparent sticky top-0 py-2 px-4 lg:px-8 lg:py-4 z-50"
       }`}
     >
@@ -78,9 +78,11 @@ const NavbarDefault = () => {
         </button>
       </div>
       {openNav && (
-        <div className="container mx-auto">
+        <div className="container mx-auto text-center">
+          {" "}
+          {/* Added text-center class */}
           {navList}
-          <button className="mb-2 bg-[#7A5AE1] rounded-sm p-2 text-white">
+          <button className="w-full mb-2 bg-[#7A5AE1] rounded-sm p-2 text-white">
             Join Waitlist
           </button>
         </div>
