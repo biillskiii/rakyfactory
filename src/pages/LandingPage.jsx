@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { BsArrowLeft, BsStars } from "react-icons/bs";
-import { BsArrowRight } from "react-icons/bs";
+import { IoMdArrowBack, IoMdArrowForward } from "react-icons/io";
+import { HiSparkles } from "react-icons/hi2";
+import { IoInfinite } from "react-icons/io5";
 import {
   AiOutlineInfoCircle,
   AiFillLinkedin,
@@ -38,11 +39,13 @@ import Card from "../components/Card";
 import Faq from "../components/Faq";
 import Pen4 from "../assets/Pen4.png";
 import Pen5 from "../assets/Pen5.png";
-import Whatsapp from "../components/Whatsapp";
+import Pen8 from "../assets/Pen8.png";
+import WhatsappLogo from "../components/Whatsapp";
 import Pen9 from "../assets/Pen9.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ScrollUpButton from "../components/ScrollUp";
+import Upcoming from "../components/Upcoming";
 const LandingPage = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [showFullContent, setShowFullContent] = useState(false);
@@ -62,14 +65,14 @@ const LandingPage = () => {
   return (
     <>
       <div id="hero" className="flex flex-col text-center ">
-        <p className="font-bold text-4xl lg:text-5xl mt-32 z-20">
+        <p className="font-bold text-4xl lg:text-[55px] mt-40 z-20">
           We help your content growth more easily
         </p>
         <img
           id="pen1"
-          className=" ms-auto ml-72 lg:mr-60 z-10"
+          className=" ms-auto ml-72 lg:mr-40 lg:mt-1 z-10"
           src={Pen1}
-          width={300}
+          width={320}
           alt="pencil"
           style={
             window.matchMedia("(max-width: 768px)").matches
@@ -77,7 +80,7 @@ const LandingPage = () => {
               : {}
           }
         />
-        <p className="font-medium text-[#505050] text-sm text-center w-80 ml-8 lg:ml-60 lg:w-8/12 my-10 px-4 lg:text-[22px] lg:leading-8 lg:px-2">
+        <p className="font-medium text-T1 text-sm text-center w-80 ml-8 lg:ml-60 lg:w-8/12 my-10 px-4 lg:text-[22px] lg:leading-8 lg:px-2">
           Dapatkan tim konten pribadimu untuk akses permintaan konten sebanyak
           mungkin dengan cara berlangganan. Dapat dijeda atau batalkan kapan
           saja.
@@ -89,12 +92,12 @@ const LandingPage = () => {
           >
             Lihat paket
           </a>
-          <button className="bg-[#F4F2FD] text-[#7A5AE1] font-medium rounded-md px-5 py-3">
+          <button className="bg-[#F4F2FD] border border-P2 text-P2 border-opacity-10 font-medium rounded-md px-5 py-3">
             Konsultasi Gratis
           </button>
         </div>
-        <p className="text-[#7C7C7C] font-medium text-xs mt-6 flex justify-center items-center">
-          <BsStars className="text-[#7C7C7C]" size={20} />
+        <p className="text-[#7C7C7C] font-medium text-xs mt-6 flex justify-center gap-x-2 items-center">
+          <HiSparkles className="text-[#7C7C7C] " size={20} />
           Tanpa kontrak. Tanpa biaya tambahan.
         </p>
         <div id="pesan"></div>
@@ -105,7 +108,7 @@ const LandingPage = () => {
           <div className="w-[649px] flex flex-col items-start ml-20 my-16 mb-44">
             <p className="font-bold text-3xl ">
               {!showFullContent ? (
-                "Pesan dari pak CEO Rakyfactory? 👀"
+                "Pesan dari pak CEO Rakyfactory?"
               ) : (
                 <p className="font-bold text-3xl">
                   Razan Musyaffa -{" "}
@@ -113,20 +116,22 @@ const LandingPage = () => {
                 </p>
               )}
             </p>
-            <img src={Pen2} className="mb-4" width={270} alt="pen2" />
             {!showFullContent ? (
-              <p className="text-base text-start leading-[32px]">
-                "Sebagai konten kreator pasti ada hambatannya. Mikirin ide
-                konten, ngedit, susah bagi waktunya. Butuh tim biar bisa bantuin
-                dan jadi temen diskusi, tapi susah nyari yang cocok dan malah
-                bikin nambah pusing kelolanya..."
-              </p>
+              <div>
+                <img src={Pen2} className="mb-4" width={270} alt="pen2" />
+                <p className="w-10/12 text-base text-start leading-[32px] text-T1">
+                  "Sebagai konten kreator pasti ada hambatannya. Mikirin ide
+                  konten, ngedit, susah bagi waktunya. Butuh tim biar bisa
+                  bantuin dan jadi temen diskusi, tapi susah nyari yang cocok
+                  dan malah bikin nambah pusing kelolanya..."
+                </p>
+              </div>
             ) : (
-              <p className="text-base text-start leading-[32px]">
-                ...Maka dari itu, hadirlah Rakyfactory untuk membantu kamu
+              <p className="w-11/12 text-base mt-7 text-start leading-[32px] text-T1">
+                "...Maka dari itu, hadirlah Rakyfactory untuk membantu kamu
                 berproses sebagai konten kreator. Kami ingin menjadi partner
                 kontenmu dan bersama-sama tumbuh untuk menciptakan peluang
-                bermanfaat bagi orang lain juga
+                bermanfaat bagi orang lain juga"
               </p>
             )}
             {!showFullContent ? (
@@ -135,14 +140,14 @@ const LandingPage = () => {
                 className="text-P2 font-medium flex items-center gap-x-3 mt-8 mb-20"
               >
                 Lihat selengkapnya
-                <BsArrowRight size={20} className="text-P2 font-medium" />
+                <IoMdArrowForward size={16} className="text-P2 font-medium" />
               </button>
             ) : (
               <button
                 onClick={toggleContent}
                 className="text-P2 font-medium flex items-center gap-x-3 mt-8 mb-20"
               >
-                <BsArrowLeft size={20} className="text-P2 font-medium" />
+                <IoMdArrowBack size={16} className="text-P2 font-medium" />
                 Kembali
               </button>
             )}
@@ -159,87 +164,91 @@ const LandingPage = () => {
           <h2 className="font-bold text-5xl">
             Kami hadir sebagai partner kontenmu
           </h2>
-          <p className="font-medium text-xl mt-10">
+          <img src={Pen5} className="ms-auto mr-72" width={400} alt="" />
+          <p className="font-medium text-xl mt-10 text-T1">
             Kami menyediakan tim seperti content strategist, writer, dan video
             editor bertalenta untuk <br /> mengembangkan kontenmu. Tanpa pusing
             kelola tim. Tanpa biaya tambahan. Tanpa kontrak.
           </p>
-          <a
-            href="#paket"
-            className="bg-P2 hover:bg-[#280598] text-white px-4 py-2 mt-10 rounded-md cursor-pointer"
-          >
-            Lihat paket berlangganan
-          </a>
-          <div className="flex flex-wrap justify-center items-center mt-24 px-2 gap-x-40">
-            <div data-aos="fade-up" className=" w-80 h-96">
-              <div className="flex flex-col justify-center items-center gap-x-3 mt-5 ml-10">
-                <img src={Partner} width={150} className="mx-auto mt-5" />
-                <p className="font-bold text-xl text-center mt-4">
-                  Your content partner
-                </p>
-                <p className="text-xs text-center mb-10">
-                  Kamu dan tim konten terlibat akan berada dalam satu grup
-                  WhatsApp untuk berdiskusi dan membuat konten bersama.
-                </p>
+          <div className="w-full  flex flex-wrap justify-center items-center mt-24 px-2 gap-10">
+            <div className="w-[36%]  h-52 flex justify-center items-center bg-white py-14 px-14 rounded-xl border border-T1 border-opacity-5 shadow-md">
+              <div className="flex justify-center items-center  gap-x-10">
+                <img src={Partner} alt="subs icon" width={100} />
+                <div className="flex flex-col text-start gap-y-3">
+                  <p className="font-semibold text-[24px]">
+                    Your Content Partner
+                  </p>
+                  <p className="w-60 text-xs text-T1">
+                    Dapatkan tim konten bertalenta secara personal, mereka akan
+                    satu grup WhatsApp denganmu.
+                  </p>
+                </div>
               </div>
             </div>
-            <div data-aos="fade-up" className=" w-80 h-96">
-              <div className="flex flex-col justify-center items-center gap-x-3 mt-5 ml-10">
-                <img src={Subs} width={150} className="mx-auto mt-5" />
-                <p className="font-bold text-xl text-center mt-4">
-                  Subscription-pause option
-                </p>
-                <p className="text-xs text-center mb-10">
-                  Berlangganan yang dapat dijeda jika tidak ada permintaan yang
-                  diproses, atau batalkan kapan saja.
-                </p>
+            <div className="w-[36%]  h-52 flex justify-center items-center bg-white py-14 px-14 rounded-xl border border-T1 border-opacity-5 shadow-md">
+              <div className="flex justify-center items-center  gap-x-10">
+                <img src={Subs} alt="subs icon" width={100} />
+                <div className="flex flex-col text-start gap-y-3">
+                  <p className="flex items-center gap-x-2 font-semibold text-[24px]">
+                    Subscription-pause
+                    <AiOutlineInfoCircle size={15} className="text-P2" />
+                  </p>
+                  <p className="w-60 text-xs text-T1">
+                    Berlangganan yang dapat dijeda jika tidak ada permintaan
+                    yang diproses, atau batalkan kapan saja.
+                  </p>
+                </div>
               </div>
             </div>
-            <div data-aos="fade-up" className=" w-80 h-96">
-              <div className="flex flex-col justify-center items-center gap-x-3 mt-5 ml-10">
-                <img src={Kanban} width={150} className="mx-auto mt-5" />
-                <p className="font-bold text-xl text-center mt-4">
-                  Unlimited requests
-                </p>
-                <p className="text-xs text-center  mb-10">
-                  Berlangganan paket dan request konten sesuai kebutuhanmu.
-                </p>
+            <div className="w-[36%]  h-52 flex justify-center items-center bg-white py-14 px-14 rounded-xl border border-T1 border-opacity-5 shadow-md">
+              <div className="flex justify-center items-center  gap-x-10">
+                <img src={Kanban} alt="subs icon" width={100} />
+                <div className="flex flex-col text-start gap-y-3">
+                  <p className="font-semibold text-[24px]">Unlimited Request</p>
+                  <p className="w-60 text-xs text-T1">
+                    Berlangganan paket dan request konten sesuai kebutuhanmu.
+                  </p>
+                </div>
               </div>
             </div>
-            <div data-aos="fade-up" className=" w-80 h-96">
-              <div className="flex flex-col justify-center items-center gap-x-3 mt-5 ml-10">
-                <img src={Wallet} width={150} className="mx-auto mt-5" />
-                <p className="font-bold text-xl text-center mt-4">
-                  Fixed subscription fee
-                </p>
-                <p className="text-xs text-center mb-10">
-                  Tidak ada biaya tambahan! Bayar dengan biaya tetap yang sama
-                  setiap periode.
-                </p>
+            <div className="w-[36%]  h-52 flex justify-center items-center bg-white py-14 px-14 rounded-xl border border-T1 border-opacity-5 shadow-md">
+              <div className="flex justify-center items-center  gap-x-10">
+                <img src={Wallet} alt="subs icon" width={100} />
+                <div className="flex flex-col text-start gap-y-3">
+                  <p className="font-semibold text-[24px]">
+                    Fixed subscription fee
+                  </p>
+                  <p className="w-60 text-xs text-T1">
+                    Tidak ada biaya tambahan! Bayar dengan biaya tetap yang sama
+                    setiap periode.
+                  </p>
+                </div>
               </div>
             </div>
-            <div data-aos="fade-up" className=" w-80 h-96">
-              <div className="flex flex-col justify-center items-center gap-x-3 mt-5 ml-10">
-                <img src={Deadline} width={150} className="mx-auto mt-5" />
-                <p className="font-bold text-xl text-center mt-4">
-                  Fast delivery
-                </p>
-                <p className="text-xs text-center  mb-10">
-                  Dapatkan updates permintaan konten kamu satu per satu hanya
-                  dalam beberapa hari.
-                </p>
+            <div className="w-[36%]  h-52 flex justify-center items-center bg-white py-14 px-14 rounded-xl border border-T1 border-opacity-5 shadow-md">
+              <div className="flex justify-center items-center  gap-x-10">
+                <img src={Deadline} alt="subs icon" width={100} />
+                <div className="flex flex-col text-start gap-y-3">
+                  <p className="font-semibold text-[24px]">Fast Delivery</p>
+                  <p className="w-60 text-xs text-T1">
+                    Dapatkan updates permintaan konten kamu satu per satu hanya
+                    dalam beberapa hari.
+                  </p>
+                </div>
               </div>
             </div>
-            <div data-aos="fade-up" className=" w-80 h-96">
-              <div className="flex flex-col justify-center items-center gap-x-3 mt-5 ml-10">
-                <img src={Checklist} width={150} className="mx-auto mt-5" />
-                <p className="font-bold text-xl text-center mt-4">
-                  Unlimited revisions
-                </p>
-                <p className="text-sm text-center  mb-10">
-                  Tim konten kamu akan terus melakukan revisi sampai kamu puas!
-                  Tanpa biaya tambahan.
-                </p>
+            <div className="w-[36%]  h-52 flex justify-center items-center bg-white py-14 px-14 rounded-xl border border-T1 border-opacity-5 shadow-md">
+              <div className="flex justify-center items-center  gap-x-10">
+                <img src={Checklist} alt="subs icon" width={100} />
+                <div className="flex flex-col text-start gap-y-3">
+                  <p className="flex items-center gap-x-2 font-semibold text-[24px] ">
+                    Unlimited revisions
+                    <IoInfinite className="text-P2" />
+                  </p>
+                  <p className="w-60 text-xs text-T1">
+                    Tim konten kamu akan terus merevisi sampai kamu puas! Tanpa biaya tambahan.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -262,10 +271,10 @@ const LandingPage = () => {
             className="ms-auto mr-20 z-10"
           />
 
-          <p className="text-xl w-full mt-4">
+          <p className="text-xl text-T1 w-full mt-4">
             Rakyfactory meraih apresiasi dari pemerintah dan dukungan
             universitas, sekaligus telah bermitra dengan sejumlah Content
-            Creator 🫶🏻
+            Creator.
           </p>
         </div>
         <div className="flex items-center">
@@ -366,8 +375,8 @@ const LandingPage = () => {
           </div>
         </div>
       </Marquee>
+      <div id="yourcontentpartner"></div>
       <div
-        id="yourcontentpartner"
         data-aos="fade-up"
         className="flex flex-col justify-center items-center mt-48 "
       >
@@ -376,68 +385,62 @@ const LandingPage = () => {
             Dapatkan tim konten pribadimu
           </p>
           <img src={Pen3} width={500} className="ml-72 z-10" alt="pen3" />
-          <p className="font-medium text-xl mt-5 text-center  w-[825px]">
+          <p className="font-medium text-xl text-T1 mt-5 text-center  w-[825px]">
             Kami akan membantu membuat konten bernilai secara konsisten, yang{" "}
             <br />
-            membawa kamu mencapai tujuan sebagai Content Creator 🚀
+            membawa kamu mencapai tujuan sebagai Content Creator
           </p>
         </div>
-        <div className="flex mt-24 gap-x-14">
-          <div className=" w-72 h-96 ">
-            <div
-              data-aos="fade-right"
-              className="flex flex-col bg-white rounded-md shadow-md justify-center items-center mt-5 ml-10"
-            >
-              <div className="flex items-center gap-x-2 mt-5">
-                <div className="bg-gray-300 rounded-full w-10 h-10 flex justify-center items-center">
-                  01
+        <div className="flex mt-14 gap-x-14">
+          <div className=" w-80 h-96 ">
+            <div data-aos="fade-up" className=" w-80 h-96">
+              <div className="flex flex-col bg-white rounded-md shadow-md justify-center items-center gap-x-3 mt-5 ml-10">
+                <div className="flex justify-start items-center gap-x-1 mt-5">
+                  <div className="bg-[#f6f6f6] font-semibold rounded-full w-10 h-10 flex justify-center items-center">
+                    01
+                  </div>
+                  <p className="font-bold text-sm text-start">
+                    Mulai berlangganan
+                  </p>
                 </div>
-                <p className="font-bold text-sm text-center">
-                  Mulai berlangganan
+                <img src={Image1} width={150} className="mx-auto mt-5" />
+                <p className="w-60 text-xs text-start px-3 mt-3.5 mb-10">
+                  Berlangganan untuk satu periode dengan opsi jeda jika tidak
+                  ada permintaan konten. Biaya tetap dan tanpa kontrak.
                 </p>
               </div>
-              <img src={Image1} width={150} className="mx-auto mt-5" />
-              <p className="text-xs text-start px-3 mt-3.5 mb-10">
-                Berlangganan untuk satu periode dengan opsi jeda jika tidak ada
-                permintaan konten. Biaya tetap dan tanpa kontrak.
-              </p>
             </div>
           </div>
-          <div data-aos="fade-up" className=" w-72 h-96">
+          <div data-aos="fade-up" className=" w-80 h-96">
             <div className="flex flex-col bg-white rounded-md shadow-md justify-center items-center gap-x-3 mt-5 ml-10">
-              <div className="flex items-center gap-x-1 mt-5">
-                <div className="bg-gray-300 rounded-full w-10 h-10 flex justify-center items-center">
+              <div className="flex justify-start items-center gap-x-3 mt-5">
+                <div className="bg-[#f6f6f6] font-semibold rounded-full w-10 h-10 flex justify-center items-center">
                   02
                 </div>
-                <div className="group relative inline-block">
-                  <div className="font-bold text-sm flex items-center gap-x-1 group-hover: p-2">
-                    <p>Gabung di Rakyclub </p>
-                    {/* <AiOutlineInfoCircle className="text-P2 text-lg" /> */}
-                  </div>
-                  {/* <div className="hidden group-hover:block absolute bg-white shadow-md p-2 rounded-md -mt-1">
-                    <p>Your Tooltip Text</p>
-                  </div> */}
-                </div>
+                <p className="font-bold text-sm flex items-center gap-x-2">
+                  Gabung di Rakyclub
+                  <AiOutlineInfoCircle size={15} className="text-P2" />{" "}
+                </p>
               </div>
               <img src={Image2} width={150} className="mx-auto mt-5" />
-              <p className="text-xs text-start px-3 mt-3.5 mb-10">
+              <p className="w-60 text-xs text-start px-3 mt-3.5 mb-10">
                 Kamu dan tim konten terlibat akan berada dalam satu grup
                 WhatsApp untuk berdiskusi dan membuat konten bersama.
               </p>
             </div>
           </div>
-          <div data-aos="fade-left" className=" w-72 h-96">
+          <div data-aos="fade-up" className=" w-80 h-96">
             <div className="flex flex-col bg-white rounded-md shadow-md justify-center items-center gap-x-3 mt-5 ml-10">
-              <div className="flex items-center gap-x-2 mt-5">
-                <div className="bg-gray-300 rounded-full w-10 h-10 flex justify-center items-center">
+              <div className="flex justify-start items-center gap-x-3 mt-5">
+                <div className="bg-[#f6f6f6] font-semibold rounded-full w-10 h-10 flex justify-center items-center">
                   03
                 </div>
-                <p className="font-bold text-sm text-center">Tumbuh bersama</p>
+                <p className="font-bold text-sm">Tumbuh bersama</p>
               </div>
               <img src={Image3} width={150} className="mx-auto mt-5" />
-              <p className="text-xs text-start px-3 mt-3.5 mb-10">
-                Bagikan konten pertama dan amati perkembangannya. Kita akan
-                terus mengevaluasi bersama secara berkala.
+              <p className="w-60 text-xs text-start px-3 mt-3.5 mb-10">
+                Kamu dan tim konten terlibat akan berada dalam satu grup
+                WhatsApp untuk berdiskusi dan membuat konten bersama.
               </p>
             </div>
           </div>
@@ -446,34 +449,34 @@ const LandingPage = () => {
       <div
         id="sistem"
         data-aos="fade-up"
-        className="flex flex-col justify-center items-center mt-16"
+        className="flex flex-col justify-center items-center mt-14"
       >
         <div className="relative">
           <p className="font-medium text-xl w-[764px] text-center relative z-10">
-            Dengan berlangganan, kamu bisa request konten sebanyak mungkin.
-            Kalau lagi nggak butuh, kamu bisa jeda langganan kapan pun ⏳
+            <span className="bg-P1">Dengan berlangganan,</span> kamu bisa
+            request konten sebanyak mungkin. Kalau lagi nggak butuh, kamu bisa
+            jeda langganan kapan pun.
           </p>
         </div>
 
-        <p className=" flex items-center gap-x-1 text-xs my-2 font-semibold ">
+        <p className=" flex items-center gap-x-1 text-sm my-2 font-medium mt-5 ">
           Baru tersedia{" "}
-          <span className="bg-P1 text-P2 text-xs px-1 border-2 border-P3 rounded-md font-semibold">
+          <span className="bg-P1 text-P2 text-xs px-1 border-2 border-P3 rounded-md font-semibold m">
             Beta Version
           </span>
-          .{" "}
           <a
             href="https://trello.com/b/c9RKe2pl/beta-version-prototype"
             target="_blank"
-            className="flex items-center gap-x-1 text-P2 font-semibold"
+            className="flex items-center gap-x-1 text-P2 font-medium"
           >
             Pelajari selengkapnya{" "}
-            <BsArrowRight size={15} className="text-P2 font-bold" />{" "}
+            <IoMdArrowForward size={16} className="text-P2 font-bold" />{" "}
           </a>
         </p>
-        <p className="absolute bg-P2 rounded-md px-3 py-2 text-white font-semibold text-sm top-36 left-52 z-20">
-          FULL VERSION PROTOTYPE 🤩
+        <p className="absolute bg-P2 rounded-md px-3 py-2 text-white font-bold text-lg -rotate-3 top-36 left-32 shadow-md z-20">
+          FULL VERSION PROTOTYPE
         </p>
-        <img src={Prototype} width={1000} className="mt-16" alt="prototype" />
+        <img src={Prototype} width={1200} className="mt-16" alt="prototype" />
       </div>
       <div id="paket"></div>
       <div className="flex justify-center items-center mt-48">
@@ -484,8 +487,9 @@ const LandingPage = () => {
           <p className="font-bold text-5xl">
             Pilih paket yang sesuai untuk kamu
           </p>
-          <p className="font-medium mt-8 text-xl">
-            Biaya tetap. Tanpa kontrak. Tanpa pusing kelola tim 🙅🏻
+          <img src={Pen8} width={450} className="ms-auto" alt="" />
+          <p className="font-medium mt-3 text-xl text-T1">
+            Biaya tetap. Tanpa kontrak. Tanpa pusing kelola tim
           </p>
         </div>
       </div>
@@ -505,13 +509,13 @@ const LandingPage = () => {
             className="sr-only peer"
             onChange={handleToggleChange}
           />
-          <div class="w-11 h-6  bg-gray-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-P2"></div>
+          <div class="w-11 h-6  bg-gray-200 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-1 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all  peer-checked:bg-P2"></div>
           <span
             className={`ms-3 text-lg ${
-              isChecked ? "font-semibold text-P2" : " font-medium text-P3"
+              isChecked ? "font-semibold text-P2" : "font-medium text-P3"
             }`}
           >
-            Creator level (hemat 28%)
+            Creator level
           </span>
         </label>
       </div>
@@ -677,11 +681,12 @@ const LandingPage = () => {
       </div>
       <p className="flex justify-center items-center mt-10 font-medium text-sm">
         Butuh lebih banyak konten?
-        <span className="ml-1 font-medium text-sm text-P2">
-          Upgrade 2 permintaan dalam 1 waktu
+        <span className="flex items-center gap-x-2 ml-1 font-medium text-sm text-P2">
+          Upgrade 2 permintaan dalam 1 waktu <IoMdArrowForward />
         </span>
       </p>
-      <div id="faq" data-aos="fade-up" className="w-full py-32">
+      <div id="faq"></div>
+      <div data-aos="fade-up" className="w-full py-32">
         <div className="w-9/12 rounded-xl mx-auto h-full">
           <p className="font-bold flex justify-center gap-x-5 text-5xl mb-14 pt-9">
             {" "}
@@ -762,101 +767,83 @@ const LandingPage = () => {
           />
         </div>
       </div>
-      <footer class="bg-F1 text-center text-black lg:text-left">
-        <div class="ml-20 pt-14">
+      <footer className="mx-auto bg-F1 text-center text-black lg:text-left">
+        <div className="ml-40 pt-14">
           <img src={Raky} width={250} alt="logo raky" />
         </div>
-        <div class="mx-20 mt-5  text-center md:text-left">
-          <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <div class="">
-              <h6 class="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
+        <div className="mx-10 ml-40 mt-5  text-center md:text-left">
+          <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div className="text-sm">
+              <h6 className="mb-4  flex items-center justify-center font-semibold md:justify-start">
                 PT Rakyfactory Digital Group
               </h6>
-              <p class="mb-2">
-                <a href="#!" class="">
+              <p className="mb-2">
+                <a href="#!" className="">
                   Tentang kami
                 </a>
               </p>
-              <p class="mb-2">
-                <li>
-                  Affiliates{" "}
-                  <span className="bg-P1 text-P2 px-2 py-1 rounded-md text-xs font-semibold uppercase">
-                    Upcoming
-                  </span>
+              <p className="mb-2">
+                <li className="flex items-center gap-2">
+                  Affiliates <Upcoming label={"Upcoming"} />
                 </li>
               </p>
-              <p class="mb-2">
-                <li href="#!" class="">
-                  Program CSR{" "}
-                  <span className="bg-P1 text-P2 px-2 py-1 rounded-md text-xs font-semibold uppercase">
-                    Upcoming
-                  </span>
+              <p className="mb-2">
+                <li href="#!" className="flex items-center gap-2">
+                  Program CSR <Upcoming label={"Upcoming"} />
                 </li>
               </p>
-              <p class="mb-2">
-                <li href="#!" class="">
-                  Karier{" "}
-                  <span className="bg-P1 text-P2 px-2 py-1 rounded-md text-xs font-semibold uppercase">
-                    Upcoming
-                  </span>
+              <p className="mb-2">
+                <li href="#!" className="flex items-center gap-2">
+                  Karier <Upcoming label={"Upcoming"} />
                 </li>
               </p>
             </div>
-            <div class="">
-              <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+            <div className="text-sm ">
+              <h6 className="mb-4 text-sm flex justify-center font-semibold md:justify-start">
                 Produk
               </h6>
-              <p class="mb-2">
+              <p className="mb-2">
                 <li href="#!" class="">
                   Script writing team
                 </li>
               </p>
-              <p class="mb-2">
+              <p className="mb-2">
                 <li href="#!" class="">
                   Video editing team
                 </li>
               </p>
-              <p class="mb-2">
-                <li href="#!" class="">
-                  Talent manager{" "}
-                  <span className="bg-P1 text-P2 px-2 py-1 rounded-md text-xs font-semibold uppercase">
-                    Upcoming
-                  </span>
+              <p className="mb-2">
+                <li href="#!" class="flex items-center gap-2">
+                  Talent manager <Upcoming label={"Upcoming"} />
                 </li>
               </p>
-              <p class="mb-2">
-                <li href="#!" class="">
-                  Rakyfactory AI ✦⁺{" "}
-                  <span className="bg-P1 text-P2 px-2 py-1 rounded-md text-xs font-semibold uppercase">
-                    Upcoming
-                  </span>
+              <p className="mb-2">
+                <li href="#!" class="flex items-center gap-2">
+                  Rakyfactory AI ✦⁺ <Upcoming label={"Upcoming"} />
                 </li>
               </p>
             </div>
-            <div class="">
-              <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+            <div className="text-sm ">
+              <h6 className="mb-4 text-sm flex justify-center font-semibold md:justify-start">
                 Panduan
               </h6>
-              <p class="mb-2">
+              <p className="mb-2">
                 <li href="#!">Biaya langganan</li>
               </p>
-              <p class="mb-2">
+              <p className="mb-2">
                 <li href="#!">Subscription-pause option</li>
               </p>
-              <p class="mb-2">
+              <p className="mb-2">
                 <li href="#!">Studi kasus</li>
               </p>
               <p>
-                <li href="#!">
-                  Komunitas{" "}
-                  <span className="bg-P1 text-P2 px-2 py-1 rounded-md text-xs font-semibold uppercase">
-                    Upcoming
-                  </span>
+                <li href="#!" className="flex items-center gap-2">
+                  Komunitas <Upcoming label={"Upcoming"} />
                 </li>
               </p>
             </div>
-            <div>
-              <h6 class="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+            <div className="text-sm ">
+              <h6 class="mb-4 flex justify-center font-semibold md:justify-start">
                 Hubungi kami
               </h6>
               <p class="mb-2 flex items-center justify-center md:justify-start">
@@ -866,9 +853,9 @@ const LandingPage = () => {
                 +62 819-4659-3466 (WA Only)
               </p>
               <p class="mb-2 flex items-center justify-center md:justify-start">
-                tanya@rakyfactory.com
+                support@rakyfactory.com
               </p>
-              <div className="flex gap-x-3">
+              <div className="flex mt-5 gap-x-3">
                 <a
                   href="https://www.linkedin.com/company/rakyfactory/"
                   target="_blank"
@@ -887,14 +874,14 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-        <hr className="w-8/12 mx-auto" />
+        <hr className="w-8/12 mx-auto mt-10" />
         <div class="bg-F1 p-6 text-center">
-          <span className="text-F2">Copyright © 2023 All rights reserved</span>
+          <span className="text-F2 text-sm">Copyright © 2023 All rights reserved</span>
         </div>
       </footer>
-      <div className="flex flex-col gap-y-4">
+      <div className="flex flex-col gap-y-4 ">
         <ScrollUpButton />
-        <Whatsapp />
+        <WhatsappLogo />
       </div>
     </>
   );

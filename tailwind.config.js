@@ -23,6 +23,7 @@ export default {
         F1: "#FAFAFA",
         F2: "#565D6D",
         B1: "#171A1F",
+        T1: "#505050"
       },
     },
   },

@@ -38,7 +38,7 @@ const Faq = ({ question, answer }) => {
       </button>
       {isTextVisible && (
         <div className="mt-2 font-normal">
-          <p>{answer}</p>
+          <p className="text-T1 text-sm">{answer}</p>
         </div>
       )}
     </div>

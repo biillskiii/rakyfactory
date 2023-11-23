@@ -17,9 +17,9 @@ const Card = ({ avatarSrc, name, stats, views, followers, showCheckIcon, showSta
       </div>
       <div className="flex items-center mt-2">
         <AiOutlineLike size={14} className="mr-1" />
-        <p className="font-bold text-xs">{views}</p>
+        <p className="font-semibold text-xs">{views}</p>
         <GoPeople size={14} className="ml-4 mr-1" />
-        <p className="font-bold text-xs">{followers}</p>
+        <p className="font-semibold text-xs">{followers}</p>
       </div>
     </div>
   );
