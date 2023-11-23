@@ -152,8 +152,8 @@ const LandingPage = () => {
               </button>
             )}
           </div>
-          <div className="ml-24 mb-5 flex justify-center items-center">
-            <img src={Image5} alt="avatar" width={350} />
+          <div className="ml-24 my-auto flex justify-center items-center">
+            <img src={Image5} alt="avatar" width={300} />
           </div>
         </div>
         <div id="fitur"></div>
