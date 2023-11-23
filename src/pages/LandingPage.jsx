@@ -67,7 +67,7 @@ const LandingPage = () => {
         </p>
         <img
           id="pen1"
-          className="ms-auto ml-72 lg:mr-60 z-10"
+          className=" ms-auto ml-72 lg:mr-60 z-10"
           src={Pen1}
           width={300}
           alt="pencil"
@@ -77,7 +77,7 @@ const LandingPage = () => {
               : {}
           }
         />
-        <p className="font-medium text-[#505050] text-sm text-center w-80 ml-60 lg:w-8/12 my-10 px-4 lg:text-xl lg:px-2">
+        <p className="font-medium text-[#505050] text-sm text-center w-80 ml-8 lg:ml-60 lg:w-8/12 my-10 px-4 lg:text-[22px] lg:leading-8 lg:px-2">
           Dapatkan tim konten pribadimu untuk akses permintaan konten sebanyak
           mungkin dengan cara berlangganan. Dapat dijeda atau batalkan kapan
           saja.
@@ -382,7 +382,7 @@ const LandingPage = () => {
             membawa kamu mencapai tujuan sebagai Content Creator 🚀
           </p>
         </div>
-        <div className="flex mt-48 gap-x-14">
+        <div className="flex mt-24 gap-x-14">
           <div className=" w-72 h-96 ">
             <div
               data-aos="fade-right"

@@ -52,10 +52,11 @@ const NavbarDefault = () => {
 
   return (
     <nav
+      //Navbar animasi
       className={`w-full h-full bg-transparent  text-black lg:text-black ${
         isScrolled
-          ? "bg-white  sticky top-0 py-2 px-4 lg:px-8 lg:py-4 shadow-md z-50"
-          : "bg-transparent sticky top-0 py-2 px-4 lg:px-8 lg:py-4 z-50"
+          ? "bg-white sticky top-0 py-2 px-4 lg:px-8 lg:py-4 z-50"
+          : "bg-transparent top-0 py-2 px-4 lg:px-8 lg:py-4 z-50"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
