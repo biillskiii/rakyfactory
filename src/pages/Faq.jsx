@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Pen9 from "../assets/Pen9.png";
 import Faq from "../components/Faq";
 import Aos from "aos";
@@ -8,11 +8,10 @@ const FaQ = () => {
     Aos.refresh();
   }, []);
   return (
-    <div>
-      {" "}
+    <>
       <div id="faq"></div>
-      <div data-aos="fade-up" className="w-full py-32">
-        <div className="container rounded-xl mx-auto h-full">
+
+        <div className="w-9/12 rounded-xl mx-auto h-full">
           <p className="font-bold flex justify-center gap-x-5 text-5xl mb-14 pt-9">
             {" "}
             Pertanyaan umum
@@ -20,7 +19,7 @@ const FaQ = () => {
           <img
             src={Pen9}
             alt="pen9"
-            className="absolute -mt-28 left-96"
+            className="-mt-28 ml-52"
             width={100}
           />
 
@@ -91,8 +90,7 @@ const FaQ = () => {
             }
           />
         </div>
-      </div>
-    </div>
+    </>
   );
 };
 

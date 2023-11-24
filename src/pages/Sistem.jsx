@@ -1,12 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { IoMdArrowForward } from "react-icons/io";
-import Prototype from "../assets/prototype.png";
-import Aos from "aos";
+import Prototype from "../assets/prototype.png"
 const Sistem = () => {
-  useEffect(() => {
-    Aos.init();
-    Aos.refresh();
-  }, []);
   return (
     <>
       {" "}
@@ -36,13 +31,8 @@ const Sistem = () => {
             Pelajari selengkapnya{" "}
             <IoMdArrowForward size={16} className="text-P2 font-bold" />{" "}
           </a>
-        </p>
-        <p className="absolute bg-P2 rounded-md px-3 py-2 text-white font-bold text-lg -rotate-3 -mt-96 left-32 shadow-md z-20">
-          FULL VERSION PROTOTYPE
-        </p>
-        <div>
-          <img src={Prototype} width={1200} className="mt-32" alt="prototype" />
-        </div>
+        </p>  
+        <img src={Prototype} width={1400} className="mt-16" alt="prototype" />
       </div>
     </>
   );
