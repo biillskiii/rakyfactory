@@ -35,7 +35,7 @@ const Fitur = () => {
             <div className="flex justify-center items-center  gap-x-10">
               <img src={Partner} alt="subs icon" width={100} />
               <div className="flex flex-col text-start gap-y-3">
-                <p className="font-semibold text-[23px]">
+                <p className="font-semibold text-[24px]">
                   Your Content Partner
                 </p>
                 <p className="w-60 text-xs text-T1">

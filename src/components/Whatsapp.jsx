@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Whatsapp from "../assets/whatsapp.png";
 const WhatsapLogo = () => {
   const handleClick = () => {
-    window.open("https://www.whatsapp.com/");
+    window.open("https://wa.me/+62881082013808");
   };
 
   return (

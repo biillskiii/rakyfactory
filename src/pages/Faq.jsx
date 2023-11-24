@@ -10,18 +10,13 @@ const FaQ = () => {
   return (
     <>
       <div id="faq"></div>
-
-        <div className="w-9/12 rounded-xl mx-auto h-full">
+      <div className="my-48">
+        <div className="w-9/12 rounded-xl mx-auto">
           <p className="font-bold flex justify-center gap-x-5 text-5xl mb-14 pt-9">
             {" "}
             Pertanyaan umum
           </p>
-          <img
-            src={Pen9}
-            alt="pen9"
-            className="-mt-28 ml-52"
-            width={100}
-          />
+          <img src={Pen9} alt="pen9" className="-mt-28 ml-52" width={100} />
 
           <Faq
             question={"Kenapa saya harus berlangganan?"}
@@ -90,6 +85,7 @@ const FaQ = () => {
             }
           />
         </div>
+      </div>
     </>
   );
 };

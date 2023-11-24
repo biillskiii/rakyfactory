@@ -16,6 +16,9 @@ const Paket = () => {
     Aos.init();
     Aos.refresh();
   }, []);
+  const handleWhatsapp = () => {
+    window.open("https://wa.me/+62881082013808")
+  }
   return (
     <>
       {" "}
@@ -104,7 +107,7 @@ const Paket = () => {
                 <AiOutlineInfoCircle className="text-P2" />
               </li>
             </ul>
-            <button className="w-full  bg-P2 text-white py-2 px-4 rounded-md focus:outline-none focus:ring focus:border-purple-300">
+            <button onClick={handleWhatsapp} className="w-full  bg-P2 text-white py-2 px-4 rounded-md focus:outline-none focus:ring focus:border-purple-300">
               {!isChecked ? (
                 <p>Join Waitlist</p>
               ) : (
@@ -161,7 +164,7 @@ const Paket = () => {
                 <AiOutlineInfoCircle className="text-P2" />
               </li>
             </ul>
-            <button className="w-full bg-P2 text-white py-2 px-4  rounded-md focus:outline-none focus:ring focus:border-purple-300">
+            <button onClick={handleWhatsapp} className="w-full bg-P2 text-white py-2 px-4  rounded-md focus:outline-none focus:ring focus:border-purple-300">
               {!isChecked ? (
                 <p>Join Waitlist</p>
               ) : (

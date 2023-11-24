@@ -7,6 +7,9 @@ const Hero = () => {
     Aos.init();
     Aos.refresh();
   }, []);
+  const handleWhatsapp = () => {
+    window.open("https://wa.me/+62881082013808")
+  }
   return (
     <div id="hero" className="flex flex-col items-center justify-center">
       <p className="font-bold text-4xl lg:text-[55px] mt-40 z-20">
@@ -35,7 +38,7 @@ const Hero = () => {
         >
           Lihat paket
         </a>
-        <button className="bg-[#F4F2FD] border border-P2 text-P2 border-opacity-10 font-medium rounded-md px-5 py-3">
+        <button onClick={handleWhatsapp} className="bg-[#F4F2FD] border border-P2 text-P2 border-opacity-10 font-medium rounded-md px-5 py-3">
           Konsultasi Gratis
         </button>
       </div>

@@ -9,6 +9,8 @@ import Paket from "./Paket";
 import Sistem from "./Sistem";
 import FaQ from "./Faq";
 import Footer from "./Footer";
+import Whatsapp from "../components/Whatsapp";
+import ScrollUp from "../components/ScrollUp";
 import "../pages/LandingPage.css";
 const LandingPage = () => {
   return (
@@ -23,6 +25,10 @@ const LandingPage = () => {
       <Sistem />
       <FaQ />
       <Footer />
+      <div className="flex">
+        <ScrollUp />
+        <Whatsapp />
+      </div>
     </div>
   );
 };

@@ -95,7 +95,7 @@ const Footer = () => {
                 Semarang, Indonesia
               </p>
               <p class="mb-2 flex items-center justify-center md:justify-start">
-                +62 819-4659-3466 (WA Only)
+                +62881-0820-13808 (WA Only)
               </p>
               <p class="mb-2 flex items-center justify-center md:justify-start">
                 support@rakyfactory.com
