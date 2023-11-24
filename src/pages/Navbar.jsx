@@ -32,7 +32,7 @@ const NavbarDefault = () => {
       </li>
       <li className="p-1 cursor-pointer font-normal text-black">
         <Link to="funfact" smooth={true} duration={500}>
-          Testimonials
+          Portfolio
         </Link>
       </li>
       <li className="p-1 cursor-pointer font-normal text-black">
@@ -55,13 +55,9 @@ const NavbarDefault = () => {
 
   return (
     <nav
-      className={`w-full h-full bg-transparent  text-black lg:text-black ${
-        isScrolled
-          ? "bg-white sticky top-0 py-2 px-4 lg:px-8 lg:py-4 z-50"
-          : "bg-transparent top-0 py-2 px-4 lg:px-8 lg:py-4 z-50"
-      }`}
+      className="container w-full h-full bg-transparent  text-black lg:text-black bg-white sticky top-0 py-2 px-4 lg:px-8 lg:py-4 z-50"
     >
-      <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
+      <div className="mx-auto flex items-center justify-around text-blue-gray-900">
         <Link to="hero" smooth={true} duration={500}>
           <a className="text-2xl cursor-pointer py-1.5 font-bold text-black flex items-center gap-x-3">
             <img src={Logo} width={30} alt="" />
