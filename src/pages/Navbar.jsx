@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
-import Raky from "../assets/Raky.png";
+import Logo from "../assets/logo.png";
 const NavbarDefault = () => {
   const [openNav, setOpenNav] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -55,11 +55,12 @@ const NavbarDefault = () => {
   );
 
   return (
-    <nav className="container w-full h-full bg-transparent  text-black lg:text-black bg-white sticky top-0 py-2 px-4 lg:px-8 lg:py-4 z-50">
+    <nav className="w-full h-full bg-transparent  text-black lg:text-black bg-white sticky top-0 py-2 px-4 lg:px-8 lg:py-4 z-50">
       <div className="mx-auto flex items-center justify-around text-blue-gray-900">
         <Link to="hero" smooth={true} duration={500}>
-          <a className="text-2xl cursor-pointer py-1.5 font-bold text-black flex items-center gap-x-3">
-            <img src={Raky} width={200} alt="logo raky" />
+          <a className="text-2xl cursor-pointer py-1.5 font-semibold text-black flex items-center gap-x-3">
+            <img src={Logo} width={30} alt="" />
+            Rakyfactory
           </a>
         </Link>
         <div className="hidden lg:block">{navList}</div>
