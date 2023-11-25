@@ -2,17 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.container{
+.container {
   max-width: 1600px;
 }
 body {
-    font-family: "Poppins", sans-serif;
-    background: url("../src/assets/background.png");
-    background-repeat: repeat-y;
-    background-size: 100%;
-    background-position:20% 0;
-    position: relative; /* Tambahkan properti position: relative; */
-  }
-li{
-    list-style: none;
+  font-family: "Poppins", sans-serif;
+  background: url("../src/assets/background.png");
+  background-repeat: repeat-y;
+  background-size: 100%;
+  background-position: 20% 0;
+  position: relative; /* Tambahkan properti position: relative; */
 }

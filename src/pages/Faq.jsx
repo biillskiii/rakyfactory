@@ -12,11 +12,13 @@ const FaQ = () => {
       <div id="faq"></div>
       <div className="my-48">
         <div className="w-9/12 rounded-xl mx-auto">
-          <p className="font-bold flex justify-center gap-x-5 text-5xl mb-14 pt-9">
-            {" "}
-            Pertanyaan umum
-          </p>
-          <img src={Pen9} alt="pen9" className="-mt-28 ml-52" width={100} />
+          <div className="flex items-center gap-x-3">
+            <img src={Pen9} alt="pen9" className="-mt-10 ml-52" width={100} />
+            <p className="font-bold flex justify-center gap-x-5 text-5xl mb-20 pt-9">
+              {" "}
+              Pertanyaan umum
+            </p>
+          </div>
 
           <Faq
             question={"Kenapa saya harus berlangganan?"}
@@ -69,7 +71,12 @@ const FaQ = () => {
               "Apakah ada batasan berapa banyak permintaan yang dapat saya ajukan?"
             }
             answer={
-              "Setelah berlangganan, Anda dapat menambahkan permintaan ke antrean sebanyak mungkin, dan permintaan tersebut akan dikirimkan satu per satu (dua sekaligus jika Anda membeli paket Exclusive) hingga semuanya selesai."
+              <p>
+                Setelah berlangganan, Anda dapat menambahkan permintaan ke
+                antrean sebanyak mungkin, dan permintaan tersebut akan
+                dikirimkan satu per satu (dua sekaligus jika Anda membeli paket
+                tambahan berupa "Team Boost") hingga semuanya selesai.
+              </p>
             }
           />
           <Faq

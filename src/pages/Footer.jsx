@@ -3,6 +3,7 @@ import Raky from "../assets/Raky.png";
 import Upcoming from "../components/Upcoming";
 import { AiFillLinkedin, AiOutlineInstagram } from "react-icons/ai";
 import { HiSparkles } from "react-icons/hi";
+import "./Footer.css"
 import Aos from "aos";
 const Footer = () => {
   useEffect(() => {

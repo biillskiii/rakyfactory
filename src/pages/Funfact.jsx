@@ -27,7 +27,7 @@ const Funfact = () => {
         data-aos="fade-up"
         className="flex justify-center items-center mt-48"
       >
-        <div className="w-[794px]">
+        <div className="w-[794px] flex flex-col">
           <img src={Pen4} alt="pen4" width={50} className="ms-auto" />
           <p className="font-bold text-5xl z-20">
             Fun fact tentang Rakyfactory?
