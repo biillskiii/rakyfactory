@@ -11,7 +11,7 @@ import FaQ from "./Faq";
 import Footer from "./Footer";
 import Whatsapp from "../components/Whatsapp";
 import ScrollUp from "../components/ScrollUp";
-import MobilePopupModal from "../components/MobilePopupModal";
+import MobilePopupModal from "../components/MobilePopupModal"; // Import your mobile popup modal component
 import "../pages/LandingPage.css";
 
 const LandingPage = () => {
@@ -31,23 +31,28 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="container mx-auto">
-      <NavbarDefault />
-      <Hero />
-      <Pesan />
-      <Fitur />
-      <Funfact />
-      <HowItWork />
-      <Sistem />
-      <Paket />
-      <FaQ />
-      <Footer />
-      <div className="flex">
-        <ScrollUp />
-        <Whatsapp />
-      </div>
-      {showMobileModal && <MobilePopupModal />}
-    </div>
+    <>
+      {showMobileModal ? (
+        <MobilePopupModal />
+      ) : (
+        <div className="container mx-auto">
+          <NavbarDefault />
+          <Hero />
+          <Pesan />
+          <Fitur />
+          <Funfact />
+          <HowItWork />
+          <Sistem />
+          <Paket />
+          <FaQ />
+          <Footer />
+          <div className="flex">
+            <ScrollUp />
+            <Whatsapp />
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
