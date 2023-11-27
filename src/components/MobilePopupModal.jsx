@@ -16,8 +16,9 @@ const MobilePopupModal = () => {
           <span className="font-bold text-xl my-2 lg:text-2xl ">
             ONLY DEKSTOP
           </span>
-          Hanya bisa diakses melaui Desktop, untuk mobile dan Ipad masi dalam
-          pengembangan developer.
+          Untuk pengalaman terbaik, silakan akses website melalui tampilan
+          dekstop. Saat ini, tampilan melalui mobile dan tablet sedang dalam
+          tahap pengembangan.
         </p>
       </div>
     </div>
