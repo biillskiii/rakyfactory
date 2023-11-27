@@ -69,7 +69,7 @@ const HowItWork = () => {
                   <AiOutlineInfoCircle
                     onClick={openModal}
                     size={15}
-                    className="text-P2"
+                    className="text-P2 cursor-pointer"
                   />{" "}
                 </p>
               </div>

@@ -72,7 +72,7 @@ const Fitur = () => {
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                     onClick={openModal}
-                    className="text-P2"
+                    className="text-P2 cursor-pointer"
                   />
                 </p>
                 <p className="w-60 text-xs text-T1">

@@ -1,6 +1,6 @@
 import React from "react";
 import { IoMdArrowForward } from "react-icons/io";
-import Prototype from "../assets/prototype.png"
+import Video from "../assets/panduan-layanann.mp4"
 const Sistem = () => {
   return (
     <>
@@ -32,7 +32,7 @@ const Sistem = () => {
             <IoMdArrowForward size={16} className="text-P2 font-bold" />{" "}
           </a>
         </p>  
-        <img src={Prototype} width={1400} className="mt-16" alt="prototype" />
+        <iframe src={Video} width={1089} height={613} className="mt-14 shadow-2xl rounded-2xl"/>
       </div>
     </>
   );
