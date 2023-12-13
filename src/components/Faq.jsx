@@ -29,7 +29,7 @@ const Faq = ({ question, answer }) => {
         onClick={handleArrowClick}
         className="w-full flex items-center justify-between border-b border-gray-500 py-5"
       >
-        <p className="font-semibold text-start">{question}</p>
+        <p className="font-semibold text-start sm:w-full w-10/12">{question}</p>
         {isTextVisible ? (
           <IoIosArrowUp size={25} className="opacity-40 cursor-pointer" />
         ) : (
