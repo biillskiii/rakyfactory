@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Marquee from "react-fast-marquee";
 import Pen4 from "../assets/Pen4.png";
 import Pen5 from "../assets/Pen5.png";
@@ -27,27 +27,55 @@ const Funfact = () => {
         data-aos="fade-up"
         className="flex justify-center items-center mt-48"
       >
-        <div className="w-[794px] flex flex-col">
-          <img src={Pen4} alt="pen4" width={50} className="ms-auto" />
-          <p className="font-bold text-5xl z-20">
-            Fun fact tentang Rakyfactory?
-          </p>
-          <img
-            src={Pen5}
-            alt="pen4"
-            width={300}
-            className="ms-auto mr-20 z-10"
-          />
+        <div className="flex flex-col justify-center items-center sm:flex-row">
+          <div className="w-11/12 sm:w-[794px] flex flex-col">
+            <img src={Pen4} alt="pen4" width={50} className="ms-auto" />
+            <p className="font-bold text-center sm:text-start text-4xl sm:text-5xl z-20">
+              Fun fact tentang Rakyfactory?
+            </p>
+            <img
+              src={Pen5}
+              alt="pen4"
+              width={300}
+              className="ms-auto mr-20 z-10"
+              style={
+                window.matchMedia("(max-width: 640px)").matches
+                  ? { width: 250, marginRight: 80}
+                  : {}
+              }
+            />
 
-          <p className="text-xl text-T1 w-full mt-4">
-            Rakyfactory meraih apresiasi dari pemerintah dan dukungan
-            universitas, sekaligus telah bermitra dengan sejumlah Content
-            Creator.
-          </p>
-        </div>
-        <div className="flex items-center">
-          <img src={Wmp} width={200} alt="wmp" />
-          <img src={Unnes} width={170} alt="unnes" />
+            <p className="text-xs text-center sm:text-start sm:text-xl text-T1 w-full mt-4">
+              Rakyfactory meraih apresiasi dari pemerintah dan dukungan
+              universitas, sekaligus telah bermitra dengan sejumlah Content
+              Creator.
+            </p>
+          </div>
+          <div className="flex items-center flex-row justify-center mt-4">
+            <img
+              src={Wmp}
+              width={200}
+              alt="wmp"
+              className="mb-2 mx-2"
+              style={
+                window.matchMedia("(max-width: 640px)").matches
+                  ? { width: 150 }
+                  : {}
+              }
+            />
+            <img
+              src={Unnes}
+              width={170}
+              alt="unnes"
+              className="mb-2 mx-2"
+              style={
+                window.matchMedia("(max-width: 640px)").matches
+                  ? { width: 125 }
+                  : {}
+              }
+            />
+            {/* Add other images here */}
+          </div>
         </div>
       </div>
       <Marquee

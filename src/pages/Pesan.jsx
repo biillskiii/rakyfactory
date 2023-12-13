@@ -18,14 +18,14 @@ const Pesan = () => {
       <div id="pesan"></div>
       <div
         data-aos="fade-up"
-        className="w-[1232px] h-[352px] rounded-3xl bg-white mx-auto mt-48 text-black shadow-lg relative flex"
+        className="w-11/12 sm:w-9/12 h-[850px]  sm:h-[352px]  rounded-3xl bg-white mx-auto mt-48 text-black shadow-lg relative flex flex-col sm:flex-row"
       >
-        <div className="w-[649px] flex flex-col items-start ml-20 my-16 mb-44">
-          <p className="font-bold text-3xl ">
+        <div className="w-[300px] sm:w-[649px] flex flex-col items-start mx-auto sm:ml-20 my-16 mb-44">
+          <p className="font-bold text-3xl text-center sm:text-start ">
             {!showFullContent ? (
               "Pesan dari pak CEO Rakyfactory?"
             ) : (
-              <p className="font-bold text-3xl">
+              <p className="font-bold text-2xl sm:text-3xl">
                 Razan Musyaffa -{" "}
                 <span className="font-normal"> CEO & Content Creator</span>
               </p>
@@ -34,7 +34,7 @@ const Pesan = () => {
           {!showFullContent ? (
             <div>
               <img src={Pen2} className="mb-4" width={270} alt="pen2" />
-              <p className="w-10/12 text-base text-start leading-[32px] text-T1">
+              <p className="w-full text-base text-center sm:text-start leading-[32px] text-T1">
                 "Sebagai konten kreator pasti ada hambatannya. Mikirin ide
                 konten, ngedit, susah bagi waktunya. Butuh tim biar bisa bantuin
                 dan jadi temen diskusi, tapi susah nyari yang cocok dan malah
@@ -42,7 +42,7 @@ const Pesan = () => {
               </p>
             </div>
           ) : (
-            <p className="w-11/12 text-base mt-7 text-start leading-[32px] text-T1">
+            <p className="w-11/12 text-base mt-7 text-center sm:text-start leading-[32px] text-T1">
               "...Maka dari itu, hadirlah Rakyfactory untuk membantu kamu
               berproses sebagai konten kreator. Kami ingin menjadi partner
               kontenmu dan bersama-sama tumbuh untuk menciptakan peluang
@@ -67,7 +67,7 @@ const Pesan = () => {
             </button>
           )}
         </div>
-        <div className="ml-24 my-auto flex justify-center items-center">
+        <div className="mx-auto sm:ml-24 -mt-48 sm:my-auto flex justify-center items-center">
           <img src={Image5} alt="avatar" width={300} />
         </div>
       </div>

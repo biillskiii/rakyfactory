@@ -26,15 +26,15 @@ const LandingPage = () => {
   }, []);
 
   const checkScreenWidth = () => {
-    const isMobile = window.innerWidth < 1359;
+    const isMobile = window.innerWidth < 1280;
     setShowMobileModal(isMobile);
   };
 
   return (
     <>
-      {showMobileModal ? (
+      {/* {showMobileModal ? (
         <MobilePopupModal />
-      ) : (
+      ) : ( */}
         <div className="container mx-auto">
           <NavbarDefault />
           <Hero />
@@ -51,7 +51,7 @@ const LandingPage = () => {
             <Whatsapp />
           </div>
         </div>
-      )}
+      {/* )} */}
     </>
   );
 };

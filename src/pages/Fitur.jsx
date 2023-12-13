@@ -8,7 +8,7 @@ import Deadline from "../assets/deadline.png";
 import Checklist from "../assets/checklist.png";
 import { IoInfinite } from "react-icons/io5";
 import { AiOutlineInfoCircle } from "react-icons/ai";
-import "./Fitur.css"
+import "./Fitur.css";
 import Aos from "aos";
 const Fitur = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -35,23 +35,36 @@ const Fitur = () => {
         data-aos="fade-up"
         className="flex flex-col h-full text-center justify-center items-center mt-48"
       >
-        <div className="flex flex-col">
-          <h2 className="font-bold text-5xl">
-            Kami hadir sebagai partner kontenmu
-          </h2>
-          <img src={Pen5} className="ml-[520px]" width={400} alt="" />
-        </div>
-        <p className="font-medium text-xl mt-10 text-T1">
-          Kami menyediakan tim seperti content strategist, writer, dan video
-          editor bertalenta untuk <br /> mengembangkan kontenmu. Tanpa pusing
-          kelola tim. Tanpa biaya tambahan. Tanpa kontrak.
-        </p>
-        <div className="w-full flex flex-wrap justify-center items-center mt-24 px-2 gap-10">
-          <div className="w-[36%]  h-52 flex justify-center items-center bg-white py-14 px-14 rounded-xl border border-T1 border-opacity-5 shadow-md">
-            <div className="flex justify-center items-center  gap-x-10">
+       <div className="w-10/12 sm:w-full">
+         <div className="flex flex-col">
+           <h2 className="font-bold text-4xl sm:text-[55px]">
+             Kami hadir sebagai partner kontenmu
+           </h2>
+           <img
+             id="pen1"
+             className="ms-auto mr-60 mt-1 z-0"
+             src={Pen5}
+             width={450}
+             alt="pencil"
+             style={
+               window.matchMedia("(max-width: 768px)").matches
+                 ? { width: 350, marginRight: 30 }
+                 : {}
+             }
+           />
+         </div>
+         <p className="font-medium text-sm sm:text-xl mt-10 text-T1">
+           Kami menyediakan tim seperti content strategist, writer, dan video
+           editor bertalenta untuk <br /> mengembangkan kontenmu. Tanpa pusing
+           kelola tim. Tanpa biaya tambahan. Tanpa kontrak.
+         </p>
+       </div>
+        <div className="w-full ml-6 sm:ml-32 grid grid-cols-1 sm:grid-cols-2 justify-center items-center mt-24 px-2 gap-10">
+          <div className="w-full sm:w-[75%] h-52 flex justify-center items-center bg-white py-14 px-14 -ml-3 rounded-xl border border-T1 border-opacity-5 shadow-md">
+            <div className="flex justify-center items-center  gap-x-5 sm:gap-x-20">
               <img src={Partner} alt="subs icon" width={100} />
               <div className="flex flex-col text-start gap-y-3">
-                <p className="font-semibold text-[24px]">
+                <p className="font-semibold text-[20px] sm:text-[24px]">
                   Your Content Partner
                 </p>
                 <p className="w-60 text-xs text-T1">
@@ -61,11 +74,11 @@ const Fitur = () => {
               </div>
             </div>
           </div>
-          <div className="w-[36%]  h-52 flex justify-center items-center bg-white py-14 px-14 rounded-xl border border-T1 border-opacity-5 shadow-md">
-            <div className="flex justify-center items-center  gap-x-10">
+          <div className="w-full sm:w-[75%] h-52 flex justify-center items-center bg-white py-14 px-14 -ml-3 rounded-xl border border-T1 border-opacity-5 shadow-md">
+            <div className="flex justify-center items-center  gap-x-5 sm:gap-x-20">
               <img src={Subs} alt="subs icon" width={100} />
               <div className="flex flex-col text-start gap-y-3">
-                <p className="flex items-center gap-x-2 font-semibold text-[24px]">
+                <p className="flex items-center gap-x-2 font-semibold text-[20px] sm:text-[24px]">
                   Subscription-pause
                   <AiOutlineInfoCircle
                     size={15}
@@ -99,22 +112,26 @@ const Fitur = () => {
               </div>
             </div>
           )}
-          <div className="w-[36%]  h-52 flex justify-center items-center bg-white py-14 px-14 rounded-xl border border-T1 border-opacity-5 shadow-md">
-            <div className="flex justify-center items-center  gap-x-10">
+          <div className="w-full sm:w-[75%] h-52 flex justify-center items-center bg-white py-14 px-14 -ml-3 rounded-xl border border-T1 border-opacity-5 shadow-md">
+            <div className="flex justify-center items-center  gap-x-5 sm:gap-x-20">
               <img src={Kanban} alt="subs icon" width={100} />
               <div className="flex flex-col text-start gap-y-3">
-                <p className="font-semibold text-[24px]">Unlimited Request</p>
+                <p className="font-semibold text-[20px] sm:text-[24px]">
+                  Unlimited Request
+                </p>
                 <p className="w-60 text-xs text-T1">
                   Berlangganan paket dan request konten sesuai kebutuhanmu.
                 </p>
               </div>
             </div>
           </div>
-          <div className="w-[36%]  h-52 flex justify-center items-center bg-white py-14 px-14 rounded-xl border border-T1 border-opacity-5 shadow-md">
-            <div className="flex justify-center items-center  gap-x-10">
+          <div className="w-full sm:w-[75%] h-52 flex justify-center items-center bg-white py-14 px-14 -ml-3 rounded-xl border border-T1 border-opacity-5 shadow-md">
+            <div className="flex justify-center items-center  gap-x-5 sm:gap-x-20">
               <img src={Wallet} alt="subs icon" width={100} />
               <div className="flex flex-col text-start gap-y-3">
-                <p className="font-semibold text-[24px]">Fixed price model</p>
+                <p className="font-semibold text-[20px] sm:text-[24px]">
+                  Fixed price model
+                </p>
                 <p className="w-60 text-xs text-T1">
                   Tidak ada biaya tambahan! Bayar dengan biaya tetap yang sama
                   setiap periode.
@@ -122,11 +139,13 @@ const Fitur = () => {
               </div>
             </div>
           </div>
-          <div className="w-[36%]  h-52 flex justify-center items-center bg-white py-14 px-14 rounded-xl border border-T1 border-opacity-5 shadow-md">
-            <div className="flex justify-center items-center  gap-x-10">
+          <div className="w-full sm:w-[75%] h-52 flex justify-center items-center bg-white py-14 px-14 -ml-3 rounded-xl border border-T1 border-opacity-5 shadow-md">
+            <div className="flex justify-center items-center  gap-x-5 sm:gap-x-20">
               <img src={Deadline} alt="subs icon" width={100} />
               <div className="flex flex-col text-start gap-y-3">
-                <p className="font-semibold text-[24px]">Fast Delivery</p>
+                <p className="font-semibold text-[20px] sm:text-[24px]">
+                  Fast Delivery
+                </p>
                 <p className="w-60 text-xs text-T1">
                   Dapatkan updates permintaan konten kamu satu per satu hanya
                   dalam beberapa hari.
@@ -134,11 +153,11 @@ const Fitur = () => {
               </div>
             </div>
           </div>
-          <div className="w-[36%]  h-52 flex justify-center items-center bg-white py-14 px-14 rounded-xl border border-T1 border-opacity-5 shadow-md">
-            <div className="flex justify-center items-center  gap-x-10">
+          <div className="w-full sm:w-[75%] h-52 flex justify-center items-center bg-white py-14 px-14 -ml-3 rounded-xl border border-T1 border-opacity-5 shadow-md">
+            <div className="flex justify-center items-center  gap-x-5 sm:gap-x-20">
               <img src={Checklist} alt="subs icon" width={100} />
               <div className="flex flex-col text-start gap-y-3">
-                <p className="flex items-center gap-x-2 font-semibold text-[24px] ">
+                <p className="flex items-center gap-x-2 font-semibold text-[20px] sm:text-[24px] ">
                   Free revisions
                   <IoInfinite className="text-P2" />
                 </p>

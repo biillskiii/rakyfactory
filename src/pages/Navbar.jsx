@@ -25,7 +25,7 @@ const NavbarDefault = () => {
     window.open("https://forms.gle/g3nBjCSzawzmdv137", "_blank");
   };
   const navList = (
-    <ul className="text-sm mb-4 mt-2 gap-x-10 mr-0 ml-96 flex flex-col lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
+    <ul className="text-sm mb-4 mt-2 lg:mb-0 lg:mt-0 lg:flex lg:flex-row lg:items-center lg:gap-x-10">
       <li className="p-1 cursor-pointer font-normal text-black">
         <Link to="fitur" smooth={true} duration={500}>
           What We Do
@@ -63,7 +63,7 @@ const NavbarDefault = () => {
             Rakyfactory
           </a>
         </Link>
-        <div className="hidden lg:block">{navList}</div>
+        <div className="hidden ms-auto mr-5 lg:block">{navList}</div>
         <button
           onClick={() => {
             handleWaitlist();
@@ -80,7 +80,7 @@ const NavbarDefault = () => {
         </button>
       </div>
       {openNav && (
-        <div className="container mx-auto text-center">
+        <div className="w-full flex flex-col mx-auto text-left">
           {navList}
           <button
             className="w-full mb-2 bg-[#7A5AE1] rounded-sm p-2 text-white"

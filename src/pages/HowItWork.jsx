@@ -6,8 +6,10 @@ import Image3 from "../assets/image3.png";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import "./HowItWork.css";
 import Aos from "aos";
+
 const HowItWork = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCarrouse, setIsCarrousel] = useState(false);
   useEffect(() => {
     Aos.init();
     Aos.refresh();
@@ -27,19 +29,29 @@ const HowItWork = () => {
         data-aos="fade-up"
         className="flex flex-col justify-center items-center mt-48 "
       >
-        <div className="flex flex-col">
-          <p className="font-bold text-5xl text-center z-20">
+        <div className="w-11/12 sm:w-[800px] flex flex-col">
+          <p className="font-bold text-[38px] sm:text-5xl text-center z-20">
             Dapatkan tim konten pribadimu
           </p>
-          <img src={Pen3} width={500} className="ml-72 z-10" alt="pen3" />
-          <p className="font-medium text-xl text-T1 mt-5 text-center  w-[825px]">
+          <img
+            src={Pen3}
+            width={500}
+            className="ms-auto z-10"
+            alt="pen3"
+            style={
+              window.matchMedia("(max-width: 640px)").matches
+                ? { width: 450, marginRight: 20 }
+                : {}
+            }
+          />
+          <p className="font-medium text-xs sm:text-xl text-T1 mt-5 text-center ">
             Kami akan membantu membuat konten bernilai secara konsisten, yang{" "}
             <br />
             membawa kamu mencapai tujuan sebagai Content Creator
           </p>
         </div>
-        <div className="flex mt-14 gap-x-14">
-          <div className=" w-80 h-96 ">
+        <div className="flex flex-col sm:flex-row mt-14 gap-14 mr-8 sm:mx-auto">
+          <div className="w-80 h-96 ">
             <div data-aos="fade-up" className=" w-80 h-96">
               <div className="flex flex-col bg-white rounded-md shadow-md justify-center items-center gap-x-3 mt-5 ml-10">
                 <div className="flex justify-start items-center gap-x-1 mt-5">

@@ -1,6 +1,6 @@
 import React from "react";
 import { IoMdArrowForward } from "react-icons/io";
-import Video from "../assets/panduan-layanann.mp4"
+import Video from "../assets/panduan-layanann.mp4";
 const Sistem = () => {
   return (
     <>
@@ -11,7 +11,7 @@ const Sistem = () => {
         className="flex flex-col justify-center items-center mt-14"
       >
         <div className="relative">
-          <p className="font-medium text-xl w-[764px] text-center relative z-10">
+          <p className="font-medium text-base sm:text-xl w-[400px] sm:w-[764px] text-center relative z-10">
             <span className="bg-P1">Dengan berlangganan,</span> kamu bisa
             request konten sebanyak mungkin. Kalau lagi nggak butuh, kamu bisa
             jeda langganan kapan pun.
@@ -31,8 +31,19 @@ const Sistem = () => {
             Pelajari selengkapnya{" "}
             <IoMdArrowForward size={16} className="text-P2 font-bold" />{" "}
           </a>
-        </p>  
-        <iframe src={Video} width={1089} height={613} className="mt-14 shadow-2xl rounded-2xl"/>
+        </p>
+        <iframe
+          src={Video}
+          width={1089}
+          height={613}
+          className="mt-14 shadow-2xl rounded-2xl"
+          style={
+            window.matchMedia("(max-width: 640px)").matches
+              ? { width: 350, height:200 }
+              : {}
+          }
+          allowFullScreen
+        />
       </div>
     </>
   );

@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <div id="hero" className="flex flex-col items-center justify-center">
      <div className="flex flex-col">
-       <p className="font-bold text-4xl lg:text-[55px] mt-40 z-40">
+       <p className="font-bold text-5xl text-center sm:text-[55px] mt-40 leading-tight z-40">
          We help your content growth more easily
        </p>
        <img
@@ -24,13 +24,13 @@ const Hero = () => {
          width={320}
          alt="pencil"
          style={
-           window.matchMedia("(max-width: 768px)").matches
-             ? { width: 220, marginRight: 90 }
+           window.matchMedia("(max-width: 640px)").matches
+             ? { width: 300, marginRight: 50 }
              : {}
          }
        />
      </div>
-      <p className="font-medium text-T1 text-sm text-center w-80 lg:w-8/12 my-10 px-4 lg:text-[22px] lg:leading-8 lg:px-2">
+      <p className="font-medium text-T1 text-sm text-center w-80 sm:w-8/12 my-10 px-4 sm:text-[22px] sm:leading-8 sm:px-2">
         Dapatkan tim konten pribadimu untuk akses permintaan konten sebanyak
         mungkin dengan cara berlangganan. Dapat dijeda atau batalkan kapan saja.
       </p>
