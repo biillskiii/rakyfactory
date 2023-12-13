@@ -460,8 +460,8 @@ const Paket = () => {
         </span>
       </p>
       {isBoostModalOpen && (
-        <div className="fixed top-0 left-0 right-0  w-screen h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="modal absolute bg-white p-8 w-11/12 sm:w-5/12 rounded-md shadow-md text-start">
+        <div className="fixed top-0 left-0 right-0  w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="modal absolute bg-white p-8 w-5/12 rounded-md shadow-md text-start">
             <p className="text-center text-sm flex flex-col items-center">
               <img
                 src={Boost}
