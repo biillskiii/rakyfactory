@@ -35,30 +35,30 @@ const Fitur = () => {
         data-aos="fade-up"
         className="flex flex-col h-full text-center justify-center items-center mt-48"
       >
-       <div className="w-10/12 sm:w-full">
-         <div className="flex flex-col">
-           <h2 className="font-bold text-4xl sm:text-[55px]">
-             Kami hadir sebagai partner kontenmu
-           </h2>
-           <img
-             id="pen1"
-             className="ms-auto mr-60 mt-1 z-0"
-             src={Pen5}
-             width={450}
-             alt="pencil"
-             style={
-               window.matchMedia("(max-width: 768px)").matches
-                 ? { width: 350, marginRight: 30 }
-                 : {}
-             }
-           />
-         </div>
-         <p className="font-medium text-sm sm:text-xl mt-10 text-T1">
-           Kami menyediakan tim seperti content strategist, writer, dan video
-           editor bertalenta untuk <br /> mengembangkan kontenmu. Tanpa pusing
-           kelola tim. Tanpa biaya tambahan. Tanpa kontrak.
-         </p>
-       </div>
+        <div className="w-10/12 sm:w-full">
+          <div className="flex flex-col">
+            <h2 className="font-bold text-4xl sm:text-[55px]">
+              Kami hadir sebagai partner kontenmu
+            </h2>
+            <img
+              id="pen1"
+              className="ms-auto mr-60 mt-1 z-0"
+              src={Pen5}
+              width={450}
+              alt="pencil"
+              style={
+                window.matchMedia("(max-width: 768px)").matches
+                  ? { width: 350, marginRight: 30 }
+                  : {}
+              }
+            />
+          </div>
+          <p className="font-medium text-sm sm:text-xl mt-10 text-T1">
+            Kami menyediakan tim seperti content strategist, writer, dan video
+            editor bertalenta untuk <br /> mengembangkan kontenmu. Tanpa pusing
+            kelola tim. Tanpa biaya tambahan. Tanpa kontrak.
+          </p>
+        </div>
         <div className="w-full ml-6 sm:ml-32 grid grid-cols-1 sm:grid-cols-2 justify-center items-center mt-24 px-2 gap-10">
           <div className="w-full sm:w-[75%] h-52 flex justify-center items-center bg-white py-14 px-14 -ml-3 rounded-xl border border-T1 border-opacity-5 shadow-md">
             <div className="flex justify-center items-center  gap-x-5 sm:gap-x-20">
