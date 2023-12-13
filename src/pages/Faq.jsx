@@ -11,10 +11,20 @@ const FaQ = () => {
     <>
       <div id="faq"></div>
       <div className="my-48">
-        <div className="w-9/12 rounded-xl mx-auto">
-          <div className="flex items-center gap-x-3">
-            <img src={Pen9} alt="pen9" className="-mt-10 ml-52" width={100} />
-            <p className="font-bold flex justify-center gap-x-5 text-5xl mb-20 pt-9">
+        <div className="w-11/12 sm:w-9/12 rounded-xl text-start mx-auto">
+          <div className="w-full flex justify-start sm:justify-center items-center">
+            <img
+              src={Pen9}
+              alt="pen9"
+              className="-mt-10 -ml-8"
+              width={100}
+              style={
+                window.matchMedia("(max-width: 640px)").matches
+                  ? { width: 40, marginRight: 28 }
+                  : {}
+              }
+            />
+            <p className="font-bold text-3xl sm:text-5xl mb-20 pt-9">
               {" "}
               Pertanyaan umum
             </p>

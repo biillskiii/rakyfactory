@@ -12,7 +12,7 @@ const Footer = () => {
   }, []);
   return (
     <>
-      <footer className="mx-auto bg-F1  text-center text-black lg:text-left">
+          <footer className="sm:mx-auto bg-F1 text-center text-black lg:text-left">
         <div className="ml-40 pt-14">
           <img src={Raky} width={250} alt="logo raky" />
         </div>

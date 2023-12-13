@@ -45,11 +45,21 @@ const Paket = () => {
           data-aos="fade-up"
           className="relative flex flex-col justify-center items-center"
         >
-          <p className="font-bold text-5xl">
+          <p className="font-bold text-4xl text-center sm:text-5xl">
             Pilih paket yang sesuai untuk kamu
           </p>
-          <img src={Pen8} width={450} className="ms-auto" alt="" />
-          <p className="font-medium mt-3 text-xl text-T1">
+          <img
+            src={Pen8}
+            width={450}
+            className="ms-auto"
+            alt="pen8"
+            style={
+              window.matchMedia("(max-width: 640px)").matches
+                ? { width: 350, marginRight: 20 }
+                : {}
+            }
+          />
+          <p className="font-medium mt-3 text-sm sm:text-xl text-T1">
             Biaya tetap. Tanpa kontrak. Tanpa pusing kelola tim
           </p>
         </div>
@@ -81,7 +91,10 @@ const Paket = () => {
         </label>
       </div>
       <div className="flex justify-center items-center mt-10">
-        <div data-aos="fade-up" className="flex flex-wrap  space-x-10">
+        <div
+          data-aos="fade-up"
+          className="flex flex-wrap gap-y-10 ml-16  space-10"
+        >
           <div className="w-[270px] h-96 bg-white p-6 rounded-lg shadow-lg text-start">
             <h2 className="flex  items-center gap-x-3 text-lg font-semibold">
               Script Writing Team{" "}
@@ -437,11 +450,11 @@ const Paket = () => {
           )}
         </div>
       </div>
-      <p className="flex justify-center items-center mt-10 font-medium text-sm">
+      <p className="flex sm:flex-row flex-col justify-center items-center mt-10 font-medium text-xs sm:text-sm">
         Butuh lebih banyak konten?
         <span
           onClick={boostModal}
-          className="flex items-center gap-x-2 ml-1 font-medium text-sm text-P2 cursor-pointer"
+          className="flex items-center gap-x-2 ml-1 font-medium text-xs sm:text-sm text-P2 cursor-pointer"
         >
           Upgrade 2 permintaan dalam 1 waktu <IoMdArrowForward />
         </span>
@@ -477,7 +490,9 @@ const Paket = () => {
             <button
               onClick={closeModal}
               className="w-full mt-4 px-4 py-2 bg-[#7A5AE1] text-white rounded-md hover:bg-[#4C1D95] focus:outline-none focus:ring focus:border-blue-300"
-            >Tutup</button>
+            >
+              Tutup
+            </button>
           </div>
         </div>
       )}
