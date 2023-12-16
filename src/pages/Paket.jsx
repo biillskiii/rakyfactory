@@ -55,7 +55,7 @@ const Paket = () => {
             alt="pen8"
             style={
               window.matchMedia("(max-width: 640px)").matches
-                ? { width: 350, marginRight: 20 }
+                ? { width: 330, marginRight: 35 }
                 : {}
             }
           />
@@ -93,8 +93,123 @@ const Paket = () => {
       <div className="flex justify-center items-center mt-10">
         <div
           data-aos="fade-up"
-          className="flex flex-wrap gap-y-10 ml-16  space-10"
+          className="flex sm:flex-row flex-col gap-y-10 space-10"
         >
+          {isChecked && (
+            <div className="w-[270px] h-96 bg-white p-6 rounded-lg shadow-lg text-start">
+              <h2 className="flex items-center gap-x-3 text-lg font-semibold">
+                Premium Bundling{" "}
+                <AiOutlineInfoCircle
+                  size={13}
+                  onClick={() =>
+                    openModal(
+                      "Ambil kesempatan DISKON TERBAIK, kalau kamu punya kode promo!"
+                    )
+                  }
+                  className="text-P2 cursor-pointer"
+                />
+              </h2>
+              <p class="text-lg font-semibold mb-2">
+                Rp5,499 jt{" "}
+                <span className="text-xs font-normal">/ periode 31 hari</span>
+              </p>
+              <p className="text-xs">
+                Dapatkan tim video editor dan script <br /> writer untuk
+                menghemat waktumu!
+              </p>
+              <hr className="my-5" />
+              <ul className="text-left text-xs  mb-6">
+                <li className="flex items-center gap-x-2 mb-2">
+                  <div className="bg-P1 rounded-full px-1 py-1">
+                    <FaCheck className=" text-P2 " />
+                  </div>
+                  Semua bonus di paket satuan
+                </li>
+                <li class="flex items-center gap-x-2 mb-2">
+                  <div className="bg-P1 rounded-full px-1 py-1">
+                    <FaCheck className=" text-P2 " />
+                  </div>
+                  Bonus thumbnail IG Reels
+                </li>
+                <li className="flex items-center gap-x-2 mb-2">
+                  <div className="bg-P1 rounded-full px-1 py-1">
+                    <FaCheck className=" text-P2 " />
+                  </div>
+                  1 permintaan dalam 1 waktu{" "}
+                  <AiOutlineInfoCircle
+                    size={13}
+                    onClick={() =>
+                      openModal(
+                        "Work-board akan dibedakan masing-masing, sehingga timer pada masa berlangganannya tidak saling bertumpuk."
+                      )
+                    }
+                    className="text-P2 cursor-pointer"
+                  />
+                </li>
+                <li className="flex items-center gap-x-2 mb-2 ">
+                  <div className="bg-P1 rounded-full px-1 py-1">
+                    <FaCheck className=" text-P2 " />
+                  </div>
+                  Termasuk fitur tambahan
+                  <AiOutlineInfoCircle
+                    size={13}
+                    onClick={() =>
+                      openModal(
+                        <ul className="pl-10">
+                          <li className="list-item list-disc">
+                            Permintaan tak terbatas
+                          </li>
+                          <li className="list-item list-disc">
+                            Rata-rata pengiriman 48 jam
+                          </li>
+                          <li className="list-item list-disc">
+                            Revisi tak terbatas
+                          </li>
+                          <li className="list-item list-disc">
+                            Gratis cloud storage
+                          </li>
+                          <li className="list-item list-disc">
+                            Gratis konsultasi konten
+                          </li>
+                          <li className="list-item list-disc">
+                            Obrolan tim sefrekuensi
+                          </li>
+                          <li className="list-item list-disc">
+                            Tim support 24/7
+                          </li>
+                          <li className="list-item list-disc">
+                            Langganan dapat dijeda
+                          </li>
+                          <li className="list-item list-disc">
+                            Real-time & transparan
+                          </li>
+                          <li className="list-item list-disc">
+                            Biaya langganan tetap
+                          </li>
+                          <li className="list-item list-disc">
+                            Tanpa biaya tambahan
+                          </li>
+                          <li className="list-item list-disc">Tanpa kontrak</li>
+                        </ul>
+                      )
+                    }
+                    className="text-P2 cursor-pointer"
+                  />
+                </li>
+              </ul>
+              <button
+                onClick={handleWaitlist}
+                className="w-full text-xs bg-gradient-to-r from-P2 to-[#7FAAFF] text-white py-2 px-4 rounded-md hover:bg-[#280598] focus:outline-none focus:ring focus:border-purple-300"
+              >
+                <p className="flex  justify-center items-center uppercase gap-x-2 font-semibold">
+                  <MdDiscount /> Extra save 37%
+                </p>
+              </button>
+              <p className="text-xs text-center mt-3">
+                Jeda atau batalkan kapanpun
+              </p>
+            </div>
+          )}
           <div className="w-[270px] h-96 bg-white p-6 rounded-lg shadow-lg text-start">
             <h2 className="flex  items-center gap-x-3 text-lg font-semibold">
               Script Writing Team{" "}
@@ -333,121 +448,6 @@ const Paket = () => {
               Jeda atau batalkan kapanpun
             </p>
           </div>
-          {isChecked && (
-            <div className="w-[270px] h-96 bg-white p-6 rounded-lg shadow-lg text-start">
-              <h2 className="flex items-center gap-x-3 text-lg font-semibold">
-                Premium Bundling{" "}
-                <AiOutlineInfoCircle
-                  size={13}
-                  onClick={() =>
-                    openModal(
-                      "Ambil kesempatan DISKON TERBAIK, kalau kamu punya kode promo!"
-                    )
-                  }
-                  className="text-P2 cursor-pointer"
-                />
-              </h2>
-              <p class="text-lg font-semibold mb-2">
-                Rp5,499 jt{" "}
-                <span className="text-xs font-normal">/ periode 31 hari</span>
-              </p>
-              <p className="text-xs">
-                Dapatkan tim video editor dan script <br /> writer untuk
-                menghemat waktumu!
-              </p>
-              <hr className="my-5" />
-              <ul className="text-left text-xs  mb-6">
-                <li className="flex items-center gap-x-2 mb-2">
-                  <div className="bg-P1 rounded-full px-1 py-1">
-                    <FaCheck className=" text-P2 " />
-                  </div>
-                  Semua bonus di paket satuan
-                </li>
-                <li class="flex items-center gap-x-2 mb-2">
-                  <div className="bg-P1 rounded-full px-1 py-1">
-                    <FaCheck className=" text-P2 " />
-                  </div>
-                  Bonus thumbnail IG Reels
-                </li>
-                <li className="flex items-center gap-x-2 mb-2">
-                  <div className="bg-P1 rounded-full px-1 py-1">
-                    <FaCheck className=" text-P2 " />
-                  </div>
-                  1 permintaan dalam 1 waktu{" "}
-                  <AiOutlineInfoCircle
-                    size={13}
-                    onClick={() =>
-                      openModal(
-                        "Work-board akan dibedakan masing-masing, sehingga timer pada masa berlangganannya tidak saling bertumpuk."
-                      )
-                    }
-                    className="text-P2 cursor-pointer"
-                  />
-                </li>
-                <li className="flex items-center gap-x-2 mb-2 ">
-                  <div className="bg-P1 rounded-full px-1 py-1">
-                    <FaCheck className=" text-P2 " />
-                  </div>
-                  Termasuk fitur tambahan
-                  <AiOutlineInfoCircle
-                    size={13}
-                    onClick={() =>
-                      openModal(
-                        <ul className="pl-10">
-                          <li className="list-item list-disc">
-                            Permintaan tak terbatas
-                          </li>
-                          <li className="list-item list-disc">
-                            Rata-rata pengiriman 48 jam
-                          </li>
-                          <li className="list-item list-disc">
-                            Revisi tak terbatas
-                          </li>
-                          <li className="list-item list-disc">
-                            Gratis cloud storage
-                          </li>
-                          <li className="list-item list-disc">
-                            Gratis konsultasi konten
-                          </li>
-                          <li className="list-item list-disc">
-                            Obrolan tim sefrekuensi
-                          </li>
-                          <li className="list-item list-disc">
-                            Tim support 24/7
-                          </li>
-                          <li className="list-item list-disc">
-                            Langganan dapat dijeda
-                          </li>
-                          <li className="list-item list-disc">
-                            Real-time & transparan
-                          </li>
-                          <li className="list-item list-disc">
-                            Biaya langganan tetap
-                          </li>
-                          <li className="list-item list-disc">
-                            Tanpa biaya tambahan
-                          </li>
-                          <li className="list-item list-disc">Tanpa kontrak</li>
-                        </ul>
-                      )
-                    }
-                    className="text-P2 cursor-pointer"
-                  />
-                </li>
-              </ul>
-              <button
-                onClick={handleWaitlist}
-                className="w-full text-xs bg-gradient-to-r from-P2 to-[#7FAAFF] text-white py-2 px-4 rounded-md hover:bg-[#280598] focus:outline-none focus:ring focus:border-purple-300"
-              >
-                <p className="flex  justify-center items-center uppercase gap-x-2 font-semibold">
-                  <MdDiscount /> Extra save 37%
-                </p>
-              </button>
-              <p className="text-xs text-center mt-3">
-                Jeda atau batalkan kapanpun
-              </p>
-            </div>
-          )}
         </div>
       </div>
       <p className="flex sm:flex-row flex-col justify-center items-center mt-10 font-medium text-xs sm:text-sm">

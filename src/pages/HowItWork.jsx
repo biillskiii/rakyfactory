@@ -29,8 +29,8 @@ const HowItWork = () => {
         data-aos="fade-up"
         className="flex flex-col justify-center items-center mt-48 "
       >
-        <div className="w-11/12 sm:w-[800px] flex flex-col">
-          <p className="font-bold text-[38px] sm:text-5xl text-center z-20">
+        <div className="w-10/12 sm:w-[800px] flex flex-col">
+          <p className="font-bold text-[32px] sm:text-5xl text-center z-20">
             Dapatkan tim konten pribadimu
           </p>
           <img
@@ -40,34 +40,31 @@ const HowItWork = () => {
             alt="pen3"
             style={
               window.matchMedia("(max-width: 640px)").matches
-                ? { width: 450, marginRight: 20 }
+                ? { width: 280, marginRight: 20 }
                 : {}
             }
           />
-          <p className="font-medium text-xs sm:text-xl text-T1 mt-5 text-center ">
+          <p className="font-medium text-sm sm:text-xl text-T1 mt-5 text-center ">
             Kami akan membantu membuat konten bernilai secara konsisten, yang{" "}
-            <br />
             membawa kamu mencapai tujuan sebagai Content Creator
           </p>
         </div>
-        <div className="flex flex-col sm:flex-row mt-14 gap-14 mr-8 sm:mx-auto">
-          <div className="w-80 h-96 ">
-            <div data-aos="fade-up" className=" w-80 h-96">
-              <div className="flex flex-col bg-white rounded-md shadow-md justify-center items-center gap-x-3 mt-5 ml-10">
-                <div className="flex justify-start items-center gap-x-1 mt-5">
-                  <div className="bg-[#f6f6f6] font-semibold rounded-full w-10 h-10 flex justify-center items-center">
-                    01
-                  </div>
-                  <p className="font-bold text-sm text-start">
-                    Mulai berlangganan
-                  </p>
+        <div className="flex flex-col sm:flex-row mt-14 gap-2 sm:gap-14 mr-11">
+          <div data-aos="fade-up" className=" w-80 h-96">
+            <div className="flex flex-col bg-white rounded-md shadow-md justify-center items-center gap-x-3 mt-5 ml-10">
+              <div className="flex justify-start items-center gap-x-1 mt-5">
+                <div className="bg-[#f6f6f6] font-semibold rounded-full w-10 h-10 flex justify-center items-center">
+                  01
                 </div>
-                <img src={Image1} width={150} className="mx-auto mt-5" />
-                <p className="w-60 text-xs text-start px-3 mt-3.5 mb-10">
-                  Berlangganan untuk satu periode dengan opsi jeda jika tidak
-                  ada permintaan konten. Biaya tetap dan tanpa kontrak.
+                <p className="font-bold text-sm text-start">
+                  Mulai berlangganan
                 </p>
               </div>
+              <img src={Image1} width={150} className="mx-auto mt-5" />
+              <p className="w-60 text-xs text-start px-3 mt-3.5 mb-10">
+                Berlangganan untuk satu periode dengan opsi jeda jika tidak ada
+                permintaan konten. Biaya tetap dan tanpa kontrak.
+              </p>
             </div>
           </div>
           <div data-aos="fade-up" className=" w-80 h-96">

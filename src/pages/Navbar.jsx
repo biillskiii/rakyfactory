@@ -80,7 +80,7 @@ const NavbarDefault = () => {
         </button>
       </div>
       {openNav && (
-        <div className="w-full flex flex-col mx-auto text-left">
+        <div className="fixed bg-white h-full w-11/12 flex flex-col mx-auto text-left">
           {navList}
           <button
             className="w-full mb-2 bg-[#7A5AE1] rounded-sm p-2 text-white"

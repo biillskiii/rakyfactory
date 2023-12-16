@@ -7,7 +7,7 @@ const WhatsapLogo = () => {
 
   return (
     <>
-      <div className="animate-bounce fixed rounded-full bottom-12 right-12 flex items-center justify-center z-10">
+      <div className="animate-bounce fixed rounded-full bottom-12 right-5 sm:right-12 flex items-center justify-center z-10">
         <button onClick={handleClick} className="">
           <img src={Whatsapp} alt="" width={60} />
         </button>

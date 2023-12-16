@@ -40,12 +40,12 @@ const Funfact = () => {
               className="ms-auto mr-20 z-10"
               style={
                 window.matchMedia("(max-width: 640px)").matches
-                  ? { width: 250, marginRight: 80}
+                  ? { width: 250, marginRight: 60 }
                   : {}
               }
             />
 
-            <p className="text-xs text-center sm:text-start sm:text-xl text-T1 w-full mt-4">
+            <p className="text-sm text-center sm:text-start sm:text-xl text-T1 w-10/12 mx-auto mt-4">
               Rakyfactory meraih apresiasi dari pemerintah dan dukungan
               universitas, sekaligus telah bermitra dengan sejumlah Content
               Creator.
@@ -56,10 +56,10 @@ const Funfact = () => {
               src={Wmp}
               width={200}
               alt="wmp"
-              className="mb-2 mx-2"
+              className="mb-2 "
               style={
                 window.matchMedia("(max-width: 640px)").matches
-                  ? { width: 150 }
+                  ? { width: 120 }
                   : {}
               }
             />
@@ -67,10 +67,10 @@ const Funfact = () => {
               src={Unnes}
               width={170}
               alt="unnes"
-              className="mb-2 mx-2"
+              className="mb-2 "
               style={
                 window.matchMedia("(max-width: 640px)").matches
-                  ? { width: 125 }
+                  ? { width: 100 }
                   : {}
               }
             />
@@ -83,6 +83,7 @@ const Funfact = () => {
         autoFill={true}
         pauseOnClick
         gradient={true}
+        gradientWidth={100}
         direction="left"
         gap-x-0
         backgroundGradient="linear-gradient(to right, white, white)"
@@ -131,6 +132,7 @@ const Funfact = () => {
         autoFill={true}
         pauseOnClick
         gradient={true}
+        gradientWidth={100}
         overflow="hidden"
         height="150px"
         direction="right"

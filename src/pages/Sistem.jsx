@@ -11,16 +11,16 @@ const Sistem = () => {
         className="flex flex-col justify-center items-center mt-14"
       >
         <div className="relative">
-          <p className="font-medium text-base sm:text-xl w-[400px] sm:w-[764px] text-center relative z-10">
+          <p className="font-medium text-sm sm:text-xl w-[350px] sm:w-[764px] text-center relative z-10">
             <span className="bg-P1">Dengan berlangganan,</span> kamu bisa
             request konten sebanyak mungkin. Kalau lagi nggak butuh, kamu bisa
             jeda langganan kapan pun.
           </p>
         </div>
 
-        <p className=" flex items-center gap-x-1 text-sm my-2 font-medium mt-5 ">
+        <p className=" flex items-center gap-x-1 text-[10px] sm:text-sm my-2 font-medium mt-3 sm:mt-5 ">
           Baru tersedia{" "}
-          <span className="bg-P1 text-P2 text-xs px-1 border-2 border-P3 rounded-md font-semibold m">
+          <span className="bg-P1 text-P2 text-[10px] sm:text-sm px-1 border-2 border-P3 rounded-md font-semibold m">
             Beta Version
           </span>
           <a
@@ -39,7 +39,7 @@ const Sistem = () => {
           className="mt-14 shadow-2xl rounded-2xl"
           style={
             window.matchMedia("(max-width: 640px)").matches
-              ? { width: 350, height:200 }
+              ? { width: 354, height: 199 }
               : {}
           }
           allowFullScreen

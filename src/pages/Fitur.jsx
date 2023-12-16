@@ -10,7 +10,7 @@ import { IoInfinite } from "react-icons/io5";
 import { AiOutlineInfoCircle } from "react-icons/ai";
 import "./Fitur.css";
 import Aos from "aos";
-const Fitur = () => {
+const   Fitur = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const Fitur = () => {
       >
         <div className="w-10/12 sm:w-full">
           <div className="flex flex-col">
-            <h2 className="font-bold text-4xl sm:text-[55px]">
+            <h2 className="font-bold text-3xl sm:text-[55px]">
               Kami hadir sebagai partner kontenmu
             </h2>
             <img
@@ -48,14 +48,14 @@ const Fitur = () => {
               alt="pencil"
               style={
                 window.matchMedia("(max-width: 768px)").matches
-                  ? { width: 350, marginRight: 30 }
+                  ? { width: 270, marginRight: 30 }
                   : {}
               }
             />
           </div>
-          <p className="font-medium text-sm sm:text-xl mt-10 text-T1">
+          <p className="font-medium text-sm sm:text-xl mt-8 sm:mt-10 text-T1">
             Kami menyediakan tim seperti content strategist, writer, dan video
-            editor bertalenta untuk <br /> mengembangkan kontenmu. Tanpa pusing
+            editor bertalenta untuk mengembangkan kontenmu. Tanpa pusing
             kelola tim. Tanpa biaya tambahan. Tanpa kontrak.
           </p>
         </div>
