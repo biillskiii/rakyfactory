@@ -13,8 +13,8 @@ const Hero = () => {
   };
   return (
     <div id="hero" className="flex flex-col items-center justify-center">
-      <div className="flex flex-col">
-        <p className="font-bold text-5xl text-center sm:text-[55px] mt-28 sm:mt-40 leading-tight z-40">
+      <div className="flex flex-col p-1 sm:p-0">
+        <p className="font-bold text-5xl text-center sm:text-[55px] mt-10 sm:mt-40 leading-tight z-40">
           We help your content growth more easily
         </p>
         <img

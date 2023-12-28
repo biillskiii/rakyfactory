@@ -25,7 +25,7 @@ const Pesan = () => {
             {!showFullContent ? (
               "Pesan dari pak CEO Rakyfactory?"
             ) : (
-              <p className="font-bold text-2xl sm:text-3xl">
+              <p className="font-bold text-3xl sm:text-3xl">
                 Razan Musyaffa -{" "}
                 <span className="font-normal"> CEO & Content Creator</span>
               </p>
