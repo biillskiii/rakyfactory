@@ -59,8 +59,8 @@ const   Fitur = () => {
             kelola tim. Tanpa biaya tambahan. Tanpa kontrak.
           </p>
         </div>
-        <div className="w-full ml-6 sm:ml-32 grid grid-cols-1 sm:grid-cols-2 justify-center items-center mt-24 px-2 gap-10">
-          <div className="w-full sm:w-[75%] h-52 flex justify-center items-center bg-white py-14 px-14 -ml-3 rounded-xl border border-T1 border-opacity-5 shadow-md">
+        <div className="w-full ml-6 sm:ml-40 grid grid-cols-1 sm:grid-cols-2 justify-center items-center mt-24 px-2 gap-10">
+          <div className="w-full sm:w-[80%] h-52 flex justify-center items-center bg-white py-14 px-14 -ml-3 rounded-xl border border-T1 border-opacity-5 shadow-md">
             <div className="flex justify-center items-center  gap-x-5 sm:gap-x-20">
               <img src={Partner} alt="subs icon" width={100} />
               <div className="flex flex-col text-start gap-y-3">
@@ -74,7 +74,7 @@ const   Fitur = () => {
               </div>
             </div>
           </div>
-          <div className="w-full sm:w-[75%] h-52 flex justify-center items-center bg-white py-14 px-14 -ml-3 rounded-xl border border-T1 border-opacity-5 shadow-md">
+          <div className="w-full sm:w-[80%] h-52 flex justify-center items-center bg-white py-14 px-14 -ml-3 rounded-xl border border-T1 border-opacity-5 shadow-md">
             <div className="flex justify-center items-center  gap-x-5 sm:gap-x-20">
               <img src={Subs} alt="subs icon" width={100} />
               <div className="flex flex-col text-start gap-y-3">
@@ -112,7 +112,7 @@ const   Fitur = () => {
               </div>
             </div>
           )}
-          <div className="w-full sm:w-[75%] h-52 flex justify-center items-center bg-white py-14 px-14 -ml-3 rounded-xl border border-T1 border-opacity-5 shadow-md">
+          <div className="w-full sm:w-[80%] h-52 flex justify-center items-center bg-white py-14 px-14 -ml-3 rounded-xl border border-T1 border-opacity-5 shadow-md">
             <div className="flex justify-center items-center  gap-x-5 sm:gap-x-20">
               <img src={Kanban} alt="subs icon" width={100} />
               <div className="flex flex-col text-start gap-y-3">
@@ -125,7 +125,7 @@ const   Fitur = () => {
               </div>
             </div>
           </div>
-          <div className="w-full sm:w-[75%] h-52 flex justify-center items-center bg-white py-14 px-14 -ml-3 rounded-xl border border-T1 border-opacity-5 shadow-md">
+          <div className="w-full sm:w-[80%] h-52 flex justify-center items-center bg-white py-14 px-14 -ml-3 rounded-xl border border-T1 border-opacity-5 shadow-md">
             <div className="flex justify-center items-center  gap-x-5 sm:gap-x-20">
               <img src={Wallet} alt="subs icon" width={100} />
               <div className="flex flex-col text-start gap-y-3">
@@ -139,7 +139,7 @@ const   Fitur = () => {
               </div>
             </div>
           </div>
-          <div className="w-full sm:w-[75%] h-52 flex justify-center items-center bg-white py-14 px-14 -ml-3 rounded-xl border border-T1 border-opacity-5 shadow-md">
+          <div className="w-full sm:w-[80%] h-52 flex justify-center items-center bg-white py-14 px-14 -ml-3 rounded-xl border border-T1 border-opacity-5 shadow-md">
             <div className="flex justify-center items-center  gap-x-5 sm:gap-x-20">
               <img src={Deadline} alt="subs icon" width={100} />
               <div className="flex flex-col text-start gap-y-3">
@@ -153,7 +153,7 @@ const   Fitur = () => {
               </div>
             </div>
           </div>
-          <div className="w-full sm:w-[75%] h-52 flex justify-center items-center bg-white py-14 px-14 -ml-3 rounded-xl border border-T1 border-opacity-5 shadow-md">
+          <div className="w-full sm:w-[80%] h-52 flex justify-center items-center bg-white py-14 px-14 -ml-3 rounded-xl border border-T1 border-opacity-5 shadow-md">
             <div className="flex justify-center items-center  gap-x-5 sm:gap-x-20">
               <img src={Checklist} alt="subs icon" width={100} />
               <div className="flex flex-col text-start gap-y-3">
