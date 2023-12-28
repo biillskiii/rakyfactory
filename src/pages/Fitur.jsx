@@ -53,7 +53,7 @@ const   Fitur = () => {
               }
             />
           </div>
-          <p className="font-medium text-sm sm:text-xl mt-8 sm:mt-10 text-T1">
+          <p className="font-medium text-sm sm:text-xl mt-8 sm:mt-10 sm:w-8/12 sm:mx-auto text-T1">
             Kami menyediakan tim seperti content strategist, writer, dan video
             editor bertalenta untuk mengembangkan kontenmu. Tanpa pusing
             kelola tim. Tanpa biaya tambahan. Tanpa kontrak.

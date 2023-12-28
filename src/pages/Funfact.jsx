@@ -45,7 +45,7 @@ const Funfact = () => {
               }
             />
 
-            <p className="text-sm text-center sm:text-start sm:text-xl text-T1 w-10/12 mx-auto mt-4">
+            <p className="text-sm text-center sm:text-start sm:text-xl text-T1 w-10/12 mx-auto sm:mr-48 mt-4">
               Rakyfactory meraih apresiasi dari pemerintah dan dukungan
               universitas, sekaligus telah bermitra dengan sejumlah Content
               Creator.
