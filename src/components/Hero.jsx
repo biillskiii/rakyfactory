@@ -13,8 +13,11 @@ const Hero = () => {
   };
   return (
     <div id="hero" className="flex flex-col items-center justify-center">
-      <div className="flex flex-col p-1 sm:p-0">
-        <p className="font-bold text-5xl text-center sm:text-[55px] mt-10 sm:mt-40 leading-tight z-40">
+      <div className="flex flex-col p-1 sm:p-0 mt-10 sm:mt-40">
+        <p className="text-center font-medium font-bevietnampro text-[30px] ">
+          Rakyfactory Swiftcut
+        </p>
+        <p className="font-bold text-5xl text-center sm:text-[55px]  leading-tight z-40">
           We help your content growth more easily
         </p>
         <img
@@ -41,18 +44,12 @@ const Hero = () => {
           duration={200}
           className="bg-P2  text-white flex items-center justify-center font-medium rounded-md px-3 sm:px-5 py-1 sm:py-3 cursor-pointer text-xs sm:text-base"
         >
-          Lihat paket
+          Daftar Sekarang
         </Link>
-        <button
-          onClick={handleWhatsapp}
-          className="bg-[#F4F2FD] border border-P2 text-P2 border-opacity-10 font-medium rounded-md px-5 py-3 text-xs sm:text-base"
-        >
-          Konsultasi Gratis
-        </button>
       </div>
       <p className="text-[#7C7C7C] font-medium text-[10px] sm:text-xs mt-3 sm:mt-6 flex justify-center gap-x-2 items-center">
         <HiSparkles className="text-[#7C7C7C] " size={20} />
-        Tanpa kontrak. Tanpa biaya tambahan.
+        Tanpa kontrak. Langganan fleksibel
       </p>
     </div>
   );

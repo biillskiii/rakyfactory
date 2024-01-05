@@ -1,11 +1,19 @@
-import React from 'react';
+import React from "react";
 import { AiOutlineLike } from "react-icons/ai";
 import { GoPeople } from "react-icons/go";
 import { MdVerified } from "react-icons/md";
 
-const Card = ({ avatarSrc, name, stats, views, followers, showCheckIcon, showStarter }) => {
+const Card = ({
+  avatarSrc,
+  name,
+  stats,
+  views,
+  followers,
+  showCheckIcon,
+  showStarter,
+}) => {
   return (
-    <div className="w-auto bg-white rounded-xl shadow-md px-3 py-4 marquee-animation">
+    <div className="w-auto bg-white rounded-xl border-2 px-3 py-4 marquee-animation">
       <div className="flex items-center">
         <img src={avatarSrc} width={32} alt={name} className="mr-2" />
         <p className="font-bold">{name}</p>
@@ -13,7 +21,11 @@ const Card = ({ avatarSrc, name, stats, views, followers, showCheckIcon, showSta
         <p className="bg-P1 font-bold rounded-md text-P2 px-1 py-1 ml-2 text-xs">
           {stats}
         </p>
-        {showStarter && <p className='bg-Y2 text-Y1 px-1 py-1 ml-2 text-xs rounded-md font-semibold'>Starter</p>}
+        {showStarter && (
+          <p className="bg-Y2 text-Y1 px-1 py-1 ml-2 text-xs rounded-md font-semibold">
+            Starter
+          </p>
+        )}
       </div>
       <div className="flex items-center mt-2">
         <AiOutlineLike size={14} className="mr-1" />

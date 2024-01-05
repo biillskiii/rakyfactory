@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['"Poppins"'],
+        bevietnampro: ["Be Vietnam Pro"],
       },
       fontWeight: {
         light: 300,
@@ -23,7 +24,7 @@ export default {
         F1: "#FAFAFA",
         F2: "#565D6D",
         B1: "#171A1F",
-        T1: "#505050"
+        T1: "#505050",
       },
     },
   },
