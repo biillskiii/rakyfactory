@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Carousel } from "react-responsive-carousel";
 import Aos from "aos";
 import CardFeature from "./CardFeature";
 const Fitur = () => {
@@ -35,7 +34,6 @@ const Fitur = () => {
           </div>
         </div>
         <div className="mt-10 flex flex-wrap gap-5 justify-center items-center ">
-          <Carousel>
             <CardFeature
               title={"Monitoring tim mudah"}
               desc={
@@ -72,7 +70,6 @@ const Fitur = () => {
                 "Tim konten terkait akan bergabung dalam grup WhatsApp bersama Anda."
               }
             />
-          </Carousel>
         </div>
       </div>
     </>
