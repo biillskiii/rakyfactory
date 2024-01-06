@@ -5,14 +5,14 @@ import Logo from "../assets/logo.png";
 
 const NavbarDefault = () => {
   const [openNav, setOpenNav] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(true);
   const [prevScrollY, setPrevScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       setIsScrolled(currentScrollY > 50);
-      if (prevScrollY >= currentScrollY) {
+      if (prevScrollY > currentScrollY) {
         setIsScrolled(false);
       }
       if (currentScrollY === 0) {
