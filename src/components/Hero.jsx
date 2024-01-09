@@ -1,56 +1,37 @@
 import React, { useEffect } from "react";
-import Pen1 from "../assets/atas.png";
-import { HiSparkles } from "react-icons/hi";
-import { Link } from "react-scroll";
+import SideImage from "../assets/bro.png";
 import Aos from "aos";
 const Hero = () => {
   useEffect(() => {
     Aos.init();
     Aos.refresh();
   }, []);
-  const handleWhatsapp = () => {
-    window.open("https://wa.me/+62881082013808");
-  };
+
   return (
-    <div id="hero" className="flex flex-col items-center justify-center">
-      <div className="flex flex-col p-1 sm:p-0 mt-10 sm:mt-40">
-        <p className="text-center font-medium font-bevietnampro text-[30px] ">
-          Rakyfactory Swiftcut
+    <div
+      id="hero"
+      className="w-[87.89%] mt-11 mb-44 mx-auto flex items-center justify-center gap-x-24 "
+    >
+      <div className="w-[652px] flex flex-col me-auto  items-start gap-11">
+        <p className="text-base">
+          Perkenalkan <span className="text-[#7A5AE1]">Swiftcut</span> by
+          Rakyfactory
         </p>
-        <p className="font-bold text-5xl text-center sm:text-[55px]  leading-tight z-40">
-          We help your content growth more easily
+        <h1 className="font-bold text-4xl">
+          Solusi <span className="text-[#7A5AE1]">hemat waktu</span> bikin
+          konten, dengan langganan Video Editor.
+        </h1>
+        <p className="text-xl">
+          Tanpa repot kelola tim freelancer. Tanpa kontrak. Sistem langganan
+          fleksibel.
         </p>
-        <img
-          id="pen1"
-          className="ms-auto mr-2 mt-1 z-0"
-          src={Pen1}
-          width={320}
-          alt="pencil"
-          style={
-            window.matchMedia("(max-width: 640px)").matches
-              ? { width: 300, marginRight: 50 }
-              : {}
-          }
-        />
+        <button className="w-52 mb-2 bg-[#7A5AE1] rounded-md p-2 text-white">
+          Daftar sekarang,gratis!
+        </button>
       </div>
-      <p className="font-medium text-T1 text-[18px] text-center w-96 sm:w-8/12 my-10 px-4 sm:text-[22px] sm:leading-8 sm:px-2">
-        Dapatkan tim konten pribadimu untuk akses permintaan konten sebanyak
-        mungkin dengan cara berlangganan. Dapat dijeda atau batalkan kapan saja.
-      </p>
-      <div className="flex gap-x-5 justify-center">
-        <Link
-          to="paket"
-          smooth={true}
-          duration={200}
-          className="bg-P2  text-white flex items-center justify-center font-medium rounded-md px-3 sm:px-5 py-1 sm:py-3 cursor-pointer text-xs sm:text-base"
-        >
-          Daftar Sekarang
-        </Link>
+      <div className="w-[487.53px] flex justify-end">
+        <img src={SideImage} width={487} alt="hero image" />
       </div>
-      <p className="text-[#7C7C7C] font-medium text-[10px] sm:text-xs mt-3 sm:mt-6 flex justify-center gap-x-2 items-center">
-        <HiSparkles className="text-[#7C7C7C] " size={20} />
-        Tanpa kontrak. Langganan fleksibel
-      </p>
     </div>
   );
 };
