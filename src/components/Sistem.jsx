@@ -11,29 +11,22 @@ const Sistem = () => {
         className="flex flex-col justify-center items-center mt-14"
       >
         <div className="relative">
-          <p className="font-medium text-sm sm:text-xl w-[350px] sm:w-[764px] text-center relative z-10">
-            <span className="bg-P1">Dengan berlangganan,</span> kamu bisa
-            request konten sebanyak mungkin. Kalau lagi nggak butuh, kamu bisa
-            jeda langganan kapan pun.
-          </p>
+          <h2 className="w-8/12 mx-auto text-center font-bold text-lg sm:text-3xl mb-4">
+            Penggunaan <span className="text-P2">jasa video editing</span>{" "}
+            berbasis langganan di
+            <span className="text-P2"> Rakyfactory Swiftcut</span>
+          </h2>
         </div>
+        <a
+          href="https://trello.com/b/c9RKe2pl/beta-version-prototype"
+          target="_blank"
+          className="flex justify-center items-center text-sm  gap-x-1 font-medium"
+        >
+          Pelajari selengkapnya{" "}
+          <IoMdArrowForward size={16} className="font-bold" />{" "}
+        </a>
 
-        <p className=" flex items-center gap-x-1 text-[10px] sm:text-sm my-2 font-medium mt-3 sm:mt-5 ">
-          Baru tersedia{" "}
-          <span className="bg-P1 text-P2 text-[10px] sm:text-sm px-1 border-2 border-P3 rounded-md font-semibold m">
-            Beta Version
-          </span>
-          <a
-            href="https://trello.com/b/c9RKe2pl/beta-version-prototype"
-            target="_blank"
-            className="flex items-center gap-x-1 text-P2 font-medium"
-          >
-            Pelajari selengkapnya{" "}
-            <IoMdArrowForward size={16} className="text-P2 font-bold" />{" "}
-          </a>
-        </p>
         <iframe
-          src={Video}
           width={1089}
           height={613}
           className="mt-14 shadow-2xl rounded-2xl"
@@ -42,6 +35,10 @@ const Sistem = () => {
               ? { width: 354, height: 199 }
               : {}
           }
+          src="https://www.youtube.com/embed/HMXziSx38YE"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />
       </div>

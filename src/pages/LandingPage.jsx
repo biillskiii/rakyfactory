@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import NavbarDefault from "../components/Navbar";
 import Hero from "../components/Hero";
-import Pesan from "../components/Pesan";
-import HowItWork from "../components/HowItWork";
 import Fitur from "../components/Fitur";
 import Funfact from "../components/Funfact";
 import Paket from "../components/Paket";
@@ -11,7 +9,6 @@ import FaQ from "../components/Faq";
 import Footer from "../components/Footer";
 import Whatsapp from "../components/Whatsapp";
 import ScrollUp from "../components/ScrollUp";
-import MobilePopupModal from "../components/MobilePopupModal"; // Import your mobile popup modal component
 import "../pages/LandingPage.css";
 
 const LandingPage = () => {
@@ -40,7 +37,6 @@ const LandingPage = () => {
         <Hero />
         <Funfact />
         <Fitur />
-        <HowItWork />
         <Sistem />
         <Paket />
         <FaQ />
