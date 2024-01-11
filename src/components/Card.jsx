@@ -8,7 +8,7 @@ const Card = ({ avatarSrc, name, stats, views, followers, showCheckIcon }) => {
     <div className="w-auto h-20 flex flex-col justify-center items-start bg-white rounded-xl border-2 px-2 py-2 marquee-animation">
       <div className="flex items-center">
         <img src={avatarSrc} width={32} alt={name} className="mr-2" />
-        <div className="flex items-center justify-around">
+        <div className="flex items-center justify-center">
           <p className="font-bold text-sm">{name}</p>
           {showCheckIcon && <MdVerified className="text-blue-500 ml-1" />}
           <p className="bg-[#F9F9F8] me-auto font-semibold rounded-md px-1 py-1 ml-2 text-xs">
