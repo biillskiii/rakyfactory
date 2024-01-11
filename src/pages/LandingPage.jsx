@@ -32,7 +32,7 @@ const LandingPage = () => {
       {/* {showMobileModal ? (
         <MobilePopupModal />
       ) : ( */}
-      <div className="container mx-auto">
+      <div className="container mx-auto px-32">
         <NavbarDefault />
         <Hero />
         <Funfact />
@@ -40,12 +40,12 @@ const LandingPage = () => {
         <Sistem />
         <Paket />
         <FaQ />
-        <Footer />
         <div className="flex">
           <ScrollUp />
           <Whatsapp />
         </div>
       </div>
+      <Footer />
       {/* )} */}
     </>
   );

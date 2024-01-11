@@ -29,7 +29,7 @@ const Funfact = () => {
           dan bisnis di Indonesia
         </p>
       </div>
-      <div className="pb-10 w-9/12  mx-auto">
+      <div className="pb-10   mx-auto">
         <Marquee
           className="w-full h-auto rounded-xl  gap-x-5"
           autoFill={true}
@@ -45,65 +45,65 @@ const Funfact = () => {
               showCheckIcon={true}
               name="@raymondchins"
               stats="1.6M"
-              views="+5m"
+              views="+5M"
               followers="+576k"
             />
             <Card
               avatarSrc={Gracia}
               name="Gracia Carolinee"
-              stats="80.5k"
-              views="+1.2m"
+              stats="80.5K"
+              views="+1.2M"
               followers="+5.2k"
             />
             <Card
               avatarSrc={Razan}
               name="Razan Musyaffa"
-              stats="3.5k+"
-              views="+2.3m"
-              followers="+3.5k"
+              stats="3.5K"
+              views="+2.3M"
+              followers="+3.5K"
             />
             <Card
               avatarSrc={F}
               name="F Project HR"
-              stats="4.53k+"
-              views="+54k"
+              stats="4.53K"
+              views="+54K"
               followers="187"
             />
             <Card
               avatarSrc={Faiz}
               name="Faiz Daffa"
-              stats="70.9k+"
-              views="+5.4k"
-              followers="1.2k"
+              stats="70.9K"
+              views="+5.4K"
+              followers="1.2K"
             />
             <Card
               avatarSrc={Doddy}
               name="Doddy Bicara Investasi"
-              stats="15.2k+"
-              views="+523k"
-              followers="+4k"
+              stats="15.2K"
+              views="+523K"
+              followers="+4K"
             />
             <Card
               avatarSrc={Cici}
               name="Cici Otomotif"
-              stats="318+"
-              views="+1.2m"
-              followers="+5.2k"
+              stats="318K"
+              views="+1.2M"
+              followers="+5.2K"
             />
             <Card
               avatarSrc={Alvi}
               showCheckIcon={true}
               name="Alvi Syahrin"
-              stats="754k+"
-              views="+1.7m"
-              followers="+53k"
+              stats="754K"
+              views="+1.7M"
+              followers="+53K"
             />
             <Card
               avatarSrc={Training}
               name="Yuk Training Academy"
-              stats="10.3k+"
-              views="+631k"
-              followers="+7.2k"
+              stats="10.3K"
+              views="+631K"
+              followers="+7.2K"
             />
           </div>
         </Marquee>

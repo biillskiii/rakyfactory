@@ -8,7 +8,7 @@ const Sistem = () => {
       <div
         id="sistem"
         data-aos="fade-up"
-        className="flex flex-col justify-center items-center mt-14"
+        className="bg-[#FCFCFC] py-10 flex flex-col justify-center items-center mt-44"
       >
         <div className="relative">
           <h2 className="w-8/12 mx-auto text-center font-bold text-lg sm:text-3xl mb-4">

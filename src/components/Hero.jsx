@@ -10,18 +10,19 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className="w-[87.89%] mt-11 mb-44 mx-auto flex items-center justify-center gap-x-24 "
+      className=" mt-11 mb-44 mx-auto flex items-center justify-center gap-x-24 "
     >
-      <div className="w-[652px] flex flex-col me-auto  items-start gap-11">
-        <p className="text-base">
+      <div className=" flex flex-col me-auto  items-start gap-11">
+        <p className="text-base font-medium">
           Perkenalkan <span className="text-[#7A5AE1]">Swiftcut</span> by
           Rakyfactory
         </p>
         <h1 className="font-bold text-4xl">
-          Solusi <span className="text-[#7A5AE1]">hemat waktu</span> bikin
-          konten, dengan langganan Video Editor.
+          Solusi <span className="text-[#7A5AE1]">hemat waktu</span> bikin{" "}
+          <br />
+          konten, dengan langganan <br /> Video Editor.
         </h1>
-        <p className="text-xl">
+        <p className="text-xl w-[505px]">
           Tanpa repot kelola tim freelancer. Tanpa kontrak. Sistem langganan
           fleksibel.
         </p>
