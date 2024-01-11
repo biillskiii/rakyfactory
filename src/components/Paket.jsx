@@ -4,7 +4,7 @@ const Paket = () => {
   return (
     <div className="mt-44">
       <div className="flex flex-col items-center">
-        <h2 className="w-[36%] text-center font-bold text-lg sm:text-3xl mb-4">
+        <h2 className="w-[619px] text-center font-bold text-lg sm:text-3xl">
           Pilih paket <span className="text-P2">langganan Video Editor</span>{" "}
           yang tepat untuk kebutuhan Anda
         </h2>
