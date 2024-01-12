@@ -10,6 +10,7 @@ import Footer from "../components/Footer";
 import Whatsapp from "../components/Whatsapp";
 import ScrollUp from "../components/ScrollUp";
 import "../pages/LandingPage.css";
+import Form from "../components/Form";
 
 const LandingPage = () => {
   const [showMobileModal, setShowMobileModal] = useState(false);
@@ -32,18 +33,18 @@ const LandingPage = () => {
       {/* {showMobileModal ? (
         <MobilePopupModal />
       ) : ( */}
-      <div className="container mx-auto px-32">
+      <div className="container mx-auto px-40">
         <NavbarDefault />
         <Hero />
-        <Funfact />
-        <Fitur />
-        <Sistem />
-        <Paket />
-        <FaQ />
-        <div className="flex">
-          <ScrollUp />
-          <Whatsapp />
-        </div>
+      </div>
+      <Funfact />
+      <Fitur />
+      <Sistem />
+      <Paket />
+      <FaQ />
+      <Form/>
+      <div className="flex">
+        <ScrollUp />
       </div>
       <Footer />
       {/* )} */}

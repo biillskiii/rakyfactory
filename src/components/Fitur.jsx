@@ -103,7 +103,7 @@ const Fitur = () => {
   return (
     <>
       <div id="fitur"></div>
-      <div data-aos="fade-up" className=" mx-auto mt-44">
+      <div data-aos="fade-up" className="container  px-40 mx-auto mt-44">
         <div className="w-full">
           <div className="flex flex-col items-center">
             <h2 className="font-bold text-lg sm:text-3xl mb-4">

@@ -33,7 +33,7 @@ const NavbarDefault = () => {
   };
 
   const navList = (
-    <ul className="px-3 text-[#121212] text-sm mb-4 mt-2 lg:mb-0 lg:mt-0 lg:flex lg:flex-row lg:items-center lg:gap-x-16">
+    <ul className="px-3 text-[#121212] text-base mb-4 mt-2 lg:mb-0 lg:mt-0 lg:flex lg:flex-row lg:items-center lg:gap-x-16">
       <li className="p-1 cursor-pointer ">
         <Link to="fitur" smooth={true} duration={500} onClick={closeNavbar}>
           Fitur

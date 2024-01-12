@@ -1,9 +1,5 @@
 import React, { useEffect } from "react";
 import Marquee from "react-fast-marquee";
-import Pen4 from "../assets/Pen4.png";
-import Pen5 from "../assets/Pen5.png";
-import Wmp from "../assets/wmp.png";
-import Unnes from "../assets/unnes.png";
 import Gracia from "../assets/gracia.png";
 import Raymond from "../assets/raymond.png";
 import Razan from "../assets/razan.png";
@@ -21,15 +17,15 @@ const Funfact = () => {
     Aos.refresh();
   }, []);
   return (
-    <div className="bg-[#FCFCFC] mt-44 sm:mt-24 ">
+    <div className=" bg-[#FCFCFC] mt-44 sm:mt-24 ">
       <div className="my-auto" id="funfact"></div>
       <div data-aos="fade-up" className="flex justify-center items-center">
-        <p className="font-semibold text-base py-10">
+        <p className="font-semibold text-xl py-10">
           Telah dipercaya oleh <span className="text-P2">Content Creator</span>{" "}
           dan bisnis di Indonesia
         </p>
       </div>
-      <div className="pb-10   mx-auto">
+      <div className="pb-10 container mx-auto px-40">
         <Marquee
           className="w-full h-auto rounded-xl  gap-x-5"
           autoFill={true}

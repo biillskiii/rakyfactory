@@ -3,12 +3,10 @@ import { BsArrowRight } from "react-icons/bs";
 import { PiCheckBold } from "react-icons/pi";
 
 const Paket = () => {
-  const handlePaket = () =>{
-    
-  }
+  const handlePaket = () => {};
   return (
-    <div className="mt-44">
-      <div className="flex flex-col items-center">
+    <div className="bg-[#FCFCFC] mt-44 container px-40 mx-auto ">
+      <div className="flex flex-col items-center ">
         <h2 className="w-[619px] text-center font-bold text-lg sm:text-3xl">
           Pilih paket <span className="text-P2">langganan Video Editor</span>{" "}
           yang tepat untuk kebutuhan Anda
@@ -17,9 +15,12 @@ const Paket = () => {
           Biaya tetap. Tanpa kontrak. Tanpa pusing kelola tim.
         </p>
       </div>
-      <div className="flex items-center justify-center gap-6 mt-10">
-        <div className="flex flex-col gap-8 items-centerjustify-center">
-          <div onClick={handlePaket} className="w-[720px] flex items-center justify-between border-2 p-5 rounded-lg">
+      <div className="flex items-center justify-between  mt-10">
+        <div className=" flex flex-col gap-8 items-start justify-center">
+          <div
+            onClick={handlePaket}
+            className="w-[720px] cursor-pointer flex items-center justify-between border-2 p-5 rounded-lg"
+          >
             <div className="w-[275px] flex flex-col items-start justify-center">
               <p className="font-bold text-sm mb-5">Starter level</p>
               <p className="text-3xl font-bold">
@@ -34,7 +35,10 @@ const Paket = () => {
               </p>
             </div>
           </div>
-          <div onClick={handlePaket} className="w-[720px] flex items-center justify-between border-2 p-5 rounded-lg">
+          <div
+            onClick={handlePaket}
+            className="w-[720px] cursor-pointer flex items-center justify-between border-2 p-5 rounded-lg"
+          >
             <div className="w-[275px] flex flex-col items-start justify-center">
               <p className="font-bold text-sm mb-5 text-P2">Creator level</p>
               <p className="line-through text-[#5C5C5C] text-[10px]">
@@ -52,7 +56,10 @@ const Paket = () => {
               </p>
             </div>
           </div>
-          <div onClick={handlePaket} className="w-[720px] flex items-center justify-between border-2 p-5 rounded-lg">
+          <div
+            onClick={handlePaket}
+            className="w-[720px] cursor-pointer flex items-center justify-between border-2 p-5 rounded-lg"
+          >
             <div className="w-[275px] flex flex-col items-start justify-center">
               <p className="font-bold text-sm mb-5 ">Creator PRO level</p>
               <p className="line-through text-[#5C5C5C] text-[10px]">
@@ -70,7 +77,10 @@ const Paket = () => {
               </p>
             </div>
           </div>
-          <div onClick={handlePaket} className="w-[720px] flex items-center justify-between border-2 p-5 rounded-lg">
+          <div
+            onClick={handlePaket}
+            className="w-[720px] cursor-pointer flex items-center justify-between border-2 p-5 rounded-lg"
+          >
             <div className="w-[275px] flex flex-col items-start justify-center">
               <p className="font-bold text-sm mb-5">Upcoming services</p>
               <p className="flex items-center gap-2">
@@ -85,70 +95,70 @@ const Paket = () => {
             </div>
           </div>
         </div>
-        <div  className="w-[358px] h-[593px] border-2 text-start flex flex-col justify-start rounded-lg items-start px-5 py-5">
+        <div className="w-[400px] h-[593px] border-2 text-start flex flex-col justify-start rounded-lg items-start px-5 py-5">
           <h1 className="font-bold text-3xl mb-8">Included</h1>
           <div className="flex flex-col gap-3">
-            <p className="flex items-center justify-start gap-x-3 text-lg">
+            <p className="flex items-center justify-start gap-x-3 text-base">
               <div className="rounded-full flex justify-center items-center bg-P1 w-7 h-7">
                 <PiCheckBold className="text-P2" size={15} />
               </div>
               Bonus pemilihan klip YT
             </p>
-            <p className="flex items-center justify-start gap-x-3 text-lg">
+            <p className="flex items-center justify-start gap-x-3 text-base">
               <div className="rounded-full flex justify-center items-center bg-P1 w-7 h-7">
                 <PiCheckBold className="text-P2" size={15} />
               </div>
               Bonus visual-content style
             </p>
-            <p className="flex items-center justify-start gap-x-3 text-lg">
+            <p className="flex items-center justify-start gap-x-3 text-base">
               <div className="rounded-full flex justify-center items-center bg-P1 w-7 h-7">
                 <PiCheckBold className="text-P2" size={15} />
               </div>
               Unlimited request konten
             </p>
-            <p className="flex items-center justify-start gap-x-3 text-lg">
+            <p className="flex items-center justify-start gap-x-3 text-base">
               <div className="rounded-full flex justify-center items-center bg-P1 w-7 h-7">
                 <PiCheckBold className="text-P2" size={15} />
               </div>
               Gratis unlimited revisi
             </p>
-            <p className="flex items-center justify-start gap-x-3 text-lg">
+            <p className="flex items-center justify-start gap-x-3 text-base">
               <div className="rounded-full flex justify-center items-center bg-P1 w-7 h-7">
                 <PiCheckBold className="text-P2" size={15} />
               </div>
               Gratis cloud storage
             </p>
-            <p className="flex items-center justify-start gap-x-3 text-lg">
+            <p className="flex items-center justify-start gap-x-3 text-base">
               <div className="rounded-full flex justify-center items-center bg-P1 w-7 h-7">
                 <PiCheckBold className="text-P2" size={15} />
               </div>
               Gratis konsultasi konten
             </p>
-            <p className="flex items-center justify-start gap-x-3 text-lg">
+            <p className="flex items-center justify-start gap-x-3 text-base">
               <div className="rounded-full flex justify-center items-center bg-P1 w-7 h-7">
                 <PiCheckBold className="text-P2" size={15} />
               </div>
               Obrolan tim sefrekuensi
             </p>
-            <p className="flex items-center justify-start gap-x-3 text-lg">
+            <p className="flex items-center justify-start gap-x-3 text-base">
               <div className="rounded-full flex justify-center items-center bg-P1 w-7 h-7">
                 <PiCheckBold className="text-P2" size={15} />
               </div>
               Tim support 24/7
             </p>
-            <p className="flex items-center justify-start gap-x-3 text-lg">
+            <p className="flex items-center justify-start gap-x-3 text-base">
               <div className="rounded-full flex justify-center items-center bg-P1 w-7 h-7">
                 <PiCheckBold className="text-P2" size={15} />
               </div>
               Langganan terjeda otomatis
             </p>
-            <p className="flex items-center justify-start gap-x-3 text-lg">
+            <p className="flex items-center justify-start gap-x-3 text-base">
               <div className="rounded-full flex justify-center items-center bg-P1 w-7 h-7">
                 <PiCheckBold className="text-P2" size={15} />
               </div>
               Tanpa biaya tambahan
             </p>
-            <p className="flex items-center justify-start gap-x-3 text-lg">
+            <p className="flex items-center justify-start gap-x-3 text-base">
               <div className="rounded-full flex justify-center items-center bg-P1 w-7 h-7">
                 <PiCheckBold className="text-P2" size={15} />
               </div>

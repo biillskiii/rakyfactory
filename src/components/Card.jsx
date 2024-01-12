@@ -16,7 +16,7 @@ const Card = ({ avatarSrc, name, stats, views, followers, showCheckIcon }) => {
           </p>
         </div>
       </div>
-      <div className="flex items-center mt-2">
+      <div className="flex items-center mt-2">  
         <AiOutlineLike size={16} className="mr-1" />
         <p className="font-semibold text-xs">{views} view gain</p>
         <GoPeople size={16} className="ml-4 mr-1" />

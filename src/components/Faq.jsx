@@ -23,7 +23,7 @@ const Faq = () => {
   };
   return (
     <>
-      <div className="my-44 max-h-[300px] flex items-start p-3  justify-center gap-20">
+      <div className="my-44 max-h-[300px] flex items-start p-3 container mx-auto px-40  justify-between gap-20">
         <div className="w-[492px]  flex flex-col items-start justify-start  gap-y-5">
           <p>Frequently Asked Questions (FAQ)</p>
           <h1 className="font-bold text-3xl">
@@ -58,7 +58,7 @@ const Faq = () => {
                   {index === 4 &&
                     "Apa maksud 1 permintaan dan 2 permintaan dalam 1 waktu?"}
                   <IoIosArrowDown
-                    className={`ms-auto transform ${
+                    className={`ms-auto -mr-2 transform ${
                       isOpen ? "rotate-180" : "rotate-0"
                     } transition-transform`}
                   />

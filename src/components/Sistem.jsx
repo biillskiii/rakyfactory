@@ -8,9 +8,9 @@ const Sistem = () => {
       <div
         id="sistem"
         data-aos="fade-up"
-        className="bg-[#FCFCFC] py-10 flex flex-col justify-center items-center mt-44"
+        className="bg-[#FCFCFC] py-10  flex flex-col justify-center items-center mt-44"
       >
-        <div className="relative">
+        <div className="relative container mx-auto px-40 ">
           <h2 className="w-8/12 mx-auto text-center font-bold text-lg sm:text-3xl mb-4">
             Penggunaan <span className="text-P2">jasa video editing</span>{" "}
             berbasis langganan di
