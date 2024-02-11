@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { FaArrowDown } from "react-icons/fa6";
-
 import Aos from "aos";
 const Hero = () => {
   useEffect(() => {
@@ -33,7 +32,7 @@ const Hero = () => {
           Cukup isi formulir pendaftaran. Tim kami akan segera hubungi Anda.
         </p>
       </div>
-      <FaArrowDown size={30} className="text-P2 mt-24 animate-bounce" />
+      <FaArrowDown size={30} className="text-P1 mt-24 animate-bounce" />
     </div>
   );
 };

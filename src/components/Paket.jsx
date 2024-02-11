@@ -5,7 +5,7 @@ import { PiCheckBold } from "react-icons/pi";
 const Paket = () => {
   const handlePaket = () => {};
   return (
-    <div className="bg-[#FCFCFC] mt-44 container px-40 mx-auto ">
+    <div className=" mt-44 container px-40 mx-auto ">
       <div className="flex flex-col items-center ">
         <h2 className="w-[619px] text-center font-bold text-lg sm:text-3xl">
           Pilih paket <span className="text-P2">langganan Video Editor</span>{" "}

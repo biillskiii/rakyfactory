@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import Logo from "../assets/Raky.png";
+import Logo from "../../assets/Raky.png";
 
 const NavbarDefault = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -61,7 +61,7 @@ const NavbarDefault = () => {
         </li>
       </ul>
       <button
-        className="p-1 cursor-pointer bg-P1 px-5 py-4 rounded-2xl font-semibold"
+        className="p-1 cursor-pointer bg-P2 px-5 py-4 rounded-2xl font-semibold"
         style={{ color: "#ffffff" }}
       >
         Gabung jadi Mitra

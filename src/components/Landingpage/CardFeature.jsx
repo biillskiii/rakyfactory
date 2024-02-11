@@ -13,7 +13,7 @@ const CardFeature = ({ icon, title, desc, detail, detaildesc }) => {
 
   return (
     <>
-      <div className="bg-white w-96 h-auto px-5 border rounded-3xl shadow-md shadow-slate-200">
+      <div className="bg-white w-[604px]  h-auto px-5  rounded-3xl shadow-md shadow-slate-200  ">
         <div className="p-5 text-start">
           <div className="rounded-full mt-10 bg-P1 flex justify-center items-center w-20 h-20 text-xl text-white">
             {icon}
@@ -24,7 +24,7 @@ const CardFeature = ({ icon, title, desc, detail, detaildesc }) => {
             <p className="">
               {detail ? (
                 <p
-                  className="mt-10 font-semibold text-P1 flex justify-start items-center gap-x-2 cursor-pointer"
+                  className="my-10 font-semibold text-P1 flex justify-start items-center gap-x-2 cursor-pointer"
                   onMouseEnter={handleHover}
                   onMouseLeave={handleLeave}
                 >

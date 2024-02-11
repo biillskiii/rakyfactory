@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
-import NavbarDefault from "../components/Navbar";
-import Hero from "../components/Landingpage/Hero";
-import HowItWork from "../components/Landingpage/HowItWork";
-import Fitur from "../components/Landingpage/Fitur";
-import Program from "../components/Landingpage/Program";
-import Contact from "../components/Landingpage/Contact";
-import Footer from "../components/Landingpage/Footer";
+import NavbarDefault from "../components/Swiftcut/Navbar";
+import Hero from "../components/Swiftcut/Hero";
+import About from "../components/Swiftcut/About";
+
 const LandingPage = () => {
   const [showMobileModal, setShowMobileModal] = useState(false);
 
@@ -31,11 +28,9 @@ const LandingPage = () => {
       <div className="container mx-auto px-20">
         <Hero />
       </div>
-      <Fitur />
-      <HowItWork />
-      <Program />
-      <Contact />
-      <Footer />
+      <About />
+
+      {/* )} */}
     </>
   );
 };

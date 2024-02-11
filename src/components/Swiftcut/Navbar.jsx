@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import Logo from "../assets/Raky.png";
+import Logo from "../../assets/Raky.png";
 
 const NavbarDefault = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -41,7 +41,7 @@ const NavbarDefault = () => {
         </li>
         <li className="p-1 cursor-pointer ">
           <a href="#funfact" smooth={true} duration={500} onClick={closeNavbar}>
-            Gabung jadi Affiliate
+            Solusi
           </a>
         </li>
         <li className="p-1 cursor-pointer ">
@@ -51,12 +51,12 @@ const NavbarDefault = () => {
             duration={500}
             onClick={closeNavbar}
           >
-            Karir
+            Portofolio
           </a>
         </li>
         <li className="p-1 cursor-pointer ">
           <a href="#faq" smooth={true} duration={500} onClick={closeNavbar}>
-            FAQ
+            Harga
           </a>
         </li>
       </ul>
@@ -64,7 +64,7 @@ const NavbarDefault = () => {
         className="p-1 cursor-pointer bg-P1 px-5 py-4 rounded-2xl font-semibold"
         style={{ color: "#ffffff" }}
       >
-        Gabung jadi Mitra
+        Daftar sekarang
       </button>
     </div>
   );

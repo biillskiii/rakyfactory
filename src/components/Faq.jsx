@@ -22,8 +22,8 @@ const Faq = () => {
     setOpenItems(newOpenItems);
   };
   return (
-    <>
-      <div className="my-44 max-h-[300px] flex items-start p-3 container mx-auto px-40  justify-between gap-20">
+    <div className="bg-[#FCFCFC]">
+      <div className="my-44 max-h-[300px] flex items-start p-3 container mx-auto px-40 py-10 justify-between gap-20">
         <div className="w-[492px]  flex flex-col items-start justify-start  gap-y-5">
           <p>Frequently Asked Questions (FAQ)</p>
           <h1 className="font-bold text-3xl">
@@ -86,7 +86,7 @@ const Faq = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

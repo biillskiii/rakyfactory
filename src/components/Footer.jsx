@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
 import Raky from "../assets/Raky.png";
-import Upcoming from "../components/Upcoming";
-import { AiFillLinkedin, AiOutlineInstagram } from "react-icons/ai";
-import { HiSparkles } from "react-icons/hi";
+import Upcoming from "./Upcoming";
+import { AiFillLinkedin } from "react-icons/ai";
+import { RiWhatsappFill, RiInstagramFill } from "react-icons/ri";
+
 import "./Footer.css";
 import Aos from "aos";
 const Footer = () => {
@@ -11,127 +12,28 @@ const Footer = () => {
     Aos.refresh();
   }, []);
   return (
-    <>
-      <footer className="w-full bg-F1 text-center text-black lg:text-left">
-        <div className="container px-32">
-          <div className="pt-14">
-            <img src={Raky} width={250} alt="logo raky" />
+    <div className="bg-[#FCFCFC] py-10">
+      <footer className="container mx-auto px-40">
+        <div className="flex justify-between items-center">
+          <img src={Raky} width={210} alt="Logo-Raky" />
+          <div className="flex gap-x-7">
+            <p className="text-[14px] flex items-center gap-2">
+              Program Afiliasi <Upcoming />
+            </p>
+            <p className="text-[14px] flex items-center gap-2">
+              Peluang karier <Upcoming />
+            </p>
           </div>
-          <div className="text  mt-5  text-left md:text-left">
-            <div className="grid-cols-2 gap-x-10 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-              <div className="text-sm">
-                <h6 className="mb-4  flex items-start justify-center font-bold sm:font-semibold md:justify-start">
-                  PT Rakyfactory Digital Group
-                </h6>
-                <div className="text-xs">
-                  <p className="mb-2 text-xs sm:text-sm">
-                    <a href="#!" className="">
-                      Tentang kami
-                    </a>
-                  </p>
-                  <p className="mb-2 text-xs sm:text-sm">
-                    <li className="flex items-center gap-2">
-                      Affiliates <Upcoming label={"Upcoming"} />
-                    </li>
-                  </p>
-                  <p className="mb-2 text-xs sm:text-sm">
-                    <li href="#!" className="flex items-center gap-2">
-                      Program CSR <Upcoming label={"Upcoming"} />
-                    </li>
-                  </p>
-                  <p className="mb-2 text-xs sm:text-sm">
-                    <li href="#!" className="flex items-center gap-2">
-                      Karier <Upcoming label={"Upcoming"} />
-                    </li>
-                  </p>
-                </div>
-              </div>
-              <div className="text-sm ">
-                <h6 className="mb-4  text-sm sm:text-lgtext-sm flex justify-start font-bold sm:font-semibold md:justify-start">
-                  Produk
-                </h6>
-                <p className="mb-2 text-xs sm:text-sm">
-                  <li href="#!" class="">
-                    Script writing team
-                  </li>
-                </p>
-                <p className="mb-2 text-xs sm:text-sm">
-                  <li href="#!" class="">
-                    Video editing team
-                  </li>
-                </p>
-                <p className="mb-2 text-xs sm:text-sm">
-                  <li href="#!" class="flex items-center gap-2">
-                    Talent manager <Upcoming label={"Upcoming"} />
-                  </li>
-                </p>
-                <p className="mb-2 text-xs sm:text-sm">
-                  <li href="#!" class="flex items-center gap-1">
-                    Rakyfactory AI <HiSparkles size={13} />{" "}
-                    <Upcoming label={"Upcoming"} />
-                  </li>
-                </p>
-              </div>
-              <div className="text-sm ">
-                <h6 className="mb-4 text-sm flex justify-start font-bold sm:font-semibold md:justify-start">
-                  Panduan
-                </h6>
-                <p className="mb-2 text-xs sm:text-sm">
-                  <li href="#!">Biaya langganan</li>
-                </p>
-                <p className="mb-2 text-xs sm:text-sm">
-                  <li href="#!">Subscription-pause option</li>
-                </p>
-                <p className="mb-2 text-xs sm:text-sm">
-                  <li href="#!">Studi kasus</li>
-                </p>
-                <p>
-                  <li href="#!" className="flex items-center gap-2">
-                    Komunitas <Upcoming label={"Upcoming"} />
-                  </li>
-                </p>
-              </div>
-              <div className="text-sm ">
-                <h6 class="mb-4 text-sm sm:text-sm flex justify-start font-bold sm:font-semibold md:justify-start">
-                  Hubungi kami
-                </h6>
-                <p class="mb-2 text-xs sm:text-sm flex items-center justify-start md:justify-start">
-                  Semarang, Indonesia
-                </p>
-                <p class="mb-2 text-xs sm:text-sm flex items-center justify-start md:justify-start">
-                  +62881-0820-13808 (WA Only)
-                </p>
-                <p class="mb-2 text-xs sm:text-sm flex items-center justify-start md:justify-start">
-                  support@rakyfactory.com
-                </p>
-                <div className="flex mt-5 gap-x-3">
-                  <a
-                    href="https://www.linkedin.com/company/rakyfactory/"
-                    target="_blank"
-                    className="bg-black p-1 rounded-full"
-                  >
-                    <AiFillLinkedin className="text-white" />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/rakyfactory/"
-                    target="_blank"
-                    className="bg-black p-1 rounded-full"
-                  >
-                    <AiOutlineInstagram className="text-white" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <hr className="w-8/12 mx-auto mt-10" />
-          <div class="bg-F1 p-6 text-center">
-            <span className="text-F2 text-sm">
-              Copyright © 2023 All rights reserved
-            </span>
+          <div className="flex items-center gap-3">
+            <AiFillLinkedin size={25} />
+            <RiInstagramFill size={25} />
+            <RiWhatsappFill size={25} />
           </div>
         </div>
+        <div className="border-t-2 my-5"></div>
+        <p className="text-center text-[#838383] text-base my-7"> © Copyright 2024 PT Rakyfactory Digital Group</p>
       </footer>
-    </>
+    </div>
   );
 };
 
