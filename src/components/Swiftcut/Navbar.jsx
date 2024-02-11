@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import Logo from "../../assets/Raky.png";
+import Logo from "../../assets/logo-swift.png";
 
 const NavbarDefault = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -73,7 +73,7 @@ const NavbarDefault = () => {
       <div className="container mx-auto flex items-center justify-around text-blue-gray-900">
         <a href="#hero" smooth={true} duration={500}>
           <a className="text-2xl cursor-pointer py-1.5 font-semibold text-black flex items-center gap-x-3">
-            <img src={Logo} width={210} alt="" />
+            <img src={Logo} width={150} alt="" />
           </a>
         </a>
         <div className="hidden ms-auto lg:block">{navList}</div>
