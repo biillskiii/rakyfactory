@@ -24,9 +24,9 @@ const Program = () => {
         />
         <CardFeature
           icon={<LiaMoneyBillWaveSolid size={40} />}
-          title={"Gabung jadi mitra kreatif"}
+          title={"Gabung jadi Affiliate"}
           desc={
-            "Bagi para freelancer dan pekerja kreatif, dapatkan penghasilan tambahan dari rumah Anda dan nikmati berbagai keuntungan lainnya."
+            "Sering scroll sosmed? Ubah jadi pasif income bulanan melalui komisi berulang dari setiap pengguna yang Anda referensikan ke produk kami."
           }
           detail={true}
           detaildesc={"Gabung sekarang"}

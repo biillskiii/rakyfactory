@@ -21,38 +21,36 @@ const CardFeature = ({ icon, title, desc, detail, detaildesc }) => {
           <div className="mt-14">
             <p className="font-bold mt-3 text-3xl">{title}</p>
             <p className="text-T1 mt-3 text-lg font-medium">{desc}</p>
-            <p className="">
-              {detail ? (
-                <p
-                  className="mt-10 font-semibold text-P1 flex justify-start items-center gap-x-2 cursor-pointer"
-                  onMouseEnter={handleHover}
-                  onMouseLeave={handleLeave}
-                >
-                  {" "}
-                  {detaildesc}{" "}
-                  <FaArrowRightLong
-                    className={isHovered ? "animate-bounce" : ""}
-                    style={{ transition: "0.5s" }}
-                  />
-                  <style jsx>{`
-                    @keyframes bounce {
-                      0%,
-                      100% {
-                        transform: translateX(0);
-                      }
-                      50% {
-                        transform: translateX(10px);
-                      }
+            {detail ? (
+              <p
+                className="my-10 font-semibold text-P1 flex justify-start items-center gap-x-2 cursor-pointer"
+                onMouseEnter={handleHover}
+                onMouseLeave={handleLeave}
+              >
+                {" "}
+                {detaildesc}{" "}
+                <FaArrowRightLong
+                  className={isHovered ? "animate-bounce" : ""}
+                  style={{ transition: "0.5s" }}
+                />
+                <style jsx>{`
+                  @keyframes bounce {
+                    0%,
+                    100% {
+                      transform: translateX(0);
                     }
-                    .animate-bounce {
-                      animation: bounce 0.5s infinite;
+                    50% {
+                      transform: translateX(10px);
                     }
-                  `}</style>
-                </p>
-              ) : (
-                <p className="mt-10 font-semibold text-base">Coming Soon</p>
-              )}
-            </p>
+                  }
+                  .animate-bounce {
+                    animation: bounce 0.5s infinite;
+                  }
+                `}</style>
+              </p>
+            ) : (
+              <p className="my-10 font-semibold text-base">Coming Soon</p>
+            )}
           </div>
         </div>
       </div>
