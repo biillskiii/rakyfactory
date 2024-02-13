@@ -48,7 +48,7 @@ const HowItWork = () => {
   return (
     <>
       <div className="bg-P2 w-[1009px] h-[370px] flex justify-start items-center rounded-[35px] ">
-        <div className="w-[477px] px-[40px] py-[50px]">
+        <div className="w-[477px] px-[40px] py-[50px] my-52">
           <h1 className="text-3xl font-bold mb-5">
             Bagaimana cara kerja
             <br /> langganan jeda?

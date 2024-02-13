@@ -6,7 +6,7 @@ const Program = () => {
   return (
     <>
       <div id="program"></div>
-      <div className="text-center mt-36 ">
+      <div className="text-center my-52">
         <p className="text-xl font-semibold text-P1">
           Exclusive Program for All
         </p>
