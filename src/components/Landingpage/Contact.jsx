@@ -13,10 +13,10 @@ const Contact = () => {
         </p>
       </div>
       <div className="flex justify-center items-center gap-x-5 ml-14">
-        <button className="py-4 px-8 mb-2 bg-white rounded-[20px] text-sm text-P1 font-semibold">
+        <button className="py-4 px-8 mb-2 bg-white rounded-xl text-sm text-P1 font-semibold">
           Hubungi kami
         </button>
-        <button className="py-4 px-8 mb-2 outline outline-white rounded-[20px] text-sm text-white font-semibold">
+        <button className="py-4 px-8 mb-2 outline outline-white rounded-xl text-sm text-white font-semibold">
           Lihat FAQ
         </button>
       </div>

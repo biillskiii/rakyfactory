@@ -60,13 +60,13 @@ const HowItWork = () => {
           </p>
           <button
             onClick={openModal}
-            className="py-3 px-5 bg-P1 rounded-[20px] text-base text-white"
+            className="py-3 px-5 bg-P1 rounded-xl text-base text-white"
           >
             Pelajari selengkapnya
           </button>
         </div>
-        <div className="ml-36 mt-20">
-          <img src={Panduan} width={500} alt="panduan raky" />
+        <div className="ml-24 mt-10">
+          <img src={Panduan} width={450} alt="panduan raky" />
         </div>{" "}
       </div>
       {isOpen && <Modal onClose={closeModal} />}

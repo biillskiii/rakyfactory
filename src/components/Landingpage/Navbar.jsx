@@ -66,7 +66,7 @@ const NavbarDefault = () => {
           <a
             href="#program"
             data-te-smooth-scroll-init
-            className="p-1 cursor-pointer bg-P1 px-5 py-4 rounded-2xl font-semibold"
+            className="p-1 cursor-pointer bg-P1 px-5 py-4  rounded-xl  font-semibold"
             style={{ color: "#ffffff" }}
           >
             Gabung jadi Mitra
