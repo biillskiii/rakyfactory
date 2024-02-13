@@ -58,10 +58,10 @@ const Fitur = () => {
       <div data-aos="fade-up" className="container mx-auto my-44">
         <div className="w-full">
           <div className="flex flex-col items-center gap-5">
-            <p className="text-2xl font-semibold text-[#7A5AE1] uppercase">
+            <p className="text-xl font-semibold text-[#7A5AE1] uppercase">
               Services for Creators & Brands
             </p>
-            <h2 className="font-bold text-lg sm:text-[44px] mb-16">
+            <h2 className="font-semibold text-lg sm:text-[44px] mb-16">
               Temukan solusi yang paling tepat untuk Anda
             </h2>
           </div>
