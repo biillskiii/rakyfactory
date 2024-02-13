@@ -7,14 +7,14 @@ const Program = () => {
     <>
       <div id="gabungjadiaffiliate"></div>
       <div className="text-center mt-36 ">
-        <p className="text-xl font-semibold text-P1 mb-4">
+        <p className="text-xl font-semibold text-P1">
           Exclusive Program for All
         </p>
         <h1 className=" font-semibold text-[44px]">
           Dapatkan penghasilan tambahan <br />
           tanpa harus keluar rumah
         </h1>
-        <div className="flex justify-center items-center gap-x-10 mt-16">
+        <div className="flex justify-center items-center gap-x-10">
           <CardFeature
             icon={<MdLaptopMac size={40} />}
             title={"Gabung jadi mitra kreatif"}
