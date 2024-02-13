@@ -84,7 +84,7 @@ const NavbarDefault = () => {
       <div className="w-[1440px] mx-auto flex items-center justify-around text-blue-gray-900">
         <a href="#" data-te-smooth-scroll-init duration={500}>
           <a className="text-2xl cursor-pointer py-1.5 font-semibold text-black flex items-center gap-x-3">
-            <img src={Logo} width={210} alt="" />
+            <img src={Logo} width={150} alt="" />
           </a>
         </a>
         <div className="hidden ms-auto lg:block">{navList}</div>
