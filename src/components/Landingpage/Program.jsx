@@ -14,7 +14,7 @@ const Program = () => {
           Dapatkan penghasilan tambahan <br />
           tanpa harus keluar rumah
         </h1>
-        <div className="flex justify-center items-center gap-x-5 mt-16">
+        <div className="flex justify-center items-center gap-x-10 mt-16">
           <CardFeature
             icon={<MdLaptopMac size={40} />}
             title={"Gabung jadi mitra kreatif"}

@@ -13,14 +13,14 @@ const CardFeature = ({ icon, title, desc, detail, detaildesc }) => {
 
   return (
     <>
-      <div className="bg-white w-[604px]  h-auto px-5  rounded-3xl shadow-md shadow-slate-200  ">
+      <div className="bg-white w-[490px]  h-auto px-5  rounded-3xl shadow-md shadow-slate-200  ">
         <div className="p-5 text-start">
           <div className="rounded-full mt-10 bg-P1 flex justify-center items-center w-20 h-20 text-xl text-white">
             {icon}
           </div>
           <div className="mt-14">
             <p className="font-bold mt-3 text-3xl">{title}</p>
-            <p className="text-T1 mt-3 text-lg font-medium">{desc}</p>
+            <p className="text-T1 mt-3 text-base font-medium">{desc}</p>
             <p className="">
               {detail ? (
                 <p

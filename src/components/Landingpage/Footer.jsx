@@ -5,7 +5,7 @@ import { RiLinkedinBoxLine } from "react-icons/ri";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col justify-center ml-16 mt-16">
+    <div className="flex flex-col justify-center ml-16 mt-28">
       <div className="flex justify-start items-center">
         <img src={Logo} alt="logo rakyfactory" width={199} className="mr-32" />
         <ul className="font-semibold text-lg gap-x-11 flex justify-center">
