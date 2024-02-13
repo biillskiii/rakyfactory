@@ -70,7 +70,7 @@ const NavbarDefault = () => {
   );
   return (
     <nav className=" mx-auto px-16 shadow-md h-full bg-transparent text-black lg:text-black bg-white sticky top-0 py-2  lg:py-4 z-50 transition-all duration-300">
-      <div className="mx-auto flex items-center justify-around text-blue-gray-900">
+      <div className="w-[1440px] mx-auto flex items-center justify-around text-blue-gray-900">
         <a href="#hero" smooth={true} duration={500}>
           <a className="text-2xl cursor-pointer py-1.5 font-semibold text-black flex items-center gap-x-3">
             <img src={Logo} width={210} alt="" />
