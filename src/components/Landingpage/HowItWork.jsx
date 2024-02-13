@@ -60,7 +60,7 @@ const HowItWork = () => {
           </p>
           <button
             onClick={openModal}
-            className="py-3 px-5 mb-2 bg-P1 rounded-[20px] text-base text-white"
+            className="py-3 px-5 bg-P1 rounded-[20px] text-base text-white"
           >
             Pelajari selengkapnya
           </button>
