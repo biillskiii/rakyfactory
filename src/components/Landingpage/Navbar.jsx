@@ -33,7 +33,7 @@ const NavbarDefault = () => {
 
   const navList = (
     <div className="flex justify-center items-center gap-x-10">
-      <ul className="px-3  text-base mb-4 mt-2 lg:mb-0 lg:mt-0 lg:flex lg:flex-row lg:items-center lg:gap-x-16">
+      <ul className="px-3 pr-6 text-base mb-4 mt-2 lg:mb-0 lg:mt-0 lg:flex lg:flex-row lg:items-center lg:gap-x-16">
         <li className="p-1 cursor-pointer ">
           <a href="#produk" data-te-smooth-scroll-init onClick={closeNavbar}>
             Produk
