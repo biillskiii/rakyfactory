@@ -6,6 +6,7 @@ import Fitur from "../components/Landingpage/Fitur";
 import Program from "../components/Landingpage/Program";
 import Contact from "../components/Landingpage/Contact";
 import Footer from "../components/Landingpage/Footer";
+import MobilePopupModal from "../components/MobilePopupModal";
 const LandingPage = () => {
   const [showMobileModal, setShowMobileModal] = useState(false);
 
@@ -24,18 +25,21 @@ const LandingPage = () => {
 
   return (
     <>
-      {/* {showMobileModal ? (
+      {showMobileModal ? (
         <MobilePopupModal />
-      ) : ( */}
-      <NavbarDefault />
-      <div className="container mx-auto">
-        <Hero />
-        <Fitur />
-        <HowItWork />
-        <Program />
-        <Contact />
-      </div>
-      <Footer />
+      ) : (
+        <div>
+          <NavbarDefault />
+          <div className="container mx-auto">
+            <Hero />
+            <Fitur />
+            <HowItWork />
+            <Program />
+            <Contact />
+          </div>
+          <Footer />
+        </div>
+      )}
     </>
   );
 };

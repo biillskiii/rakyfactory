@@ -80,7 +80,9 @@ const Fitur = () => {
             </div>
           ))}
         </div>
-        <p
+        <a
+          href="https://forms.gle/5vAmUSRVbLodznSS9"
+          target="_blank"
           className="flex justify-center items-center gap-x-3 cursor-pointer font-medium mt-14"
           onMouseEnter={handleHover}
           onMouseLeave={handleLeave}
@@ -93,7 +95,7 @@ const Fitur = () => {
               style={{ transition: "0.5s" }}
             />
           </span>
-        </p>
+        </a>
         <style jsx>{`
           @keyframes bounce {
             0%,

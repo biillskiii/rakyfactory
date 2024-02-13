@@ -26,12 +26,18 @@ const Hero = () => {
         Anda.
       </p>
       <div className="flex justify-center items-center gap-x-5">
-        <button className="py-4 px-8 mb-2 bg-P1 rounded-xl text-base text-white font-semibold">
+        <a
+          href="#gabungjadiaffiliate"
+          className="py-4 px-8 mb-2 bg-P1 rounded-xl text-base text-white font-semibold"
+        >
           Pelajari solusi kami
-        </button>
-        <button className="py-4 px-8 mb-2 outline outline-P1 rounded-xl text-base text-P1 font-semibold">
+        </a>
+        <a
+          href="#gabungjadiaffiliate"
+          className="py-4 px-8 mb-2 outline outline-P1 rounded-xl text-base text-P1 font-semibold"
+        >
           Gabung jadi Mitra
-        </button>
+        </a>
       </div>
     </div>
   );
