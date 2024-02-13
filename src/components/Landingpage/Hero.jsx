@@ -34,7 +34,7 @@ const Hero = () => {
         </a>
         <a
           href="#gabungjadiaffiliate"
-          className="py-4 px-8 mb-2 outline outline-P1 rounded-xl text-base text-P1 font-semibold"
+          className="py-4 px-8 mb-2 outline outline-2 outline-P1 rounded-xl text-base text-P1 font-semibold"
         >
           Gabung jadi Mitra
         </a>
