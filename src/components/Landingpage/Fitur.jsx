@@ -38,7 +38,7 @@ const Fitur = () => {
       desc: (
         <p>
           Solusi kebutuhan desain Instagram tanpa batas. Kami terhubung dengan
-          designer good-taste. <br />
+          designer good-taste.
           <br />
         </p>
       ),
