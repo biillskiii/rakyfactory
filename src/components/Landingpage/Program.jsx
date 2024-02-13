@@ -5,7 +5,7 @@ import { LiaMoneyBillWaveSolid } from "react-icons/lia";
 const Program = () => {
   return (
     <>
-      <div id="gabungjadiaffiliate"></div>
+      <div id="program"></div>
       <div className="text-center mt-36 ">
         <p className="text-xl font-semibold text-P1">
           Exclusive Program for All

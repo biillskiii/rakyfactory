@@ -54,7 +54,8 @@ const Fitur = () => {
 
   return (
     <>
-      <div id="produk"></div>
+      <div id="product"></div>
+      <div></div>
       <div data-aos="fade-up" className="container mx-auto my-44">
         <div className="w-full">
           <div className="flex flex-col items-center gap-5">

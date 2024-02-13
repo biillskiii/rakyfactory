@@ -27,13 +27,13 @@ const Hero = () => {
       </p>
       <div className="flex justify-center items-center gap-x-5">
         <a
-          href="#gabungjadiaffiliate"
+          href="#program  "
           className="py-4 px-8 mb-2 bg-P1 rounded-xl text-base text-white font-semibold"
         >
           Pelajari solusi kami
         </a>
         <a
-          href="#gabungjadiaffiliate"
+          href="#program"
           className="py-4 px-8 mb-2 outline outline-2 outline-P1 rounded-xl text-base text-P1 font-semibold"
         >
           Gabung jadi Mitra

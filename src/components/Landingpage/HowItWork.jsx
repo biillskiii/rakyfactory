@@ -47,8 +47,8 @@ const HowItWork = () => {
 
   return (
     <>
-      <div className="bg-P2 w-[1009px] h-[329px] flex justify-start items-center rounded-[35px] ">
-        <div className="w-[477px] px-[40px] py-[40px]">
+      <div className="bg-P2 w-[1009px] h-[370px] flex justify-start items-center rounded-[35px] ">
+        <div className="w-[477px] px-[40px] py-[50px]">
           <h1 className="text-3xl font-bold mb-5">
             Bagaimana cara kerja
             <br /> langganan jeda?
@@ -60,13 +60,13 @@ const HowItWork = () => {
           </p>
           <button
             onClick={openModal}
-            className="py-4 px-6 mb-2 bg-P1 rounded-[20px] text-lg text-white"
+            className="py-3 px-5 mb-2 bg-P1 rounded-[20px] text-base text-white"
           >
             Pelajari selengkapnya
           </button>
         </div>
-        <div className="ml-36 mt-10">
-          <img src={Panduan} width={400} alt="panduan raky" />
+        <div className="ml-36 mt-20">
+          <img src={Panduan} width={500} alt="panduan raky" />
         </div>{" "}
       </div>
       {isOpen && <Modal onClose={closeModal} />}
