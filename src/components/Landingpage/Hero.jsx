@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className="w-[1093px] my-44 mx-auto flex flex-col text-center items-center justify-center gap-y-7 "
+      className="my-44 mx-auto flex flex-col text-center items-center justify-center gap-y-7 "
     >
       <p className="text-2xl font-semibold text-[#7A5AE1]">
         INDONESIA'S PAUSEABLE SUBSCRIPTION SERVICE PIONEER
@@ -33,7 +33,6 @@ const Hero = () => {
           Gabung jadi Mitra
         </button>
       </div>
-      <FaArrowDown size={30} className="text-P2 mt-24 animate-bounce" />
     </div>
   );
 };

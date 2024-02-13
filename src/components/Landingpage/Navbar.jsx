@@ -35,42 +35,42 @@ const NavbarDefault = () => {
     <div className="flex justify-center items-center gap-x-10">
       <ul className="px-3  text-base mb-4 mt-2 lg:mb-0 lg:mt-0 lg:flex lg:flex-row lg:items-center lg:gap-x-16">
         <li className="p-1 cursor-pointer ">
-          <a href="#fitur" duration={500} onClick={closeNavbar}>
+          <a href="#produk" className="scroll-smooth" onClick={closeNavbar}>
             Produk
           </a>
         </li>
         <li className="p-1 cursor-pointer ">
-          <a href="#funfact" smooth={true} duration={500} onClick={closeNavbar}>
+          <a
+            href="#gabungjadiaffiliate"
+            className="scroll-smooth"
+            onClick={closeNavbar}
+          >
             Gabung jadi Affiliate
           </a>
         </li>
         <li className="p-1 cursor-pointer ">
-          <a
-            href="#yourcontentpartner"
-            smooth={true}
-            duration={500}
-            onClick={closeNavbar}
-          >
+          <a href="" onClick={closeNavbar}>
             Karir
           </a>
         </li>
         <li className="p-1 cursor-pointer ">
-          <a href="#faq" smooth={true} duration={500} onClick={closeNavbar}>
+          <a href="" onClick={closeNavbar}>
             FAQ
           </a>
         </li>
       </ul>
-      <button
-        className="p-1 cursor-pointer bg-P2 px-5 py-4 rounded-2xl font-semibold"
+      <a
+        href="#gabungjadiaffiliate"
+        className="p-1 cursor-pointer bg-P1 px-5 py-4 rounded-2xl font-semibold scroll-smooth"
         style={{ color: "#ffffff" }}
       >
         Gabung jadi Mitra
-      </button>
+      </a>
     </div>
   );
   return (
-    <nav className=" mx-auto px-40 shadow-md h-full bg-transparent text-black lg:text-black bg-white sticky top-0 py-2  lg:py-4 z-50 transition-all duration-300">
-      <div className="container mx-auto flex items-center justify-around text-blue-gray-900">
+    <nav className=" mx-auto px-16 shadow-md h-full bg-transparent text-black lg:text-black bg-white sticky top-0 py-2  lg:py-4 z-50 transition-all duration-300">
+      <div className="mx-auto flex items-center justify-around text-blue-gray-900">
         <a href="#hero" smooth={true} duration={500}>
           <a className="text-2xl cursor-pointer py-1.5 font-semibold text-black flex items-center gap-x-3">
             <img src={Logo} width={210} alt="" />

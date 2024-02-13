@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.container{
-  max-width: 1600px;
+.container {
+  max-width: 1009px;
 }
 body {
   font-family: Be Vietnam Pro;

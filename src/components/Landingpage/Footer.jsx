@@ -5,9 +5,9 @@ import { RiLinkedinBoxLine } from "react-icons/ri";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col justify-center items-center mt-16">
-      <div className="flex justify-center items-center">
-        <img src={Logo} alt="logo rakyfactory" width={199} className="mr-24" />
+    <div className="flex flex-col justify-center ml-16 mt-16">
+      <div className="flex justify-start items-center">
+        <img src={Logo} alt="logo rakyfactory" width={199} className="mr-32" />
         <ul className="font-semibold text-lg gap-x-11 flex justify-center">
           <li>
             <a href="">Karir</a>
@@ -25,7 +25,7 @@ const Footer = () => {
             <a href="">Tentang Kami</a>
           </li>
         </ul>
-        <ul className="flex items-center ml-10 gap-x-5">
+        <ul className="flex items-center ml-36 gap-x-5">
           <li>
             <a href="">
               <PiInstagramLogoBold size={18} />
@@ -38,7 +38,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div className="flex justify-between w-[1241px] mt-20 mb-5">
+      <div className="flex justify-between mr-16 mt-20 mb-5">
         <p className="text-lg text-Y1">PT Rakyfactory Digital Group</p>
         <p className="text-lg text-Y1">@ 2024 Rakyfactory</p>
       </div>

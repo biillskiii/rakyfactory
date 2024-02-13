@@ -2,21 +2,21 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="bg-P1 rounded-3xl w-[1241px] h-[397px] flex justify-around items-center mt-44 mx-auto">
-      <div className="w-[613px] py-40 text-white">
-        <h1 className="text-[40px] font-semibold">
+    <div className="bg-P1 rounded-3xl w-[1009px] h-[281px] flex justify items-center mt-44 mx-auto py-40">
+      <div className="w-[500px] ml-14  text-white">
+        <h1 className="text-[32px] font-semibold">
           Punya pertanyaan untuk kami?
         </h1>
-        <p className="text-lg">
+        <p className="text-base">
           Diskon 10% selamanya, khusus untuk kreator dan brand jika apply kode
           referral! Belum punya kode? Hubungi kami sekarang.
         </p>
       </div>
-      <div className="flex justify-center items-center gap-x-5">
-        <button className="py-4 px-8 mb-2 bg-white rounded-[20px] text-xl text-P1 font-semibold">
+      <div className="flex justify-center items-center gap-x-5 ml-14">
+        <button className="py-4 px-8 mb-2 bg-white rounded-[20px] text-sm text-P1 font-semibold">
           Hubungi kami
         </button>
-        <button className="py-4 px-8 mb-2 outline outline-white rounded-[20px] text-xl text-white font-semibold">
+        <button className="py-4 px-8 mb-2 outline outline-white rounded-[20px] text-sm text-white font-semibold">
           Lihat FAQ
         </button>
       </div>

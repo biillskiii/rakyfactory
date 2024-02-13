@@ -30,12 +30,18 @@ const Fitur = () => {
       title: "Swiftcut",
       desc: "Solusi cari editor Tiktok tanpa ribet, tanpa seleksi portofolio, tanpa urus tim. Pasti cocok sesuai preferensi konten Anda!",
       detail: true,
-      detaildesc:"Selengkapnya"
+      detaildesc: "Selengkapnya",
     },
     {
       icon: <MdOutlineDashboard fontSize={40} />,
       title: "Socialuse",
-      desc: "Solusi kebutuhan desain Instagram tanpa batas. Kami terhubung dengan designer good-taste.",
+      desc: (
+        <p>
+          Solusi kebutuhan desain Instagram tanpa batas. Kami terhubung dengan
+          designer good-taste. <br />
+          <br />
+        </p>
+      ),
       detail: false,
     },
     {
@@ -48,14 +54,14 @@ const Fitur = () => {
 
   return (
     <>
-      <div id="fitur"></div>
-      <div data-aos="fade-up" className="container px-40 mx-auto my-44">
+      <div id="produk"></div>
+      <div data-aos="fade-up" className="container mx-auto my-44">
         <div className="w-full">
           <div className="flex flex-col items-center gap-5">
             <p className="text-2xl font-semibold text-[#7A5AE1] uppercase">
               Services for Creators & Brands
             </p>
-            <h2 className="font-bold text-lg sm:text-5xl mb-16">
+            <h2 className="font-bold text-lg sm:text-[44px] mb-16">
               Temukan solusi yang paling tepat untuk Anda
             </h2>
           </div>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import NavbarDefault from "../components/Navbar";
+import NavbarDefault from "../components/Landingpage/Navbar";
 import Hero from "../components/Landingpage/Hero";
 import HowItWork from "../components/Landingpage/HowItWork";
 import Fitur from "../components/Landingpage/Fitur";
@@ -28,13 +28,13 @@ const LandingPage = () => {
         <MobilePopupModal />
       ) : ( */}
       <NavbarDefault />
-      <div className="container mx-auto px-20">
+      <div className="container mx-auto">
         <Hero />
+        <Fitur />
+        <HowItWork />
+        <Program />
+        <Contact />
       </div>
-      <Fitur />
-      <HowItWork />
-      <Program />
-      <Contact />
       <Footer />
     </>
   );

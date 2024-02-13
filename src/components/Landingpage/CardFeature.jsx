@@ -41,7 +41,7 @@ const CardFeature = ({ icon, title, desc, detail, detaildesc }) => {
                         transform: translateX(0);
                       }
                       50% {
-                        transform: translateX(10px);
+                        transform: translateX(3px);
                       }
                     }
                     .animate-bounce {
