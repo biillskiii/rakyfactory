@@ -13,9 +13,9 @@ const CardFeature = ({ icon, title, desc, detail, detaildesc }) => {
 
   return (
     <>
-      <div className="bg-white w-[490px]  h-auto px-5  rounded-[50px] shadow-md shadow-slate-200  ">
+      <div className="bg-white w-[488px] border h-auto px-5  rounded-[50px] shadow-md shadow-slate-200  ">
         <div className="p-5 text-start">
-          <div className="rounded-full mt-10 bg-P1 flex justify-center items-center w-20 h-20 text-xl text-white">
+          <div className="rounded-full mt-10 bg-P1 flex justify-center items-center w-16 h-16 text-xl text-white">
             {icon}
           </div>
           <div className="mt-14">

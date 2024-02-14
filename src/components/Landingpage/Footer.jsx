@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../../assets/Raky.png";
 import { PiInstagramLogoBold } from "react-icons/pi";
 import { RiLinkedinBoxLine } from "react-icons/ri";
-
+import { MdOutlineCopyright } from "react-icons/md";
 const Footer = () => {
   return (
     <div className=" mx-auto flex flex-col justify-center items-stretch ml-16 mt-28">
@@ -46,7 +46,10 @@ const Footer = () => {
         </div>
         <div className="flex justify-between mt-20 mb-5">
           <p className="text-base text-Y1">PT Rakyfactory Digital Group</p>
-          <p className="text-base text-Y1">@ 2024 Rakyfactory</p>
+          <p className="text-base text-Y1 flex items-center gap-x-1">
+            <MdOutlineCopyright />
+            2024 Rakyfactory
+          </p>
         </div>
       </div>
     </div>

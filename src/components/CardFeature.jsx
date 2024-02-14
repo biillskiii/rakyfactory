@@ -46,7 +46,7 @@ const CardFeature = ({ icon, title, desc, detail, detaildesc }) => {
                     }
                   }
                   .animate-bounce {
-                    animation: bounce 0.5s infinite;
+                    animation: bounce 0.5s;
                   }
                 `}</style>
               </p>

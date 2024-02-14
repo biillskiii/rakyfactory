@@ -3,28 +3,35 @@ import ReactDOM from "react-dom";
 import Panduan from "../../assets/panduan.png";
 
 const Modal = ({ onClose }) => {
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest(".modal-content")) {
+        onClose();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [onClose]);
+
   return ReactDOM.createPortal(
     <div className="fixed top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center z-50 overflow-hidden">
-      <div className="bg-white rounded-xl p-10">
+      <div className="modal-content rounded-xl p-10 ">
         <iframe
-          className="rounded-xl"
           src="https://www.youtube.com/embed/HMXziSx38YE"
           frameborder="0"
-          width={600}
-          height={350}
+          width={800}
+          height={450}
+          className="rounded-xl"
         ></iframe>
-        <button
-          onClick={onClose}
-          className="block mt-4 px-4 py-2 bg-P1 text-white rounded-xl"
-        >
-          Close
-        </button>
       </div>
     </div>,
     document.getElementById("modal-root")
   );
 };
-
 const HowItWork = () => {
   const [isOpen, setIsOpen] = useState(false);
 

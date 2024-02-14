@@ -44,10 +44,11 @@ const NavbarDefault = () => {
             Gabung jadi Affiliate
           </a>
         </li>
-        <li className="p-1 cursor-not-allowed">
+        <li className="p-1 cursor-pointer">
           <a
-            href=""
-            className=" text-gray-400 pointer-events-none"
+            href="https://rakyfactory.notion.site/f2fe38a909e54f2a8da668153f246392?v=73a41606847049eabba8fa0969f8848e"
+            target="_blank"
+            data-te-smooth-scroll-init
             onClick={closeNavbar}
           >
             Karir

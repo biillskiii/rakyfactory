@@ -16,7 +16,7 @@ const Hero = () => {
       <p className="text-xl font-semibold text-[#7A5AE1]">
         INDONESIA'S PAUSEABLE SUBSCRIPTION SERVICE PIONEER
       </p>
-      <h1 className="font-semibold text-[44px]">
+      <h1 className="font-semibold text-[48px]">
         Menghubungkan Mitra Kreatif yang siap melayani kebutuhan konten digital
         Anda
       </h1>

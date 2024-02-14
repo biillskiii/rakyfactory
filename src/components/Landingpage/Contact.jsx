@@ -16,7 +16,7 @@ const Contact = () => {
         <button className="py-4 px-8 mb-2 bg-white rounded-xl text-sm text-P1 font-semibold">
           Hubungi kami
         </button>
-        <button className="py-4 px-8 mb-2 outline outline-white rounded-xl text-sm text-white font-semibold">
+        <button className="py-4 px-8 mb-2 outline outline-2 outline-white rounded-xl text-sm text-white font-semibold">
           Lihat FAQ
         </button>
       </div>
