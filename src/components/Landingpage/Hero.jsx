@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className="mt-28 mb-44 mx-auto flex flex-col text-center items-center justify-center gap-y-7 "
+      className="mt-28 mx-auto flex flex-col text-center items-center justify-center gap-y-5"
     >
       <p className="text-xl font-semibold text-[#7A5AE1]">
         INDONESIA'S PAUSEABLE SUBSCRIPTION SERVICE PIONEER

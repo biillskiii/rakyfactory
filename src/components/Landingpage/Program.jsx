@@ -10,7 +10,7 @@ const Program = () => {
         <p className="text-xl font-semibold text-P1 uppercase">
           Exclusive Program for All
         </p>
-        <h1 className=" font-semibold text-[44px]">
+        <h1 className=" font-semibold text-[44px] mb-16">
           Dapatkan penghasilan tambahan <br />
           tanpa harus keluar rumah
         </h1>

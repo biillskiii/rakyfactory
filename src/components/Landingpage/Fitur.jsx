@@ -55,7 +55,6 @@ const Fitur = () => {
   return (
     <>
       <div id="product"></div>
-      <div></div>
       <div data-aos="fade-up" className="container mx-auto my-52">
         <div className="w-full">
           <div className="flex flex-col items-center gap-5">
@@ -84,7 +83,7 @@ const Fitur = () => {
         <a
           href="https://forms.gle/5vAmUSRVbLodznSS9"
           target="_blank"
-          className="flex justify-center items-center gap-x-3 cursor-pointer font-medium mt-14"
+          className="flex justify-center items-center gap-x-3 cursor-pointer font-medium mt-5"
           onMouseEnter={handleHover}
           onMouseLeave={handleLeave}
         >
