@@ -8,39 +8,51 @@ const NavbarDefault = () => {
   const [prevScrollY, setPrevScrollY] = useState(0);
 
   useEffect(() => {
-    // const handleScroll = () => {
-    //   const currentScrollY = window.scrollY;
-    //   setIsScrolled(currentScrollY > 50);
-    //   if (prevScrollY > currentScrollY) {
-    //     setIsScrolled(false);
-    //   }
-    //   if (currentScrollY === 0) {
-    //     setIsScrolled(true);
-    //   }
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
 
-    //   setPrevScrollY(currentScrollY);
-    // };
-
-    // window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      // window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollY]);
+  }, []);
+
   const closeNavbar = () => {
     setOpenNav(false);
   };
-
+  const shadowClass = isScrolled ? "shadow-md" : "shadow-none";
   const navList = (
     <div className="flex justify-center items-center">
-      <ul className="text-base mb-4 mt-2 lg:mb-0 lg:mt-0 lg:flex lg:flex-row lg:items-center lg:gap-x-16">
+      <ul className="text-sm mb-4 mt-2 lg:mb-0 lg:mt-0 lg:flex lg:flex-row lg:items-center lg:gap-x-16">
         <li className="p-1 cursor-pointer ">
-          <a href="#product" data-te-smooth-scroll-init onClick={closeNavbar}>
+          <a
+            href="#product"
+            data-te-smooth-scroll-init
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .getElementById("product")
+                .scrollIntoView({ behavior: "smooth" });
+              closeNavbar();
+            }}
+          >
             Produk
           </a>
         </li>
         <li className="p-1 cursor-pointer ">
-          <a href="#program" data-te-smooth-scroll-init onClick={closeNavbar}>
+          <a
+            href="#program"
+            data-te-smooth-scroll-init
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .getElementById("program")
+                .scrollIntoView({ behavior: "smooth" });
+              closeNavbar();
+            }}
+          >
             Gabung jadi Affiliate
           </a>
         </li>
@@ -49,7 +61,9 @@ const NavbarDefault = () => {
             href="https://rakyfactory.notion.site/f2fe38a909e54f2a8da668153f246392?v=73a41606847049eabba8fa0969f8848e"
             target="_blank"
             data-te-smooth-scroll-init
-            onClick={closeNavbar}
+            onClick={() => {
+              closeNavbar();
+            }}
           >
             Karir
           </a>
@@ -58,7 +72,14 @@ const NavbarDefault = () => {
           <a
             href=""
             className="disabled text-gray-400 pointer-events-none"
-            onClick={closeNavbar}
+            data-te-smooth-scroll-init
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .getElementById("")
+                .scrollIntoView({ behavior: "smooth" });
+              closeNavbar();
+            }}
           >
             FAQ
           </a>
@@ -67,7 +88,14 @@ const NavbarDefault = () => {
           <a
             href="#program"
             data-te-smooth-scroll-init
-            className="p-1 cursor-pointer bg-P1 px-5 py-4  rounded-xl  font-semibold"
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .getElementById("program")
+                .scrollIntoView({ behavior: "smooth" });
+              closeNavbar();
+            }}
+            className="p-1 cursor-pointer bg-P1 px-5 py-4  rounded-xl  font-semibold before:ease relative overflow-hidden border border-P2 shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-24 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-60"
             style={{ color: "#ffffff" }}
           >
             Gabung jadi Mitra
@@ -77,13 +105,24 @@ const NavbarDefault = () => {
     </div>
   );
   return (
-    <nav className="w-full px-24 shadow-md h-full bg-transparent text-black lg:text-black bg-white sticky top-0 py-2  lg:py-4 z-50 transition-all duration-300">
+    <nav
+      className={`w-full px-24 h-full bg-transparent text-black bg-white sticky top-0 py-2 lg:py-4 z-50 transition-all duration-300 ${shadowClass}`}
+    >
       <div className=" mx-auto flex items-center justify-end text-blue-gray-900">
-        <a href="#" data-te-smooth-scroll-init duration={500}>
+        <a
+          href="#"
+          data-te-smooth-scroll-init
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            closeNavbar();
+          }}
+        >
           <a className="text-2xl cursor-pointer py-1.5 font-semibold text-black flex items-center gap-x-3">
             <img src={Logo} width={150} alt="" />
           </a>
         </a>
+
         <div className="hidden ms-auto lg:block">{navList}</div>
 
         <button

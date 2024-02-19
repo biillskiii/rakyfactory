@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Aos from "aos";
 import CardFeature from "../CardFeature";
 import { FaArrowRightLong } from "react-icons/fa6";
 import "slick-carousel/slick/slick.css";
@@ -7,11 +6,12 @@ import "slick-carousel/slick/slick-theme.css";
 import { MdMovieEdit } from "react-icons/md";
 import { MdOutlineDashboard } from "react-icons/md";
 import { MdOutlineTheaters } from "react-icons/md";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Fitur = () => {
   useEffect(() => {
-    Aos.init();
-    Aos.refresh();
+    AOS.init();
   }, []);
 
   const [isHovered, setIsHovered] = useState(false);
@@ -55,7 +55,7 @@ const Fitur = () => {
   return (
     <>
       <div id="product"></div>
-      <div data-aos="fade-up" className="container mx-auto my-52">
+      <div className="container mx-auto my-52" data-aos="fade-up">
         <div className="w-full">
           <div className="flex flex-col items-center gap-5">
             <p className="text-xl font-semibold text-[#7A5AE1] uppercase">
@@ -108,6 +108,15 @@ const Fitur = () => {
           }
           .animate-bounce {
             animation: bounce 0.5s infinite;
+          }
+          .fade-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s, transform 0.5s;
+          }
+          .fade-up.in-view {
+            opacity: 1;
+            transform: translateY(0);
           }
         `}</style>
       </div>

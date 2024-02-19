@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import Panduan from "../../assets/panduan.png";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Modal = ({ onClose }) => {
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -42,6 +43,7 @@ const HowItWork = () => {
     } else {
       body.style.overflow = "auto";
     }
+    AOS.init();
   }, [isOpen]);
 
   const openModal = () => {
@@ -54,7 +56,10 @@ const HowItWork = () => {
 
   return (
     <>
-      <div className="bg-P2 w-[1009px] h-[370px] flex justify-start items-center rounded-[40px] ">
+      <div
+        className="bg-P2 w-[1009px] h-[370px] flex justify-start items-center rounded-[40px] "
+        data-aos="fade-up"
+      >
         <div className="w-[477px] px-[40px] py-[50px] my-52">
           <h1 className="text-3xl font-bold mb-5">
             Bagaimana cara kerja
@@ -67,7 +72,7 @@ const HowItWork = () => {
           </p>
           <button
             onClick={openModal}
-            className="py-3 px-5 bg-P1 rounded-xl text-base text-white"
+            className="py-3 px-5 bg-P1 rounded-xl text-base text-white before:ease relative overflow-hidden border border-P2  shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-24 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-60"
           >
             Pelajari selengkapnya
           </button>
