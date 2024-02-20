@@ -7,7 +7,7 @@ import Program from "../components/Landingpage/Program";
 import Contact from "../components/Landingpage/Contact";
 import Footer from "../components/Landingpage/Footer";
 import MobilePopupModal from "../components/MobilePopupModal";
-import ScrollUp from "../components/ScrollUp"
+import ScrollUp from "../components/Landingpage/ScrollUp"
 const LandingPage = () => {
   const [showMobileModal, setShowMobileModal] = useState(false);
 
