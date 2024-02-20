@@ -1,6 +1,0 @@
-.modal {
-  background: url("../assets/bg-modal.png");
-  background-size: 70%;
-  background-position: 100%; /* Adjust the percentage for the desired shift to the right */
-  background-repeat: no-repeat;
-}

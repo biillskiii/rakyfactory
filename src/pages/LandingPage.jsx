@@ -7,6 +7,7 @@ import Program from "../components/Landingpage/Program";
 import Contact from "../components/Landingpage/Contact";
 import Footer from "../components/Landingpage/Footer";
 import MobilePopupModal from "../components/MobilePopupModal";
+import ScrollUp from "../components/ScrollUp"
 const LandingPage = () => {
   const [showMobileModal, setShowMobileModal] = useState(false);
 
@@ -38,6 +39,7 @@ const LandingPage = () => {
             <Contact />
           </div>
           <Footer />
+          <ScrollUp />
         </div>
       )}
     </>
