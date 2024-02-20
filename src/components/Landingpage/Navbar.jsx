@@ -22,7 +22,7 @@ const NavbarDefault = () => {
   const closeNavbar = () => {
     setOpenNav(false);
   };
-  const shadowClass = isScrolled ? "shadow-md" : "shadow-none";
+  const shadowClass = isScrolled ? "drop-shadow-md" : "drop-shadow-none";
   const navList = (
     <div className="flex justify-center items-center">
       <ul className="text-sm mb-4 mt-2 lg:mb-0 lg:mt-0 lg:flex lg:flex-row lg:items-center lg:gap-x-16">
