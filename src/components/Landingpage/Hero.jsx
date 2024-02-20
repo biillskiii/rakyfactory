@@ -28,13 +28,13 @@ const Hero = () => {
       <div className="flex justify-center items-center gap-x-5">
         <a
           href="#product  "
-          className="py-4 px-8 mb-2 bg-P1 rounded-xl text-base text-white font-semibold before:ease relative overflow-hidden border border-P2 shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-24 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-60"
+          className="py-4 px-8 mb-2 bg-P1 rounded-xl text-base text-white font-semibold before:ease relative overflow-hidden border border-P2  transition-all before:absolute before:right-0 before:top-0 before:h-24 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-60"
         >
           Pelajari solusi kami
         </a>
         <a
           href="#program"
-          className="py-4 px-8 mb-2 outline outline-2 outline-P1 rounded-xl text-base text-P1 font-semibold before:ease relative overflow-hidden border border-P1 shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-24 before:w-6 before:translate-x-12 before:rotate-6 before:bg-P1 before:opacity-10 before:duration-700 hover:before:-translate-x-60"
+          className="py-4 px-8 mb-2 outline outline-2 outline-P1 rounded-xl text-base text-P1 font-semibold before:ease relative overflow-hidden border border-P1 transition-all before:absolute before:right-0 before:top-0 before:h-24 before:w-6 before:translate-x-12 before:rotate-6 before:bg-P1 before:opacity-10 before:duration-700 hover:before:-translate-x-60"
         >
           Gabung jadi Mitra
         </a>

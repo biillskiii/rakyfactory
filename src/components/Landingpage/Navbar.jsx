@@ -95,7 +95,7 @@ const NavbarDefault = () => {
                 .scrollIntoView({ behavior: "smooth" });
               closeNavbar();
             }}
-            className="p-1 cursor-pointer bg-P1 px-5 py-4  rounded-xl  font-semibold before:ease relative overflow-hidden border border-P2 shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-24 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-60"
+            className="p-1 cursor-pointer bg-P1 px-5 py-4  rounded-xl  font-semibold before:ease relative overflow-hidden border border-P2 transition-all before:absolute before:right-0 before:top-0 before:h-24 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-60"
             style={{ color: "#ffffff" }}
           >
             Gabung jadi Mitra

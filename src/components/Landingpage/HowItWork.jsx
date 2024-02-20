@@ -72,7 +72,7 @@ const HowItWork = () => {
           </p>
           <button
             onClick={openModal}
-            className="py-3 px-5 bg-P1 rounded-xl text-base text-white before:ease relative overflow-hidden border border-P2  shadow-2xl transition-all before:absolute before:right-0 before:top-0 before:h-24 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-60"
+            className="py-3 px-5 bg-P1 rounded-xl text-base text-white before:ease relative overflow-hidden border border-P2   transition-all before:absolute before:right-0 before:top-0 before:h-24 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-60"
           >
             Pelajari selengkapnya
           </button>
