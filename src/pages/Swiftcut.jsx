@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import NavbarDefault from "../components/Swiftcut/Navbar";
 import Hero from "../components/Swiftcut/Hero";
 import About from "../components/Swiftcut/About";
+import Upcoming from "../components/Upcoming";
 
 const LandingPage = () => {
   const [showMobileModal, setShowMobileModal] = useState(false);
@@ -24,11 +25,12 @@ const LandingPage = () => {
       {/* {showMobileModal ? (
         <MobilePopupModal />
       ) : ( */}
-      <NavbarDefault />
+      {/* <NavbarDefault />
       <div className="container mx-auto">
         <Hero />
       </div>
-      <About />
+      <About /> */}
+      <Upcoming label={"coming soon"} />
 
       {/* )} */}
     </>
