@@ -33,12 +33,12 @@ const Footer = () => {
           </ul>
           <ul className="flex items-center  gap-x-5">
             <li>
-              <a href="">
+              <a href="https://instagram.com/rakyfactory" target="_blank">
                 <PiInstagramLogoBold size={25} />
               </a>
             </li>
             <li>
-              <a href="">
+              <a href="https://www.linkedin.com/company/rakyfactory/" target="_blank">
                 <RiLinkedinBoxLine size={25} />
               </a>
             </li>

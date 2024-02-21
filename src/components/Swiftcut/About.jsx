@@ -2,8 +2,13 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="w-[1120px] h-[562px] flex  mx-auto bg-P2 rounded-xl px-24 py-16 gap-x-32">
-      <div className="w-[544px] ">
+    <div className="container flex  mx-auto bg-P2 rounded-[35px] px-10 py-16 gap-x-32">
+      <div className="flex justify-center items-end">
+        <button className=" shadow-md p-1 cursor-pointer bg-white px-5 py-4 rounded-2xl text-P1 font-semibold">
+          Daftar sekarang
+        </button>
+      </div>
+      <div className="w-[496px] ">
         <p className="text-2xl font-semibold mb-2 text-P1">ABOUT PRODUCT</p>
         <h1 className="text-4xl font-bold mb-2">
           Apa itu berlangganan
@@ -25,11 +30,6 @@ const About = () => {
             <p className="font-semibold">Pelanggan Terlayani</p>
           </div>
         </div>
-      </div>
-      <div className="flex justify-center items-end">
-        <button className=" shadow-md p-1 cursor-pointer bg-white px-5 py-4 rounded-2xl text-P1 font-semibold">
-          Daftar sekarang
-        </button>
       </div>
     </div>
   );

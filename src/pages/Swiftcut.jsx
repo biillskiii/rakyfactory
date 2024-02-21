@@ -25,7 +25,7 @@ const LandingPage = () => {
         <MobilePopupModal />
       ) : ( */}
       <NavbarDefault />
-      <div className="container mx-auto px-20">
+      <div className="container mx-auto">
         <Hero />
       </div>
       <About />

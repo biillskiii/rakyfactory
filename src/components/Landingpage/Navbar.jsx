@@ -4,8 +4,7 @@ import Logo from "../../assets/Raky.png";
 
 const NavbarDefault = () => {
   const [openNav, setOpenNav] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(true);
-  const [prevScrollY, setPrevScrollY] = useState(0);
+  const [isScrolled, setIsScrolled] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {

@@ -21,6 +21,9 @@ export default {
         Y1: "#959494",
         T1: "#787878",
       },
+      borderRadius: {
+        button: ""
+      }
     },
   },
   plugins: [],
