@@ -28,7 +28,7 @@
 }
 ::-webkit-scrollbar {
   width: 10px;
-  height: 10px; /* tambahkan properti height untuk scrollbar vertikal */
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -37,16 +37,16 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: #7a5ae1;
-  border-radius: 3px; /* membuat scrollbar menjadi rounded */
+  border-radius: 3px;
 }
 .container {
   max-width: 1009px;
 }
 body {
   font-family: Be Vietnam Pro;
-  /* background: url("../src/assets/background.png");
-  background-repeat: repeat-y;
-  background-size: 100%;
-  background-position: 20% 0;
-  position: relative; Tambahkan properti position: relative; */
+}
+@media only screen and (max-width: 480px) {
+  .container {
+    max-width: 370px;
+  }
 }

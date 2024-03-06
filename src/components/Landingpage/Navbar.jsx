@@ -105,7 +105,7 @@ const NavbarDefault = () => {
   );
   return (
     <nav
-      className={`w-full px-24 h-full bg-transparent text-black bg-white sticky top-0 py-2 lg:py-4 z-50 transition-all duration-300 ${shadowClass}`}
+      className={`w-full px-5 lg:px-24 h-full bg-transparent text-black bg-white sticky top-0 py-2 lg:py-4 z-50 transition-all duration-300 ${shadowClass}`}
     >
       <div className=" mx-auto flex items-center justify-end text-blue-gray-900">
         <a

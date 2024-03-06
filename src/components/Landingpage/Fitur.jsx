@@ -26,14 +26,14 @@ const Fitur = () => {
 
   const cardData = [
     {
-      icon: <MdMovieEdit fontSize={40} />,
+      icon: <MdMovieEdit className="text-2xl lg:text-[40px]" />,
       title: "Swiftcut",
       desc: "Solusi cari editor Tiktok tanpa ribet, tanpa seleksi portofolio, tanpa urus tim. Pasti cocok sesuai preferensi konten Anda!",
       detail: true,
       detaildesc: "Selengkapnya",
     },
     {
-      icon: <MdOutlineDashboard fontSize={40} />,
+      icon: <MdOutlineDashboard className="text-2xl lg:text-[40px]" />,
       title: "Socialuse",
       desc: (
         <p>
@@ -45,7 +45,7 @@ const Fitur = () => {
       detail: false,
     },
     {
-      icon: <MdOutlineTheaters fontSize={40} />,
+      icon: <MdOutlineTheaters className="text-2xl lg:text-[40px]" />,
       title: "Longframe",
       desc: "Solusi editing Youtube tanpa khawatir repot urus tim. Anda fokus ngonten, biar kami yang kelola mitra editornya!",
       detail: false,
@@ -55,21 +55,21 @@ const Fitur = () => {
   return (
     <>
       <div id="product"></div>
-      <div className="container mx-auto my-52" data-aos="fade-up">
+      <div className="w-[300px] lg:container mx-auto my-52" data-aos="fade-up">
         <div className="w-full">
-          <div className="flex flex-col items-center gap-5">
-            <p className="text-xl font-semibold text-[#7A5AE1] uppercase">
+          <div className="flex flex-col items-center gap-1 lg:gap-5">
+            <p className="text-[10px] lg:text-xl font-semibold text-[#7A5AE1] uppercase">
               Services for Creators & Brands
             </p>
-            <h2 className="font-semibold text-lg sm:text-[44px] mb-16">
+            <h2 className="font-semibold  text-xl sm:text-[44px] mb-16">
               Temukan solusi yang paling tepat untuk Anda
             </h2>
           </div>
         </div>
 
-        <div className="flex justify-center items-center gap-x-5">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-x-5">
           {cardData.map((card, index) => (
-            <div key={index} className="my-5">
+            <div key={index} className="my-3 lg:my-5">
               <CardFeature
                 icon={card.icon}
                 title={card.title}
