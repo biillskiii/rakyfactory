@@ -12,9 +12,9 @@ const Footer = () => {
           <img
             src={Logo}
             alt="logo rakyfactory"
-            className="mb-[45px] lg:mb-0 w-36 lg:w-48"
+            className="mb-[35px] lg:mb-0 w-36 lg:w-48"
           />
-          <ul className="w-[300px] lg:w-[831px] leading-8 lg:leading-0 font-semibold text-xs lg:text-base gap-x-11 flex flex-wrap justify-start lg:justify-center mb-[45px] lg:mb-0">
+          <ul className="w-[300px] lg:w-[831px] leading-8 lg:leading-0 font-semibold text-xs lg:text-base gap-x-11 flex flex-wrap justify-start lg:justify-center mb-[35px] lg:mb-0">
             <li>
               <a href="">Karir</a>
             </li>
