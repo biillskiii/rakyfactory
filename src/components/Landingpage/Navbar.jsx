@@ -23,7 +23,7 @@ const NavbarDefault = () => {
   };
   const shadowClass = isScrolled ? "drop-shadow-md" : "drop-shadow-none";
   const navList = (
-    <div className="flex justify-center items-center">
+    <div className="pl-5 flex justify-start lg:justify-center items-center">
       <ul className="text-sm mb-4 mt-2 lg:mb-0 lg:mt-0 lg:flex lg:flex-row lg:items-center lg:gap-x-16">
         <li className="p-1 cursor-pointer ">
           <a
@@ -132,7 +132,7 @@ const NavbarDefault = () => {
         </button>
       </div>
       {openNav && (
-        <div className="fixed top-14 left-0 right-0 bottom-0 bg-white h-full w-full flex flex-col mx-auto text-left">
+        <div className="absolute top-14 left-0 right-0 bg-white h-auto w-full flex flex-col  text-left">
           {navList}
         </div>
       )}

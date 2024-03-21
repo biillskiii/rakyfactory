@@ -57,27 +57,27 @@ const HowItWork = () => {
   return (
     <>
       <div
-        className="bg-P2 w-[1009px] h-[370px] flex justify-start items-center rounded-[40px] "
+        className="bg-P2 w-[353px] mx-auto lg:mx-1 lg:w-[1009px] h-auto lg:h-[370px] flex flex-col lg:flex-row justify-start items-center rounded-[40px] "
         data-aos="fade-up"
       >
-        <div className="w-[477px] px-[40px] py-[50px] my-52">
-          <h1 className="text-3xl font-bold mb-5">
+        <div className="w-[292px] lg:w-[477px] lg:px-[40px] py-[50px] -my-4 lg:my-52">
+          <h1 className="text-xl lg:text-3xl font-bold mb-5">
             Bagaimana cara kerja
             <br /> langganan jeda?
           </h1>
-          <p className="text-base mb-5">
+          <p className="text-xs lg:text-base mb-5">
             Sebagai pionir layanan jasa berlangganan-jeda di Indonesia, kami
             hadir dengan fitur inovatif untuk memastikan masa langganan Anda
             tidak terbuang sia-sia.
           </p>
           <button
             onClick={openModal}
-            className="py-3 px-5 bg-P1 rounded-xl text-base text-white before:ease relative overflow-hidden border border-P2   transition-all before:absolute before:right-0 before:top-0 before:h-24 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-60"
+            className="py-3 px-5 bg-P1 rounded-xl text-xs lg:text-base text-white before:ease relative overflow-hidden border border-P2   transition-all before:absolute before:right-0 before:top-0 before:h-24 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-60"
           >
             Pelajari selengkapnya
           </button>
         </div>
-        <div className="ml-24 mt-10">
+        <div className="ml-8 lg:ml-24 mt-3 lg:mt-10">
           <img src={Panduan} width={450} alt="panduan raky" />
         </div>{" "}
       </div>

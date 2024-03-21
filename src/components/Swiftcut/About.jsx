@@ -9,16 +9,11 @@ const About = () => {
         </button>
       </div>
       <div className="w-[496px] ">
-        <p className="text-2xl font-semibold mb-2 text-P1">ABOUT PRODUCT</p>
-        <h1 className="text-4xl font-bold mb-2">
-          Apa itu berlangganan
-          <br /> video editor?
-        </h1>
+        <p className="text-[24px] font-semibold mb-2 text-P1">ABOUT PRODUCT</p>
+        <h1 className="text-4xl font-bold mb-2">Video Editing Subscription</h1>
         <p className="text-xl">
-          Layanan unggulan dari Rakyfactory yang memberikan akses unlimited
-          untuk permintaan video editing konten TikTok. Dengan biaya langganan
-          yang tetap dan tanpa biaya tambahan, layanan ini menjadi pilihan utama
-          konten kreator untuk menghemat waktu dan budget.
+          Solusi praktis untuk konten kreator, dengan cara berlangganan layanan
+          video editing TikTok.
         </p>
         <div className="flex justify-start items-center mt-16 text-center gap-x-10">
           <div className="space-y-3">

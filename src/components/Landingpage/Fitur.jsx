@@ -26,14 +26,14 @@ const Fitur = () => {
 
   const cardData = [
     {
-      icon: <MdMovieEdit className="text-2xl lg:text-[40px]" />,
+      icon: <MdMovieEdit className="text-2xl lg:text-[30px]" />,
       title: "Swiftcut",
       desc: "Solusi cari editor Tiktok tanpa ribet, tanpa seleksi portofolio, tanpa urus tim. Pasti cocok sesuai preferensi konten Anda!",
       detail: true,
       detaildesc: "Selengkapnya",
     },
     {
-      icon: <MdOutlineDashboard className="text-2xl lg:text-[40px]" />,
+      icon: <MdOutlineDashboard className="text-2xl lg:text-[30px]" />,
       title: "Socialuse",
       desc: (
         <p>
@@ -45,7 +45,7 @@ const Fitur = () => {
       detail: false,
     },
     {
-      icon: <MdOutlineTheaters className="text-2xl lg:text-[40px]" />,
+      icon: <MdOutlineTheaters className="text-2xl lg:text-[30px]" />,
       title: "Longframe",
       desc: "Solusi editing Youtube tanpa khawatir repot urus tim. Anda fokus ngonten, biar kami yang kelola mitra editornya!",
       detail: false,
@@ -61,7 +61,7 @@ const Fitur = () => {
             <p className="text-[10px] lg:text-xl font-semibold text-[#7A5AE1] uppercase">
               Services for Creators & Brands
             </p>
-            <h2 className="font-semibold  text-xl sm:text-[44px] mb-16">
+            <h2 className="font-semibold lg:text-start text-center  text-xl sm:text-[44px] mb-16">
               Temukan solusi yang paling tepat untuk Anda
             </h2>
           </div>
@@ -83,7 +83,7 @@ const Fitur = () => {
         <a
           href="https://forms.gle/5vAmUSRVbLodznSS9"
           target="_blank"
-          className="flex justify-center items-center gap-x-3 cursor-pointer font-medium mt-5"
+          className="flex flex-col lg:flex-row justify-center items-center gap-x-3 cursor-pointer text-[10px] lg:text-base font-medium mt-5"
           onMouseEnter={handleHover}
           onMouseLeave={handleLeave}
         >

@@ -26,22 +26,22 @@ const LandingPage = () => {
 
   return (
     <>
-      {showMobileModal ? (
+      {/* {showMobileModal ? (
         <MobilePopupModal />
-      ) : (
-        <div>
-          <NavbarDefault />
-          <div className="container mx-auto">
-            <Hero />
-            <Fitur />
-            <HowItWork />
-            <Program />
-            <Contact />
-          </div>
-          <Footer />
-          <ScrollUp />
+      ) : ( */}
+      <div>
+        <NavbarDefault />
+        <div className="container mx-auto">
+          <Hero />
+          <Fitur />
+          <HowItWork />
+          <Program />
+          <Contact />
         </div>
-      )}
+        <Footer />
+        <ScrollUp />
+      </div>
+      {/* )} */}
     </>
   );
 };

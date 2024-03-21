@@ -22,17 +22,17 @@ const LandingPage = () => {
 
   return (
     <>
-      {/* {showMobileModal ? (
+      {showMobileModal ? (
         <MobilePopupModal />
-      ) : ( */}
-      {/* <NavbarDefault />
-      <div className="container mx-auto">
-        <Hero />
-      </div>
-      <About /> */}
-      <Upcoming label={"coming soon"} />
-
-      {/* )} */}
+      ) : (
+        <div>
+          <NavbarDefault />
+          <div className="container mx-auto">
+            <Hero />
+          </div>
+          <About />
+        </div>
+      )}
     </>
   );
 };
