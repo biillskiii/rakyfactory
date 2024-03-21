@@ -12,10 +12,9 @@ const Footer = () => {
           <img
             src={Logo}
             alt="logo rakyfactory"
-            width={199}
-            className="mb-[45px] lg:mb-0"
+            className="mb-[45px] lg:mb-0 w-36 lg:w-48"
           />
-          <ul className="w-[300px] lg:w-[831px] leading-8 lg:leading-0 font-semibold text-base gap-x-11 flex flex-wrap justify-start lg:justify-center mb-[45px] lg:mb-0">
+          <ul className="w-[300px] lg:w-[831px] leading-8 lg:leading-0 font-semibold text-xs lg:text-base gap-x-11 flex flex-wrap justify-start lg:justify-center mb-[45px] lg:mb-0">
             <li>
               <a href="">Karir</a>
             </li>
@@ -35,7 +34,7 @@ const Footer = () => {
           <ul className="flex items-center gap-x-5">
             <li>
               <a href="https://instagram.com/rakyfactory" target="_blank">
-                <PiInstagramLogoBold size={25} />
+                <PiInstagramLogoBold className="w-5 lg:w-6" />
               </a>
             </li>
             <li>
@@ -43,7 +42,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/rakyfactory/"
                 target="_blank"
               >
-                <RiLinkedinBoxLine size={25} />
+                <RiLinkedinBoxLine className="w-5 lg:w-6" />
               </a>
             </li>
           </ul>
