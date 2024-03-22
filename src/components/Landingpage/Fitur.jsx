@@ -55,7 +55,10 @@ const Fitur = () => {
   return (
     <>
       <div id="product"></div>
-      <div className="w-[300px] lg:container mx-auto my-52" data-aos="fade-up">
+      <div
+        className="my-36 lg:my-52 w-[300px] lg:container mx-auto"
+        data-aos="fade-up"
+      >
         <div className="w-full">
           <div className="flex flex-col items-center gap-1 lg:gap-5">
             <p className="text-[10px] lg:text-xl font-semibold text-[#7A5AE1] uppercase">

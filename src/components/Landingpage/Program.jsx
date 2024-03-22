@@ -11,7 +11,7 @@ const Program = () => {
   return (
     <>
       <div id="program"></div>
-      <div className="text-center my-52" data-aos="fade-up">
+      <div className="text-center my-20 lg:my-52" data-aos="fade-up">
         <p className="text-[10px] lg:text-xl mb-5 font-semibold text-P1 uppercase">
           Exclusive Program for All
         </p>
@@ -21,7 +21,7 @@ const Program = () => {
         </h1>
         <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
           <CardFeature
-            icon={<MdLaptopMac size={25} />}
+            icon={<MdLaptopMac className="text-2xl lg:text-[30px]" />}
             title={"Gabung jadi mitra kreatif"}
             desc={
               "Bagi para freelancer dan pekerja kreatif, dapatkan penghasilan tambahan dari rumah Anda dan nikmati berbagai keuntungan lainnya."
@@ -30,7 +30,7 @@ const Program = () => {
             detaildesc={"Gabung sekarang"}
           />
           <CardFeature
-            icon={<LiaMoneyBillWaveSolid size={25} />}
+            icon={<LiaMoneyBillWaveSolid className="text-2xl lg:text-[30px]" />}
             title={"Gabung jadi Affiliate"}
             desc={
               "Sering scroll sosmed? Ubah jadi pasif income bulanan melalui komisi berulang dari setiap pengguna yang Anda referensikan ke produk kami."

@@ -57,7 +57,7 @@ const HowItWork = () => {
   return (
     <>
       <div
-        className="bg-P2 w-[353px] mx-auto lg:mx-1 lg:w-[1009px] h-auto lg:h-[370px] flex flex-col lg:flex-row justify-start items-center rounded-[40px] "
+        className="my-14 lg:my-52 bg-P2 w-[353px] mx-auto lg:mx-1 lg:w-[1009px] h-auto lg:h-[370px] flex flex-col lg:flex-row justify-start items-center rounded-[40px] "
         data-aos="fade-up"
       >
         <div className="w-[292px] lg:w-[477px] lg:px-[40px] py-[50px] -my-4 lg:my-52">

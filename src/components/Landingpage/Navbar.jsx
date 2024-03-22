@@ -24,7 +24,7 @@ const NavbarDefault = () => {
   const shadowClass = isScrolled ? "drop-shadow-md" : "drop-shadow-none";
   const navList = (
     <div className="w-full pl-5 flex justify-start lg:justify-center items-center">
-      <ul className="w-11/12 text-sm mb-4 mt-2 lg:mb-0 lg:mt-0 lg:flex lg:flex-row lg:items-center lg:gap-x-16">
+      <ul className="w-11/12 lg:w-full text-sm mb-4 mt-2 lg:mb-0 lg:mt-0 lg:flex lg:flex-row lg:items-center lg:gap-x-16">
         <li className="p-1 cursor-pointer ">
           <a
             href="#product"
