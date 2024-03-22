@@ -23,8 +23,8 @@ const NavbarDefault = () => {
   };
   const shadowClass = isScrolled ? "drop-shadow-md" : "drop-shadow-none";
   const navList = (
-    <div className="pl-5 flex justify-start lg:justify-center items-center">
-      <ul className="text-sm mb-4 mt-2 lg:mb-0 lg:mt-0 lg:flex lg:flex-row lg:items-center lg:gap-x-16">
+    <div className="w-full pl-5 flex justify-start lg:justify-center items-center">
+      <ul className="w-11/12 text-sm mb-4 mt-2 lg:mb-0 lg:mt-0 lg:flex lg:flex-row lg:items-center lg:gap-x-16">
         <li className="p-1 cursor-pointer ">
           <a
             href="#product"
@@ -94,7 +94,7 @@ const NavbarDefault = () => {
                 .scrollIntoView({ behavior: "smooth" });
               closeNavbar();
             }}
-            className="p-1 cursor-pointer bg-P1 px-5 py-4  rounded-xl  font-semibold before:ease relative overflow-hidden border border-P2 transition-all before:absolute before:right-0 before:top-0 before:h-14 before:w-6 before:translate-x-10 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-44"
+            className="w-full cursor-pointer flex justify-center bg-P1 px-5 p-3 lg:py-4  rounded-xl  font-semibold before:ease relative overflow-hidden border border-P2 transition-all before:absolute before:right-0 before:top-0 before:h-14 before:w-6 before:translate-x-10 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-44"
             style={{ color: "#ffffff" }}
           >
             Gabung jadi Mitra
@@ -105,7 +105,7 @@ const NavbarDefault = () => {
   );
   return (
     <nav
-      className={`w-full px-5 lg:px-24 h-full bg-transparent text-black bg-white sticky top-0 py-2 lg:py-4 z-50 transition-all duration-300 ${shadowClass}`}
+      className={`w-full px-5 lg:px-24 h-auto  bg-transparent text-black bg-white sticky top-0 py-2 lg:py-4 z-50 transition-all duration-300 ${shadowClass}`}
     >
       <div className=" mx-auto flex items-center justify-end text-blue-gray-900">
         <a
