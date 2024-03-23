@@ -19,14 +19,14 @@ const Modal = ({ onClose }) => {
   }, [onClose]);
 
   return ReactDOM.createPortal(
-    <div className="fixed top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center z-50 overflow-hidden">
+    <div className="fixed top-0 left-0 w-full h-full bg-black/90 lg:bg-black/70 flex justify-center items-center z-50 overflow-hidden">
       <div className="modal-content rounded-xl p-10 ">
         <iframe
           src="https://www.youtube.com/embed/HMXziSx38YE"
           frameborder="0"
-          width={800}
-          height={450}
-          className="rounded-xl"
+          // width={800}
+          // height={450}
+          className="rounded-xl w-[340px] lg:w-[800px] h-[190px] lg:h-[450px]"
         ></iframe>
       </div>
     </div>,
