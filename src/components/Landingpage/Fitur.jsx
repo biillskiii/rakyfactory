@@ -86,7 +86,7 @@ const Fitur = () => {
         <a
           href="https://forms.gle/5vAmUSRVbLodznSS9"
           target="_blank"
-          className="flex flex-col lg:flex-row justify-center items-center gap-y-2 lg:gap-y-0 gap-x-3 cursor-pointer text-[10px] lg:text-base font-medium mt-5"
+          className="flex flex-col lg:flex-row justify-center items-center gap-y-2 lg:gap-y-0 gap-x-3 cursor-pointer text-xs lg:text-base font-medium mt-5"
           onMouseEnter={handleHover}
           onMouseLeave={handleLeave}
         >
