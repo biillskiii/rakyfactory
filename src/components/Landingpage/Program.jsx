@@ -19,7 +19,7 @@ const Program = () => {
           Dapatkan penghasilan tambahan <br />
           tanpa harus keluar rumah
         </h1>
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-10">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-6">
           <CardFeature
             icon={<MdLaptopMac className="text-2xl lg:text-[30px]" />}
             title={"Gabung jadi mitra kreatif"}
@@ -37,6 +37,9 @@ const Program = () => {
             }
             detail={true}
             detaildesc={"Gabung sekarang"}
+            onClick={
+              "https://rakyfactory.notion.site/Ayo-bergabung-bersama-Rakyfactory-Affiliate-Program-d07582bd629b47e788706d67e9f2ebd9?pvs=4"
+            }
           />
         </div>
       </div>

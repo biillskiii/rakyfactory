@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const CardFeature = ({ icon, title, desc, detail, detaildesc }) => {
+const CardFeature = ({ icon, title, desc, detail, detaildesc, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleHover = () => {
@@ -13,7 +13,7 @@ const CardFeature = ({ icon, title, desc, detail, detaildesc }) => {
   };
 
   return (
-    <div className="bg-white w-[274px] lg:w-[488px]  border h-[370px] lg:h-[440px] px-2  rounded-[50px] shadow-md shadow-slate-200 flex flex-col">
+    <div className="bg-white w-[280px] lg:w-[488px]  border h-auto lg:h-[440px] px-2  rounded-[30px] shadow-md shadow-slate-200 flex flex-col">
       <div className="p-5 text-start flex-grow">
         <div className="rounded-full mt-5 lg:mt-10 bg-P1 flex justify-center items-center w-10 h-10 lg:w-14 lg:h-14 text-xl text-white">
           {icon}
@@ -25,12 +25,13 @@ const CardFeature = ({ icon, title, desc, detail, detaildesc }) => {
           </p>
         </div>
       </div>
-      <div className="mt-auto">
+      <div className="">
         {detail ? (
-          <p
-            className="px-5 pb-5 my-6 lg:my-10 font-semibold text-P1 text-xs lg:text-base flex justify-start items-center gap-x-2 cursor-pointer"
+          <a
+            className="px-5 pb-5 my-1 lg:my-10 font-semibold text-P1 text-xs lg:text-base flex justify-start items-center gap-x-2 cursor-pointer"
             onMouseEnter={handleHover}
             onMouseLeave={handleLeave}
+            onClick={onClick}
           >
             {detaildesc}{" "}
             <FaArrowRightLong
@@ -51,7 +52,7 @@ const CardFeature = ({ icon, title, desc, detail, detaildesc }) => {
                 animation: bounce 0.5s infinite;
               }
             `}</style>
-          </p>
+          </a>
         ) : (
           <p className="mt-10 font-semibold text-base">Coming Soon</p>
         )}

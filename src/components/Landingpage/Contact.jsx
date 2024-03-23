@@ -7,7 +7,7 @@ const Contact = () => {
   }, []);
   return (
     <div
-      className="bg-P1 rounded-[45px] w-[353px] lg:w-[1009px] h-[334px] lg:h-[281px] flex flex-col lg:flex-row lg:justify-center items-center my-44 mx-auto py-16 lg:py-auto space-y-10"
+      className="bg-P1 rounded-[45px] w-[353px] lg:w-[1009px] h-[334px] lg:h-[281px] flex flex-col lg:flex-row lg:justify-center items-center my-44 mx-auto py-12 lg:py-16 lg:py-auto space-y-10"
       data-aos="fade-up"
     >
       <div className="w-[320px] lg:w-[500px] text-center lg:text-start space-y-5  text-white">
