@@ -20,8 +20,8 @@ const Hero = () => {
         Menghubungkan Mitra Kreatif yang siap melayani kebutuhan konten digital
         Anda
       </h1>
-      <p className="lg:px-28 text-[10px] lg:text-xl mb-5 tracking-tight font-normal text-[#707070]">
-        Layanan berlangganan yang dapat dijeda sesuai kebutuhan. Tanpa repot
+      <p className="lg:px-28 leading-6 lg:leading-0 text-xs lg:text-xl mb-5 tracking-tight font-normal text-[#707070]">
+        Layanan subscription yang dapat dijeda sesuai kebutuhan. Tanpa repot
         rekrutmen dan kelola tim. Pasti sesuai kebutuhan dan menghemat waktu
         Anda.
       </p>
