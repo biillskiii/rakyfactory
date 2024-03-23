@@ -28,7 +28,7 @@ const CardFeature = ({ icon, title, desc, detail, detaildesc, onClick }) => {
       <div className="">
         {detail ? (
           <a
-            className="px-5 pb-5 my-1 lg:my-10 font-semibold text-P1 text-xs lg:text-base flex justify-start items-center gap-x-2 cursor-pointer"
+            className="px-5 pb-10 my-0 lg:my-10 font-semibold text-P1 text-xs lg:text-base flex justify-start items-center gap-x-2 cursor-pointer"
             onMouseEnter={handleHover}
             onMouseLeave={handleLeave}
             onClick={onClick}
