@@ -64,7 +64,7 @@ const Fitur = () => {
             <p className="text-[10px] lg:text-xl font-semibold text-[#7A5AE1] uppercase">
               Services for Creators & Brands
             </p>
-            <h2 className="font-semibold lg:text-start text-center  text-xl sm:text-[44px] mb-16">
+            <h2 className="font-semibold lg:text-start text-center  text-xl lg:text-[44px] mb-16">
               Temukan solusi yang paling tepat untuk Anda
             </h2>
           </div>
