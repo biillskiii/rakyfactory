@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const CardFeature = ({ icon, title, desc, detail, detaildesc, onClick }) => {
+const CardFeature = ({
+  icon,
+  title,
+  desc,
+  detail,
+  detaildesc,
+  onClick,
+  disabled,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleHover = () => {
@@ -28,14 +36,18 @@ const CardFeature = ({ icon, title, desc, detail, detaildesc, onClick }) => {
       <div className="">
         {detail ? (
           <a
-            className="px-5 pb-10 my-0 lg:my-10 font-semibold text-P1 text-xs lg:text-base flex justify-start items-center gap-x-2 cursor-pointer"
+            className={`px-5 pb-10 my-0 lg:my-10 font-semibold text-P1 text-xs lg:text-base flex justify-start items-center gap-x-2 cursor-pointer ${
+              disabled ? "text-gray-400 disabled" : ""
+            }`}
             onMouseEnter={handleHover}
             onMouseLeave={handleLeave}
             onClick={onClick}
           >
             {detaildesc}{" "}
             <FaArrowRightLong
-              className={isHovered ? "animate-bounce" : ""}
+              className={`${isHovered && !disabled ? "animate-bounce" : ""} ${
+                disabled ? "animate-none" : ""
+              }`}
               style={{ transition: "0.5s" }}
             />
             <style jsx>{`

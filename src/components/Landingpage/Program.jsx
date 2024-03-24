@@ -8,6 +8,12 @@ const Program = () => {
   useEffect(() => {
     AOS.init();
   }, []);
+  const gabungSekarang = () => {
+    window.open(
+      "https://rakyfactory.notion.site/Ayo-bergabung-bersama-Rakyfactory-Affiliate-Program-d07582bd629b47e788706d67e9f2ebd9?pvs=4",
+      "_blank"
+    );
+  };
   return (
     <>
       <div id="program"></div>
@@ -28,6 +34,7 @@ const Program = () => {
             }
             detail={true}
             detaildesc={"Gabung sekarang"}
+            disabled={true}
           />
           <CardFeature
             icon={<LiaMoneyBillWaveSolid className="text-2xl lg:text-[30px]" />}
@@ -37,9 +44,7 @@ const Program = () => {
             }
             detail={true}
             detaildesc={"Gabung sekarang"}
-            onClick={
-              "https://rakyfactory.notion.site/Ayo-bergabung-bersama-Rakyfactory-Affiliate-Program-d07582bd629b47e788706d67e9f2ebd9?pvs=4"
-            }
+            onClick={gabungSekarang}
           />
         </div>
       </div>
