@@ -1,0 +1,26 @@
+name: Deploy wesite on push
+
+#Controls when the workflow will run
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  when-deploy:
+    name: Deploy
+
+    runs-on: ubunti-latest
+
+    steps:
+    - name: Get latest code
+
+      uses: actions/checkout@v2
+
+    - name: Sync files
+      uses: biillskiii/FTP-Deploy-Action@4.1.0
+      with:
+        server: ftp.appimate.com
+        username: $({ secrets.USERNAME })
+        password: $({ secrets.PASSWORD })
+        server-dir: /
