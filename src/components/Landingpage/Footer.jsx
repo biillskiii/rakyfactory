@@ -19,7 +19,9 @@ const Footer = () => {
               <a href="">Karir</a>
             </li>
             <li>
-              <a href="">Mitra kreatif</a>
+              <a href="https://s.id/GabungMitraSwiftcut" target="_blank">
+                Mitra kreatif
+              </a>
             </li>
             <li>
               <a href="">Affiliates</a>

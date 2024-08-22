@@ -7,7 +7,6 @@ const Hero = () => {
     Aos.init();
     Aos.refresh();
   }, []);
-
   return (
     <div
       id="hero"
@@ -27,17 +26,11 @@ const Hero = () => {
       </p>
       <div className="flex flex-col lg:flex-row justify-center items-center gap-x-5">
         <a
-          href="#product  "
-          className="py-4 px-[125px] lg:px-8 mb-2  bg-P1 rounded-xl text-xs lg:text-base text-white font-semibold before:ease relative overflow-hidden border border-P2  transition-all before:absolute before:right-0 before:top-0 before:h-24 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-60"
-          onClick={(e) => {
-            e.preventDefault();
-            document
-              .getElementById("product")
-              .scrollIntoView({ behavior: "smooth" });
-            closeNavbar();
-          }}
+          href="https://trello.com/b/NLtlE9WZ/dashboard"
+          target="_blank"
+          className="py-4 px-[145px] lg:px-8 mb-2  bg-P1 rounded-xl text-xs lg:text-base text-white font-semibold before:ease relative overflow-hidden border border-P2  transition-all before:absolute before:right-0 before:top-0 before:h-24 before:w-6 before:translate-x-12 before:rotate-6 before:bg-white before:opacity-10 before:duration-700 hover:before:-translate-x-60"
         >
-          Pelajari solusi kami
+          Get Product
         </a>
         <a
           href="#program"

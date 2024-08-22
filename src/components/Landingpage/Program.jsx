@@ -4,16 +4,23 @@ import { MdLaptopMac } from "react-icons/md";
 import { LiaMoneyBillWaveSolid } from "react-icons/lia";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 const Program = () => {
   useEffect(() => {
     AOS.init();
   }, []);
+
   const gabungSekarang = () => {
     window.open(
       "https://rakyfactory.notion.site/Ayo-bergabung-bersama-Rakyfactory-Affiliate-Program-d07582bd629b47e788706d67e9f2ebd9?pvs=4",
       "_blank"
     );
   };
+
+  const gabungMitraKreatif = () => {
+    window.open("https://s.id/GabungMitraSwiftcut", "_blank");
+  };
+
   return (
     <>
       <div id="program"></div>
@@ -21,7 +28,7 @@ const Program = () => {
         <p className="text-[10px] lg:text-xl mb-5 font-semibold text-P1 uppercase">
           Exclusive Program for All
         </p>
-        <h1 className=" font-semibold text-xl lg:text-5xl mb-16">
+        <h1 className="font-semibold text-xl lg:text-5xl mb-16">
           Dapatkan penghasilan tambahan <br />
           tanpa harus keluar rumah
         </h1>
@@ -34,7 +41,7 @@ const Program = () => {
             }
             detail={true}
             detaildesc={"Gabung sekarang"}
-            disabled={true}
+            onClick={gabungMitraKreatif}
           />
           <CardFeature
             icon={<LiaMoneyBillWaveSolid className="text-2xl lg:text-[30px]" />}

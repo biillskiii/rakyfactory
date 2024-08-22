@@ -3,9 +3,11 @@ import CardFeature from "../CardFeature";
 import { FaArrowRightLong } from "react-icons/fa6";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { MdMovieEdit } from "react-icons/md";
-import { MdOutlineDashboard } from "react-icons/md";
-import { MdOutlineTheaters } from "react-icons/md";
+import {
+  MdMovieEdit,
+  MdOutlineDashboard,
+  MdOutlineTheaters,
+} from "react-icons/md";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -31,6 +33,7 @@ const Fitur = () => {
       desc: "Solusi cari editor Tiktok tanpa ribet, tanpa seleksi portofolio, tanpa urus tim. Pasti cocok sesuai preferensi konten Anda!",
       detail: true,
       detaildesc: "Selengkapnya",
+      href: "https://raky-landing-swift.vercel.app/",
     },
     {
       icon: <MdOutlineDashboard className="text-2xl lg:text-[30px]" />,
@@ -79,6 +82,7 @@ const Fitur = () => {
                 desc={card.desc}
                 detail={card.detail}
                 detaildesc={card.detaildesc}
+                href={card.href} // Pass href prop if defined
               />
             </div>
           ))}
